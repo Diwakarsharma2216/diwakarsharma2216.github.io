@@ -1,6 +1,41 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { SITE_CONFIG } from '../config/seo'
 
 export const Route = createFileRoute('/about')({
+  head: () => ({
+    meta: [
+      {
+        title: `About — ${SITE_CONFIG.name}`,
+      },
+      {
+        name: 'description',
+        content:
+          'Learn more about Tarang Rajpara, Full Stack Design Engineer. Background, experience, architecture philosophy, and contact details.',
+      },
+      {
+        property: 'og:title',
+        content: `About — ${SITE_CONFIG.name}`,
+      },
+      {
+        property: 'og:description',
+        content:
+          'Learn more about Tarang Rajpara, Full Stack Design Engineer. Background, experience, architecture philosophy, and contact details.',
+      },
+      {
+        property: 'og:url',
+        content: `${SITE_CONFIG.url}/about`,
+      },
+      {
+        name: 'twitter:title',
+        content: `About — ${SITE_CONFIG.name}`,
+      },
+      {
+        name: 'twitter:description',
+        content:
+          'Learn more about Tarang Rajpara, Full Stack Design Engineer. Background, experience, architecture philosophy, and contact details.',
+      },
+    ],
+  }),
   component: About,
 })
 

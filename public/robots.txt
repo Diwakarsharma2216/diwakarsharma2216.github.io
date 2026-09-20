@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tarang.space
+
+# Sitemap
+Sitemap: https://tarang.space/sitemap.xml

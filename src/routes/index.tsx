@@ -5,7 +5,40 @@ import { Button } from '../components/ui/Button'
 import { Badge } from '../components/ui/Badge'
 import DitherCanvas from '../components/DitherCanvas'
 
-export const Route = createFileRoute('/')({ component: PortfolioPage })
+import { SITE_CONFIG } from '../config/seo'
+
+export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      {
+        title: SITE_CONFIG.title,
+      },
+      {
+        name: 'description',
+        content: SITE_CONFIG.description,
+      },
+      {
+        property: 'og:title',
+        content: SITE_CONFIG.shortTitle,
+      },
+      {
+        property: 'og:description',
+        content: SITE_CONFIG.description,
+      },
+      {
+        property: 'og:url',
+        content: `${SITE_CONFIG.url}/`,
+      },
+    ],
+    links: [
+      {
+        rel: 'canonical',
+        href: `${SITE_CONFIG.url}/`,
+      },
+    ],
+  }),
+  component: PortfolioPage,
+})
 
 function PortfolioPage() {
   const [copied, setCopied] = useState(false)

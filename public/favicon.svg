@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <!-- Background squircle -->
+  <rect width="64" height="64" rx="16" fill="#0a0a0a" />
+  <rect width="62" height="62" x="1" y="1" rx="15" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none" />
+  
+  <!-- Stylized Geometric T & R monogram -->
+  <!-- Top bar of T -->
+  <path d="M14 20 H34" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" />
+  <!-- Stem of T -->
+  <path d="M24 20 V44" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" />
+  
+  <!-- Modern angled accent for R -->
+  <path d="M35 27 C35 22.5 39 19 44 19 C48.5 19 51 22 51 25.5 C51 29 48 32 44 32 H36" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M43 32 L51 44" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linecap="round" />
+</svg>
