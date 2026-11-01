@@ -39,7 +39,6 @@ jobs:
       - name: Build static site
         run: pnpm build
         env:
-          NITRO_PRESET: github_pages
           VITE_SITE_URL: https://diwakarsharma2216.github.io
 
       - name: Upload Pages artifact

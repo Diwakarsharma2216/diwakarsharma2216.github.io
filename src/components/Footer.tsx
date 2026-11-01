@@ -49,13 +49,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
-        {/* Large Signature Watermark at the very last */}
-        <div className="mt-8 pt-6 border-t border-[var(--border-subtle)]/50 text-center select-none pointer-events-none overflow-hidden">
-          <span className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter text-[var(--text-primary)] opacity-[0.06] font-semibold block uppercase">
-            Diwakar Sharma
-          </span>
-        </div>
       </div>
     </footer>
   )
