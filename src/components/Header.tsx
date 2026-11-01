@@ -1,5 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import ThemeToggle from './ThemeToggle'
+import Logo from './Logo'
+import { env } from '../config/env'
 
 export default function Header() {
   return (
@@ -10,15 +12,13 @@ export default function Header() {
             to="/"
             className="group flex items-center gap-2 text-inherit no-underline"
           >
-            <span className="font-serif text-xl sm:text-2xl font-normal tracking-tight text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)] whitespace-nowrap">
-              Tarang Rajpara
-            </span>
+            <Logo size="sm" />
           </Link>
           <span className="hidden text-xs text-[var(--text-muted)] font-mono sm:inline-block">
             /
           </span>
           <span className="hidden text-xs text-[var(--text-secondary)] font-mono sm:inline-block whitespace-nowrap">
-            Design Engineer
+            {env.role}
           </span>
         </div>
 
@@ -36,10 +36,22 @@ export default function Header() {
             Experience
           </a>
           <a
+            href="#education"
+            className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors no-underline"
+          >
+            Education
+          </a>
+          <a
             href="#stack"
             className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors no-underline"
           >
             Stack
+          </a>
+          <a
+            href="#faq"
+            className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors no-underline"
+          >
+            FAQ
           </a>
           <a
             href="#contact"
@@ -50,9 +62,8 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-
           <a
-            href="https://github.com/tnrajpara"
+            href={env.githubUrl}
             target="_blank"
             rel="noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-[6px] text-[var(--text-secondary)] transition hover:bg-[var(--bg-surface)] hover:text-[var(--text-primary)]"

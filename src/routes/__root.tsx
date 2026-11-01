@@ -47,6 +47,30 @@ export const Route = createRootRoute({
         content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
       },
       {
+        name: 'googlebot',
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+      },
+      {
+        name: 'bingbot',
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+      },
+      {
+        name: 'subject',
+        content: 'Diwakar Sharma (diwakarsharma) — Full Stack Developer Portfolio',
+      },
+      {
+        name: 'rating',
+        content: 'general',
+      },
+      {
+        name: 'geo.region',
+        content: 'IN-GJ',
+      },
+      {
+        name: 'geo.placename',
+        content: 'Surat',
+      },
+      {
         name: 'application-name',
         content: SITE_CONFIG.shortTitle,
       },
@@ -165,6 +189,12 @@ export const Route = createRootRoute({
       {
         rel: 'manifest',
         href: '/site.webmanifest',
+      },
+      {
+        rel: 'alternate',
+        type: 'text/plain',
+        href: '/llms.txt',
+        title: 'LLM Agent Summary',
       },
       {
         rel: 'stylesheet',

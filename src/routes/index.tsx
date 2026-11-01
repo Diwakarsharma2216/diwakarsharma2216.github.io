@@ -6,6 +6,7 @@ import { Badge } from '../components/ui/Badge'
 import DitherCanvas from '../components/DitherCanvas'
 
 import { SITE_CONFIG } from '../config/seo'
+import { env } from '../config/env'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -40,14 +41,137 @@ export const Route = createFileRoute('/')({
   component: PortfolioPage,
 })
 
+const TECH_STACK_CATEGORIES = [
+  {
+    number: '01',
+    category: 'LANGUAGES',
+    title: 'Core Programming',
+    skills: ['JavaScript (ES6+)', 'TypeScript', 'Java', 'C', 'C++'],
+    description:
+      'Strong algorithmic foundations with deep production expertise in TypeScript, JavaScript (ES6+), Java, and system concepts in C/C++.',
+  },
+  {
+    number: '02',
+    category: 'FRONTEND',
+    title: 'UI & Web Architecture',
+    skills: [
+      'React.js',
+      'Next.js (SSR/SSG/ISR)',
+      'Redux',
+      'Context API',
+      'Tailwind CSS',
+      'HTML5',
+      'CSS3',
+      'Responsive Design',
+    ],
+    description:
+      'Production-grade user interfaces with Next.js rendering strategies, predictive state management, accessible component architectures, and responsive design.',
+  },
+  {
+    number: '03',
+    category: 'BACKEND',
+    title: 'APIs & Services',
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST API Design',
+      'JWT Authentication',
+      'Socket.IO',
+      'Strapi CMS',
+      'BullMQ',
+      'Sharp',
+    ],
+    description:
+      'High-throughput RESTful endpoints, robust JWT/RBAC security, real-time WebSockets, headless CMS integrations, and distributed background processing.',
+  },
+  {
+    number: '04',
+    category: 'DATABASES & CACHE',
+    title: 'Storage & Search',
+    skills: [
+      'PostgreSQL',
+      'MongoDB',
+      'Firebase (Firestore & Realtime)',
+      'Redis',
+      'Typesense',
+    ],
+    description:
+      'Relational and NoSQL schema design, real-time cloud data sync, aggressive Redis caching, and instant typo-tolerant full-text search indexing.',
+  },
+  {
+    number: '05',
+    category: 'CLOUD & DEVOPS',
+    title: 'Infrastructure & CI/CD',
+    skills: [
+      'AWS (EC2, S3)',
+      'Docker',
+      'Firebase Hosting',
+      'Cloudflare R2',
+      'Git & GitHub',
+      'CI/CD Pipelines',
+      'Agile / Scrum',
+    ],
+    description:
+      'Scalable cloud infrastructure on AWS and Cloudflare, containerized services with Docker, automated deployment pipelines, and agile delivery.',
+  },
+  {
+    number: '06',
+    category: 'PRODUCT & COMMERCE',
+    title: 'SaaS & Analytics',
+    skills: [
+      'SaaS Development',
+      'Stripe',
+      'Razorpay',
+      'PostHog',
+      'CleverTap',
+      'SEO Optimization',
+    ],
+    description:
+      'Payment gateway integrations with automated webhook recovery, event-driven user telemetry with PostHog and CleverTap, and high-ranking SEO/AEO.',
+  },
+  {
+    number: '07',
+    category: 'CORE CS & SYSTEMS',
+    title: 'Computer Science',
+    skills: [
+      'Data Structures & Algorithms',
+      'System Design',
+      'OOP',
+      'Geolocation APIs',
+      'XLSX / CSV Export',
+    ],
+    description:
+      'Robust algorithmic problem solving, object-oriented design patterns, distributed architecture, geospatial mapping, and high-volume data export utilities.',
+  },
+]
+
+const FAQS = [
+  {
+    q: 'Who is Diwakar Sharma (diwakarsharma)?',
+    a: 'Diwakar Sharma (known online as diwakarsharma and diwakarsharma2216) is a Full Stack Developer based in Surat, Gujarat, India with 2.5+ years of experience engineering scalable web applications using Next.js, React, Node.js, Express, TypeScript, and cloud services. He currently serves as Software Developer at Diamond Atelier.',
+  },
+  {
+    q: "What are Diwakar Sharma's primary technical skills?",
+    a: 'Diwakar specializes in Next.js, React 19, TypeScript, JavaScript, Node.js, Express.js, MongoDB, PostgreSQL, Redis caching, BullMQ background queues, Docker, AWS S3, Cloudflare Workers, and Stripe payment processing.',
+  },
+  {
+    q: 'What companies and production systems has Diwakar worked on?',
+    a: 'Diwakar is currently Software Developer at Diamond Atelier building a production diamond e-commerce platform and custom headless CMS. Previously, he developed WhatsApp automation & appointment booking platforms at Empiric Infotech LLP and mentored 200+ developers while building LMS review modules at Masai School.',
+  },
+  {
+    q: 'How can I contact or book a meeting with Diwakar Sharma?',
+    a: 'You can email Diwakar at diwakarsharma2216@gmail.com, book a 30-minute consultation call on Cal.com (https://cal.com/diwakar-sharma-ojozup/30min), connect on LinkedIn (https://www.linkedin.com/in/diwakarsharma-fullstackdev/), or explore his open-source work on GitHub (https://github.com/Diwakarsharma2216).',
+  },
+]
+
 function PortfolioPage() {
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: '30min' })
+      const cal = await getCalApi({ namespace: env.calNamespace })
       cal('floatingButton', {
-        calLink: 'tarang-rajpara-lgnt7r/30min',
+        calLink: env.calLink,
         config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
         buttonColor: '#ea580c',
         buttonTextColor: '#ffffff',
@@ -57,7 +181,7 @@ function PortfolioPage() {
   }, [])
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('rajparatarang66@email.com')
+    navigator.clipboard.writeText(env.email)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -73,33 +197,34 @@ function PortfolioPage() {
           <div className="lg:col-span-8">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5">
               <Badge variant="accent" size="sm" dot>
-                Full Stack Design Engineer
+                {env.role}
               </Badge>
               <span className="text-xs font-mono text-[var(--text-muted)] whitespace-nowrap">
-                Surat, India &bull; Open for work
+                @diwakarsharma2216 &bull; {env.location} &bull; Open for work
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[4.5rem] font-normal tracking-tight text-[var(--text-primary)] mb-5 leading-[1.08] sm:leading-[1.06]">
-              Building clean architecture <br />
-              <span className="italic text-[var(--accent)] font-serif">and interfaces that feel good to use.</span>
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-[var(--text-primary)] mb-5 leading-[1.08] sm:leading-[1.06]">
+              Diwakar Sharma <br />
+              <span className="italic text-[var(--accent)] font-serif text-3xl sm:text-5xl lg:text-[3.5rem] block mt-1">
+                Full Stack Developer & Architect.
+              </span>
             </h1>
 
             <p className="text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-7 max-w-xl">
-              Software engineer with 2+ years building large-scale web applications. I care about solid system architecture, thoughtful typography, and interfaces that feel fast, tactile, and intentional. Currently at <span className="text-[var(--text-primary)] font-medium">Diamond Atelier</span> engineering Diamond Forest.
+              Engineering clean architecture and scalable cloud systems. Full Stack Developer (<strong className="text-[var(--text-primary)] font-medium">diwakarsharma</strong>) with 2.5+ years of experience building and shipping web applications using Next.js, React, Node.js, and Express. Strong in backend development, commerce workflows, authentication, payments, background queues, and cloud deployment. Currently at <span className="text-[var(--text-primary)] font-medium">Diamond Atelier</span> engineering a production diamond e-commerce platform.
             </p>
 
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <Button
                 type="button"
-                data-cal-link="tarang-rajpara-lgnt7r/30min"
-                data-cal-namespace="30min"
+                data-cal-link={env.calLink}
+                data-cal-namespace={env.calNamespace}
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
                 onClick={async () => {
-                  const cal = await getCalApi({ namespace: '30min' })
-                  // @ts-expect-error Cal API modal
+                  const cal = await getCalApi({ namespace: env.calNamespace })
                   cal('modal', {
-                    calLink: 'tarang-rajpara-lgnt7r/30min',
+                    calLink: env.calLink,
                     config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
                   })
                 }}
@@ -110,7 +235,7 @@ function PortfolioPage() {
                 <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" className="opacity-90">
                   <path d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0zm0 3.5H2.75a.25.25 0 0 0-.25.25V5h11V3.75a.25.25 0 0 0-.25-.25H11.25V4.5a.75.75 0 0 1-1.5 0V3.5h-5V4.5a.75.75 0 0 1-1.5 0V3.5zM2.5 6.5v7.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V6.5h-11z" />
                 </svg>
-                Contact Me
+                Book a 30m Call
               </Button>
 
               <Button
@@ -138,7 +263,7 @@ function PortfolioPage() {
               </Button>
 
               <a
-                href="https://github.com/tnrajpara"
+                href={SITE_CONFIG.links.github}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 px-3 py-2 rounded-[6px] text-xs font-mono text-[var(--text-secondary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors no-underline whitespace-nowrap"
@@ -147,7 +272,7 @@ function PortfolioPage() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/tarang-rajpara-330102379"
+                href={SITE_CONFIG.links.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 px-3 py-2 rounded-[6px] text-xs font-mono text-[var(--text-secondary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:text-[var(--text-primary)] hover:border-[var(--border-strong)] transition-colors no-underline whitespace-nowrap"
@@ -177,7 +302,7 @@ function PortfolioPage() {
           </span>
         </div>
 
-        {/* Flagship Feature: Diamond Forest */}
+        {/* Flagship Feature: Diamond Atelier */}
         <div className="mb-8 p-6 sm:p-8 rounded-[10px] border border-[var(--border-strong)] bg-[var(--bg-surface)]">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
             <div className="flex items-center gap-2">
@@ -185,23 +310,49 @@ function PortfolioPage() {
                 Diamond Atelier
               </span>
               <span className="text-xs font-mono text-[var(--text-muted)]">&bull;</span>
-              <span className="text-xs font-mono text-[var(--text-muted)]">2025–Present</span>
+              <span className="text-xs font-mono text-[var(--text-muted)]">Nov 2025–Present</span>
             </div>
-            <span className="text-xs font-mono px-2 py-0.5 rounded-[4px] bg-[var(--bg-canvas)] text-[var(--text-secondary)] border border-[var(--border-subtle)]">
-              Lead Frontend Engineer (~90% ownership)
-            </span>
+            <div className="flex items-center gap-2">
+              <a
+                href={env.projectLinks.diamondAtelier}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--accent-text)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors no-underline cursor-pointer"
+                title="Open Live Link"
+              >
+                <span>Live Link</span>
+                <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                  <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                </svg>
+              </a>
+              <span className="text-xs font-mono px-2 py-0.5 rounded-[4px] bg-[var(--bg-canvas)] text-[var(--text-secondary)] border border-[var(--border-subtle)]">
+                Software Developer &bull; Core Platform Delivery
+              </span>
+            </div>
           </div>
 
-          <h3 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] mb-3">
-            Diamond Forest
-          </h3>
+          <div className="mb-3">
+            <a
+              href={env.projectLinks.diamondAtelier}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-2.5 text-inherit no-underline"
+            >
+              <h3 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                Diamond E-Commerce Platform
+              </h3>
+              <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
 
           <p className="text-base sm:text-lg text-[var(--text-secondary)] font-sans leading-relaxed max-w-3xl mb-6">
-            Large-scale luxury jewellery e-commerce platform. As the sole frontend engineer handling approximately 90% of all client code, I translated Figma design systems into performant production layouts, built the complete storefront catalog, shopping cart, and wishlist, and engineered an interactive 3D ring viewer and customiser using <strong>Three.js</strong> for real-time 360&deg; in-browser inspection.
+            Production diamond e-commerce platform. Owned feature delivery end-to-end: built a headless CMS enabling a six-person content team to manage website assets without developer intervention, integrated Stripe payments with webhook verification & failure recovery, designed RBAC authentication, implemented S3-compatible media uploads with Sharp image compression, and scaled performance using Redis caching, BullMQ background queues, and Docker CI/CD pipelines.
           </p>
 
           <div className="flex flex-wrap gap-1.5 pt-2">
-            {['Next.js', 'TypeScript', 'Three.js', 'TanStack Query', 'Tailwind CSS', 'Figma'].map(
+            {['Next.js', 'Node.js', 'Redis', 'BullMQ', 'Docker', 'Stripe', 'Sharp', 'Typesense'].map(
               (tech) => (
                 <span
                   key={tech}
@@ -216,22 +367,45 @@ function PortfolioPage() {
 
         {/* Selected Projects Editorial Grid */}
         <div className="grid sm:grid-cols-2 gap-6">
-          {/* Torin Wealth */}
+          {/* WhatsApp & Booking Platform */}
           <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
             <div>
               <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>Brand & Motion</span>
-                <span>2024–2025</span>
+                <span>Backend & Commerce &bull; Apr 2024–Oct 2025</span>
+                <a
+                  href={env.projectLinks.whatsappBooking}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                  title="Open Live Link"
+                >
+                  <span>Live Link</span>
+                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
               </div>
-              <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-2">
-                Torin Wealth
-              </h3>
+              <div className="mb-2">
+                <a
+                  href={env.projectLinks.whatsappBooking}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-2 text-inherit no-underline"
+                >
+                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                    WhatsApp & Booking Platform
+                  </h3>
+                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
               <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Brand presence site for a wealth management firm. Implemented fluid micro-animations with Framer Motion and lightweight state via Zustand directly from Figma designs. On-page SEO improvements drove measurable inbound lead growth for the client.
+                Expert appointment-booking system and communication platform at Empiric Infotech. Implemented end-to-end Stripe payment processing with refund workflows, integrated the WAHA API into an internal WhatsApp platform for automated employee and group messaging, and developed scheduling REST APIs with admin-controlled access tiers.
               </p>
             </div>
             <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['Next.js', 'TypeScript', 'Framer Motion', 'Zustand', 'TanStack Query', 'Tailwind CSS'].map(
+              {['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Stripe', 'WAHA API'].map(
                 (tech) => (
                   <span
                     key={tech}
@@ -244,22 +418,45 @@ function PortfolioPage() {
             </div>
           </div>
 
-          {/* Phone Win Dashboard */}
+          {/* Masai LMS Assessment Module */}
           <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
             <div>
               <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>Admin & Operations</span>
-                <span>2024–2025</span>
+                <span>EdTech & Workflow &bull; Oct 2023–Mar 2024</span>
+                <a
+                  href={env.projectLinks.masaiLms}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                  title="Open Live Link"
+                >
+                  <span>Live Link</span>
+                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
               </div>
-              <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-2">
-                Phone Win Dashboard
-              </h3>
+              <div className="mb-2">
+                <a
+                  href={env.projectLinks.masaiLms}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-2 text-inherit no-underline"
+                >
+                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                    Masai LMS Assessment Module
+                  </h3>
+                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
               <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Admin control panel featuring 50+ CRUD workflows for user management, reward campaigns, and administrative audits. Integrated a real-time live chat customer support system powered by Socket.IO, with server caching via TanStack Query.
+                Engineered the Learning Management System student review module for submission tracking, feedback collection, and review workflows. Mentored 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.
               </p>
             </div>
             <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['React', 'TypeScript', 'Socket.IO', 'TanStack Query', 'Shadcn UI', 'Tailwind CSS'].map(
+              {['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'].map(
                 (tech) => (
                   <span
                     key={tech}
@@ -272,22 +469,45 @@ function PortfolioPage() {
             </div>
           </div>
 
-          {/* AKA Gaming Dashboard */}
+          {/* AI Interview Platform */}
           <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
             <div>
               <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>Gaming & Realtime</span>
-                <span>2024–2025</span>
+                <span>AI & Full Stack &bull; Open Source</span>
+                <a
+                  href={env.projectLinks.aiInterview}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                  title="Open Live Link"
+                >
+                  <span>Live Link</span>
+                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
               </div>
-              <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-2">
-                AKA Gaming Dashboard
-              </h3>
+              <div className="mb-2">
+                <a
+                  href={env.projectLinks.aiInterview}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-2 text-inherit no-underline"
+                >
+                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                    AI Interview Platform
+                  </h3>
+                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
               <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Real-time content management and live player analytics dashboard for a gaming platform. Built live event telemetry feeds using Socket.IO, interactive data visualisations, and role-based access control across administration tiers.
+                Full-stack MERN platform built for interactive technical interview practice. Features JWT user authentication, OpenAI API integration for automated question generation and response evaluation, a real-time scoring system, and admin controls.
               </p>
             </div>
             <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['React', 'TypeScript', 'Socket.IO', 'Zustand', 'Shadcn UI', 'Tailwind CSS'].map(
+              {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'OpenAI API', 'Tailwind CSS'].map(
                 (tech) => (
                   <span
                     key={tech}
@@ -300,22 +520,45 @@ function PortfolioPage() {
             </div>
           </div>
 
-          {/* Account Mart */}
+          {/* Hevenly Heven E-Commerce */}
           <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
             <div>
               <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>Digital Marketplace</span>
-                <span>2024–2025</span>
+                <span>Retail & E-Commerce &bull; Full Stack</span>
+                <a
+                  href={env.projectLinks.hevenlyHeven}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                  title="Open Live Link"
+                >
+                  <span>Live Link</span>
+                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
               </div>
-              <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-2">
-                Account Mart
-              </h3>
+              <div className="mb-2">
+                <a
+                  href={env.projectLinks.hevenlyHeven}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-2 text-inherit no-underline"
+                >
+                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                    Hevenly Heven E-Commerce
+                  </h3>
+                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
+              </div>
               <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                End-to-end digital account marketplace with complete listing, categorized browsing, and purchase workflows. Handled global cart and multi-step transaction validation states using Zustand, implemented from Figma designs.
+                Full-stack online shopping platform designed for product discovery, facet filtering, cart management, and seamless transaction checkout. Built with modular component architecture, state management, and responsive styling.
               </p>
             </div>
             <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['React', 'Vite', 'TypeScript', 'Zustand', 'Tailwind CSS', 'Figma'].map(
+              {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'REST APIs'].map(
                 (tech) => (
                   <span
                     key={tech}
@@ -336,10 +579,10 @@ function PortfolioPage() {
       <section id="experience" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
-            Experience & Education
+            Work Experience
           </h2>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Career Timeline
+            Career Timeline &bull; 2.5+ Years
           </span>
         </div>
 
@@ -347,56 +590,101 @@ function PortfolioPage() {
           {/* Diamond Atelier */}
           <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
             <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              2025 — Present
+              Nov 2025 — Present
             </div>
             <div className="sm:col-span-4">
               <span className="font-serif text-lg text-[var(--text-primary)]">Diamond Atelier</span>
-              <span className="block text-xs font-mono text-[var(--accent-text)]">Software Engineer</span>
+              <span className="block text-xs font-mono text-[var(--accent-text)]">Software Developer &bull; Surat (Onsite)</span>
             </div>
             <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-              Sole frontend engineer on Diamond Forest (~90% of all frontend work). Built storefront, catalog, cart, wishlist, and interactive 3D ring viewer (Three.js).
+              Own feature delivery end-to-end: built a headless CMS for independent content management, Stripe webhook payment processing, RBAC authorization, S3/R2 media uploads with Sharp compression, Redis caching, BullMQ queues, and Docker CI/CD.
             </div>
           </div>
 
-          {/* Freelance */}
+          {/* Empiric Infotech LLP */}
           <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
             <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              2024 — 2025
+              Apr 2024 — Oct 2025
             </div>
             <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Independent Freelance</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Full Stack Engineer</span>
+              <span className="font-serif text-lg text-[var(--text-primary)]">Empiric Infotech LLP</span>
+              <span className="block text-xs font-mono text-[var(--text-muted)]">MERN Stack Developer &bull; Surat (Onsite)</span>
             </div>
             <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-              Shipped 4 production web applications spanning operational dashboards, marketplaces, and brand sites directly from Figma into code.
+              Implemented end-to-end Stripe payment processing with refund handling, integrated the WAHA API into an internal WhatsApp platform for targeted messaging, and developed REST APIs for an appointment-booking system with RBAC.
             </div>
           </div>
 
-          {/* Bachelor's */}
+          {/* Masai School - Experience */}
           <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
             <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              2023 — 2025
+              Oct 2023 — Mar 2024
             </div>
             <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Sarvajanik University</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Bachelor&apos;s Degree</span>
+              <span className="font-serif text-lg text-[var(--text-primary)]">Masai School</span>
+              <span className="block text-xs font-mono text-[var(--text-muted)]">Associate Instructor &bull; Remote</span>
             </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
-              Computer Science &bull; Degree completion
+            <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+              Trained 200+ students in JavaScript, React.js, and Node.js fundamentals. Built the LMS student review module for submission tracking, feedback, and review workflows; conducted mock full-stack interviews.
             </div>
           </div>
 
-          {/* Diploma */}
+        </div>
+      </section>
+
+      {/* ────────────────────────────────────────────────────────── */}
+      {/* EDUCATION SECTION                                          */}
+      {/* ────────────────────────────────────────────────────────── */}
+      <section id="education" className="mb-14 sm:mb-20 scroll-mt-24">
+        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+          <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
+            Education
+          </h2>
+          <span className="text-xs font-mono text-[var(--text-muted)]">
+            Academic & Certifications
+          </span>
+        </div>
+
+        <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
+          {/* Manipal University Jaipur - Education */}
           <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
             <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              2019 — 2022
+              2023 — 2026
             </div>
             <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Bhagwan Mahavir University</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Diploma in Engineering</span>
+              <span className="font-serif text-lg text-[var(--text-primary)]">Manipal University Jaipur</span>
+              <span className="block text-xs font-mono text-[var(--text-muted)]">Bachelor of Computer Applications (BCA)</span>
             </div>
             <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
-              Engineering foundations &bull; Diploma completion
+              Coursework: DSA, OOP (C++, Java), Python, DBMS, Operating Systems, Computer Networks.
+            </div>
+          </div>
+
+          {/* Masai School - Education */}
+          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
+              Sep 2022 — Jun 2023
+            </div>
+            <div className="sm:col-span-4">
+              <span className="font-serif text-lg text-[var(--text-primary)]">Masai School</span>
+              <span className="block text-xs font-mono text-[var(--text-muted)]">Full Stack Web Development (NSDC Certified)</span>
+            </div>
+            <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
+              Coursework: Data Structures & Algorithms, React.js, Redux, Node.js fundamentals.
+            </div>
+          </div>
+
+          {/* Mahatma Gandhi Inter College */}
+          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
+              Mar 2021 — Apr 2022
+            </div>
+            <div className="sm:col-span-4">
+              <span className="font-serif text-lg text-[var(--text-primary)]">Mahatma Gandhi Inter College</span>
+              <span className="block text-xs font-mono text-[var(--text-muted)]">Class XII – Science</span>
+            </div>
+            <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
+              Science & Mathematics foundations.
             </div>
           </div>
         </div>
@@ -405,12 +693,10 @@ function PortfolioPage() {
       {/* ────────────────────────────────────────────────────────── */}
       {/* CORE STACK SECTION                                         */}
       {/* ────────────────────────────────────────────────────────── */}
-      {/* CORE STACK SECTION (INDUSTRIAL SPEC SHEET)                 */}
-      {/* ────────────────────────────────────────────────────────── */}
       <section id="stack" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
-            Core Stack
+            Core Stack &amp; Skills
           </h2>
           <span className="text-xs font-mono text-[var(--accent-text)]">
             Technical Specification &bull; Production
@@ -418,105 +704,64 @@ function PortfolioPage() {
         </div>
 
         <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
-          {/* Row 1: Frontend & Architecture */}
-          <div className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
-            <div className="sm:col-span-3">
-              <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider">
-                01 / FRONTEND
-              </span>
-              <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
-                Architecture & UI
-              </span>
-            </div>
-            <div className="sm:col-span-5 flex flex-wrap gap-1.5">
-              {['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML5 / CSS3'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)]"
-                >
-                  {tech}
+          {TECH_STACK_CATEGORIES.map((group) => (
+            <div key={group.category} className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
+              <div className="sm:col-span-3">
+                <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider">
+                  {group.number} / {group.category}
                 </span>
-              ))}
+                <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
+                  {group.title}
+                </span>
+              </div>
+              <div className="sm:col-span-5 flex flex-wrap gap-1.5">
+                {group.skills.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
+                {group.description}
+              </div>
             </div>
-            <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
-              Strictly typed component architectures, design systems from Figma, and responsive, accessible layouts.
-            </div>
-          </div>
+          ))}
+        </div>
+      </section>
 
-          {/* Row 2: 3D & Realtime */}
-          <div className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
-            <div className="sm:col-span-3">
-              <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider">
-                02 / GRAPHICS
-              </span>
-              <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
-                3D & Realtime
-              </span>
-            </div>
-            <div className="sm:col-span-5 flex flex-wrap gap-1.5">
-              {['Three.js (WebGL)', 'Socket.IO', 'Framer Motion'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)]"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
-              Interactive 3D canvas customisers with 360&deg; orbital controls, physics motion, and live WebSocket telemetry.
-            </div>
-          </div>
+      {/* ────────────────────────────────────────────────────────── */}
+      {/* FAQ & KNOWLEDGE GRAPH (AEO / AGENT SEARCH OPTIMIZED)       */}
+      {/* ────────────────────────────────────────────────────────── */}
+      <section id="faq" className="mb-14 sm:mb-20 scroll-mt-24">
+        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+          <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
+            FAQ &bull; About Diwakar Sharma
+          </h2>
+          <span className="text-xs font-mono text-[var(--text-muted)]">
+            AEO & Quick Facts
+          </span>
+        </div>
 
-          {/* Row 3: State & Data */}
-          <div className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
-            <div className="sm:col-span-3">
-              <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider">
-                03 / DATA LAYER
-              </span>
-              <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
-                State & Sync
-              </span>
-            </div>
-            <div className="sm:col-span-5 flex flex-wrap gap-1.5">
-              {['TanStack Query', 'Zustand', 'REST APIs'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)]"
-                >
-                  {tech}
+        <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
+          {FAQS.map((item) => (
+            <details
+              key={item.q}
+              className="group py-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex items-center justify-between font-serif text-base sm:text-lg text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors list-none select-none">
+                <span>{item.q}</span>
+                <span className="text-xs font-mono text-[var(--text-muted)] group-open:rotate-45 transition-transform duration-200">
+                  +
                 </span>
-              ))}
-            </div>
-            <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
-              Server-state synchronization, aggressive cache revalidation, and lightweight multi-step client stores.
-            </div>
-          </div>
-
-          {/* Row 4: Runtime & Workflow */}
-          <div className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
-            <div className="sm:col-span-3">
-              <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider">
-                04 / WORKFLOW
-              </span>
-              <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
-                Runtime & Tools
-              </span>
-            </div>
-            <div className="sm:col-span-5 flex flex-wrap gap-1.5">
-              {['Node.js', 'Express', 'Vite', 'Figma', 'Git & GitHub'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)]"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
-              Backend runtime services, lightning-fast bundlers, design handoff in Figma, and Git collaboration workflows.
-            </div>
-          </div>
+              </summary>
+              <p className="mt-3 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+                {item.a}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 
@@ -529,7 +774,7 @@ function PortfolioPage() {
             Contact
           </h2>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            rajparatarang66@email.com
+            {env.email}
           </span>
         </div>
 
@@ -538,20 +783,19 @@ function PortfolioPage() {
             Let&apos;s build together.
           </h3>
           <p className="text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-            Open to full-time engineering roles and select freelance projects. Whether you have an open position or a web project to build, my inbox is open.
+            Open to full-time engineering roles and collaborative projects. Whether you have an open position or a system architecture to discuss, my inbox is open.
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <Button
               type="button"
-              data-cal-link="tarang-rajpara-lgnt7r/30min"
-              data-cal-namespace="30min"
+              data-cal-link={env.calLink}
+              data-cal-namespace={env.calNamespace}
               data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               onClick={async () => {
-                const cal = await getCalApi({ namespace: '30min' })
-                // @ts-expect-error Cal API modal
+                const cal = await getCalApi({ namespace: env.calNamespace })
                 cal('modal', {
-                  calLink: 'tarang-rajpara-lgnt7r/30min',
+                  calLink: env.calLink,
                   config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
                 })
               }}
@@ -591,9 +835,9 @@ function PortfolioPage() {
 
             <Button
               as="a"
-              href="mailto:rajparatarang66@email.com"
+              href={SITE_CONFIG.links.email}
               onClick={() => {
-                window.location.href = 'mailto:rajparatarang66@email.com'
+                window.location.href = SITE_CONFIG.links.email
               }}
               variant="secondary"
               size="md"

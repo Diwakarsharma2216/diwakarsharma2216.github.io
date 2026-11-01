@@ -1,0 +1,73 @@
+# Diwakar Sharma (diwakarsharma) — Full Stack Developer
+
+> Full Stack Developer with 2.5+ years of experience engineering production web applications, commerce workflows, payment integrations, and cloud infrastructure. Currently building a production diamond e-commerce platform at Diamond Atelier.
+
+## Canonical Identity
+- **Full Name**: Diwakar Sharma
+- **Primary Online Handle**: diwakarsharma / diwakarsharma2216
+- **Current Role**: Software Developer at Diamond Atelier (Nov 2025 – Present)
+- **Location**: Surat, Gujarat, India (UTC+5:30)
+- **Portfolio Website**: https://diwakarsharma2216.github.io
+- **GitHub**: https://github.com/Diwakarsharma2216
+- **LinkedIn**: https://www.linkedin.com/in/diwakarsharma-fullstackdev/
+- **Email**: diwakarsharma2216@gmail.com
+- **Book Call**: https://cal.com/diwakar-sharma-ojozup/30min
+
+---
+
+## Technical Competencies (Structured by Discipline)
+- **Languages**: JavaScript (ES6+), TypeScript, Java, C, C++
+- **Frontend**: React.js, Next.js (SSR/SSG/ISR), Redux, Context API, Tailwind CSS, HTML5, CSS3, Responsive Design
+- **Backend**: Node.js, Express.js, REST API Design, JWT Authentication, Socket.IO, Strapi CMS, BullMQ, Sharp
+- **Databases & Cache**: PostgreSQL, MongoDB, Firebase (Firestore, Realtime DB, Auth, Storage), Redis, Typesense
+- **Cloud & DevOps**: AWS (EC2, S3), Docker, Firebase Hosting, Cloudflare R2, Git/GitHub, CI/CD Pipelines, Agile/Scrum
+- **Product & Analytics**: SaaS Product Development, PostHog, CleverTap, SEO Optimization, Payment Gateways (Razorpay, Stripe)
+- **Core CS & Systems**: Data Structures & Algorithms, System Design, OOP, Geolocation APIs, XLSX/CSV Data Export
+
+---
+
+## Featured Production Projects
+
+1. **Diamond Atelier E-Commerce Platform**
+   - **Role**: Software Developer (Diamond Atelier)
+   - **Stack**: Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense.
+   - **Highlights**: Built headless CMS enabling non-technical teams to manage catalog assets; Stripe payments with automated webhook recovery; S3/R2 image pipelines with Sharp compression; Redis caching & BullMQ queues for asynchronous order events.
+
+2. **WhatsApp & Appointment Booking Platform**
+   - **Role**: MERN Stack Developer (Empiric Infotech LLP)
+   - **Stack**: React, Node.js, Express, MongoDB, WAHA WhatsApp API, Stripe.
+   - **Highlights**: Expert scheduling system with multi-tier RBAC; automated employee & customer messaging via WAHA API; integrated Stripe payment processing with refund workflows.
+
+3. **Masai LMS Student Assessment Module**
+   - **Role**: Associate Instructor / Platform Contributor (Masai School)
+   - **Stack**: React.js, Node.js, Express, MongoDB.
+   - **Highlights**: Built student submission evaluation rubrics, progress feedback tracking, and workflow modules serving 200+ students.
+
+4. **AI Technical Interview Platform**
+   - **Role**: Creator & Maintainer (Open Source)
+   - **Stack**: React.js, Node.js, Express.js, MongoDB, OpenAI API.
+   - **Highlights**: Full-stack technical interview simulation platform featuring JWT authentication, automated question generation via OpenAI, and real-time candidate scoring.
+
+5. **Hevenly Heven E-Commerce**
+   - **Role**: Creator & Maintainer (Open Source)
+   - **Stack**: React.js, Redux Toolkit, Node.js, Express.js, MongoDB.
+   - **Highlights**: Responsive multi-category storefront with cart state persistence, dynamic product filters, and secure checkout simulation.
+
+---
+
+## Work Experience
+- **Diamond Atelier** — Software Developer (Nov 2025 – Present | Surat, India, Onsite)
+- **Empiric Infotech LLP** — MERN Stack Developer (Apr 2024 – Oct 2025 | Surat, India, Onsite)
+- **Masai School** — Associate Instructor (Oct 2023 – Mar 2024 | Remote)
+
+---
+
+## Education
+- **Bachelor of Computer Applications (BCA)** — Manipal University Jaipur (2023 – 2026)
+- **Full Stack Web Development & Data Structures** — Masai School (2022 – 2023)
+
+---
+
+## Detailed Briefing
+For the complete technical breakdown, architecture metrics, and deep resume transcript, see:
+- [Full LLM Context](https://diwakarsharma2216.github.io/llms-full.txt)

@@ -1,0 +1,53 @@
+export const env = {
+  // Personal & Site Info
+  siteName: import.meta.env.VITE_SITE_NAME || 'Diwakar Sharma',
+  siteUrl: import.meta.env.VITE_SITE_URL || 'https://diwakarsharma2216.github.io',
+  role: import.meta.env.VITE_ROLE || 'Full Stack Developer',
+  location: import.meta.env.VITE_LOCATION || 'Surat, Gujarat, India',
+  locationDetail:
+    import.meta.env.VITE_LOCATION_DETAIL || 'Surat, Gujarat, India (UTC+5:30)',
+  phone: import.meta.env.VITE_PHONE || '+91 6394842216',
+
+  // Contact & Social Links
+  email: import.meta.env.VITE_EMAIL || 'diwakarsharma2216@gmail.com',
+  githubUrl:
+    import.meta.env.VITE_GITHUB_URL || 'https://github.com/Diwakarsharma2216',
+  linkedinUrl:
+    import.meta.env.VITE_LINKEDIN_URL ||
+    'https://www.linkedin.com/in/diwakarsharma-fullstackdev/',
+  twitterHandle: import.meta.env.VITE_TWITTER_HANDLE || '@diwakarsharma2216',
+
+  // Cal.com Meeting Booking
+  calLink: import.meta.env.VITE_CAL_LINK || 'diwakar-sharma-ojozup/30min',
+  calNamespace: import.meta.env.VITE_CAL_NAMESPACE || '30min',
+
+  // Project Live / Demo Links
+  projectLinks: {
+    diamondAtelier:
+      import.meta.env.VITE_PROJECT_DIAMOND_URL ||
+      'https://github.com/Diwakarsharma2216',
+    whatsappBooking:
+      import.meta.env.VITE_PROJECT_BOOKING_URL ||
+      'https://github.com/Diwakarsharma2216',
+    masaiLms:
+      import.meta.env.VITE_PROJECT_LMS_URL ||
+      'https://github.com/Diwakarsharma2216',
+    aiInterview:
+      import.meta.env.VITE_PROJECT_INTERVIEW_URL ||
+      'https://github.com/Diwakarsharma2216/Interview-Platform',
+    hevenlyHeven:
+      import.meta.env.VITE_PROJECT_HEVENLY_URL ||
+      'https://github.com/Diwakarsharma2216',
+  },
+
+  // SEO & Headings
+  shortTitle:
+    import.meta.env.VITE_SHORT_TITLE ||
+    'Diwakar Sharma (diwakarsharma) — Full Stack Developer',
+  title:
+    import.meta.env.VITE_TITLE ||
+    'Diwakar Sharma (diwakarsharma) — Full Stack Developer | Next.js, Node.js & Cloud Systems',
+  description:
+    import.meta.env.VITE_DESCRIPTION ||
+    'Diwakar Sharma (diwakarsharma / diwakarsharma2216) — Full Stack Developer with 2.5+ years of experience engineering scalable web applications, headless commerce, Stripe payments, BullMQ queues, and cloud deployments. Software Developer at Diamond Atelier.',
+}

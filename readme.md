@@ -1,117 +1,69 @@
-# Tarang Rajpara
+# Diwakar Sharma
 
-> Full Stack Design Engineer
+> Full Stack Developer &bull; Surat, Gujarat, India &bull; [diwakarsharma2216.github.io](https://diwakarsharma2216.github.io)
 
 ---
 
 ## About
 
-Software engineer with 2+ years of experience building production-grade web applications. I work across the full stack — primarily on the frontend, with a strong eye for design and a genuine interest in how systems are built under the hood.
+Full Stack Developer with 2.5+ years of experience building and shipping web applications using Next.js, React, Node.js, and Express. Strong in backend development and commerce workflows, including secure authentication, payments, background jobs, and cloud deployment. Currently building a production diamond e-commerce platform at **Diamond Atelier**, owning feature requirements and team delivery.
 
-Currently building **Diamond Forest** at Diamond Atelier.
+---
+
+## Technical Skills
+
+- **Languages:** JavaScript (ES6+), TypeScript, Java, C, C++
+- **Frontend:** React.js, Next.js (SSR/SSG/ISR), Redux, Context API, Tailwind CSS, HTML5, CSS3, Responsive Design
+- **Backend:** Node.js, Express.js, REST API Design, JWT Authentication, Socket.IO, Strapi CMS, BullMQ, Sharp
+- **Databases & Cache:** PostgreSQL, MongoDB, Firebase (Firestore, Realtime DB, Auth, Storage), Redis, Typesense
+- **Cloud & DevOps:** AWS (EC2, S3), Docker, Firebase Hosting, Cloudflare R2, Git/GitHub, CI/CD Pipelines, Agile/Scrum
+- **Product & Analytics:** SaaS Product Development, PostHog, CleverTap, SEO Optimization, Payment Gateways (Razorpay, Stripe)
+- **Core CS:** Data Structures & Algorithms, OOP, System Design, Geolocation APIs, XLSX/CSV Export
+
+---
+
+## Work Experience
+
+**Diamond Atelier** — Software Developer *(Nov 2025 – Present)*
+- Own feature delivery end to end: requirements, task planning, team coordination, and pre-release verification.
+- Built a headless CMS enabling a six-person content team to manage website content and images independently.
+- Integrated payments with webhook handling, verification, and failure recovery for reliable order processing.
+- Designed authentication, authorization, and RBAC for admin, staff, and customer roles.
+- Implemented S3-compatible media uploads with Sharp image compression for faster page loads.
+- Added Redis caching and BullMQ background queues to speed up content delivery and offload heavy tasks.
+- Manage Docker setup, server configuration, and CI/CD pipelines for deployments.
+
+**Empiric Infotech LLP** — MERN Stack Developer *(Apr 2024 – Oct 2025)*
+- Implemented end-to-end Stripe payment processing, including refund handling.
+- Integrated the WAHA API into an internal WhatsApp platform for targeted employee and group messaging.
+- Developed REST APIs for an expert appointment-booking system covering availability, scheduling, and bookings.
+- Built an admin-controlled task module with developer-level access control.
+
+**Masai School** — Associate Instructor & Assessment Assistant *(Oct 2023 – Mar 2024)*
+- Trained 200+ students in JavaScript, React.js, and Node.js across frontend and backend fundamentals.
+- Built the Learning Management System's student review module for submissions, feedback, and review management.
+- Designed assignments and lessons, and assessed student progress.
+- Conducted mock full-stack interviews with personalized feedback for developer-role readiness.
 
 ---
 
 ## Education
 
 | Year | Institution | Qualification |
-|------|-------------|---------------|
-| 2019 – 2022 | Bhagwan Mahavir University | Diploma |
-| 2023 – 2025 | Sarvajanik University | Bachelor's Degree |
-
----
-
-## Technical Skills
-
-- **Core & Languages:** TypeScript, JavaScript, HTML5, CSS3
-- **Frontend & State:** React, Next.js, TanStack Query, Zustand, Tailwind CSS, Shadcn UI
-- **Libraries & Integrations:** Three.js, Framer Motion, Socket.IO, Stripe, Typesense, Vite
-- **Backend & Tools:** Node.js, Express, Figma, Git & GitHub
-
----
-
-## Work Experience
-
-**Diamond Atelier** — Software Engineer *(2025 – Present)*
-
-- Sole frontend engineer (~90% of all frontend work) on Diamond Forest, a large-scale jewellery ecommerce platform
-- Built storefront, product listing & detail pages, cart, wishlist, **Stripe** checkout, and an interactive 3D ring viewer (**Three.js**)
-- Implemented frontend directly from Figma designs with responsive layouts and performance optimisations
-
-**Freelance** *(2024 – 2025)*
-
-- Built and shipped 4 production web applications across dashboards, marketplaces, and brand sites
-- Implemented user interfaces directly from Figma designs into clean, maintainable production code
-
----
-
-## Projects
-
-### 💎 Diamond Forest *(Diamond Atelier — Ongoing)*
-
-Large-scale jewellery ecommerce platform built with **Next.js** and **TypeScript**. Sole frontend engineer on the project.
-
-- Built full storefront flow: product listings, detail pages, cart, wishlist, and **Stripe** checkout
-- Developed an interactive 3D ring viewer with real-time customisation using **Three.js**
-- Integrated fast product search and facet filtering powered by **Typesense**
-- Managed server state, caching, and data synchronisation using **TanStack Query**
-- Implemented responsive layouts directly from Figma designs with basic SEO and performance optimisations
-
----
-
-### 💰 Torin Wealth *(Freelance)*
-
-Brand presence website for a wealth management firm, built with **Next.js** and **TypeScript**.
-
-- Designed in **Figma** and engineered interactive micro-animations using **Framer Motion**
-- Structured lightweight state with **Zustand** and asynchronous queries with **TanStack Query**
-- Implemented on-page SEO improvements that directly drove measurable lead growth for the client
-
----
-
-### 🎮 AKA Gaming Dashboard *(Freelance)*
-
-Real-time content management dashboard for a gaming platform, built with **React** and **TypeScript**.
-
-- Engineered live data feeds for player activities and game content updates via **Socket.IO**
-- Built interactive charts, data visualisations, and role-based access control
-- Handled client state with **Zustand** and styled UI components using **Shadcn UI**
-
----
-
-### 📱 Phone Win Dashboard *(Freelance)*
-
-Comprehensive admin panel for the Phone Win app, built with **React** and **TypeScript**.
-
-- Implemented 50+ CRUD workflows for user management, reward programs, and campaign administration
-- Built a real-time customer support live chat system powered by **Socket.IO**
-- Handled complex asynchronous data fetching, caching, and mutations using **TanStack Query**
-- Styled responsive, accessible tables and modals with **Shadcn UI**
-
----
-
-### 🛒 Account Mart *(Freelance)*
-
-End-to-end frontend for a digital account marketplace, built with **React**, **Vite**, and **TypeScript**.
-
-- Built complete marketplace user flows: account listing creation, categorized browsing, detail views, and purchase flow
-- Managed global cart and multi-step transaction states using **Zustand**
-- Implemented responsive UI directly from provided Figma designs
-
----
-
-## Open To Work
-
-Open to **full-time roles** and **freelance projects**. Feel free to reach out.
+| :--- | :--- | :--- |
+| 2023 – 2026 | Manipal University Jaipur | Bachelor of Computer Applications (BCA) |
+| 2022 – 2023 | Masai School | Full Stack Web Development (NSDC Certified) |
+| 2021 – 2022 | Mahatma Gandhi Inter College | Class XII – Science |
 
 ---
 
 ## Contact
 
-- **GitHub**: [github.com/tnrajpara](https://github.com/tnrajpara)
-- **LinkedIn**: [linkedin.com/in/tarang-rajpara-330102379](https://www.linkedin.com/in/tarang-rajpara-330102379)
-- **Email**: rajparatarang66@email.com
+- **Email**: [diwakarsharma2216@gmail.com](mailto:diwakarsharma2216@gmail.com)
+- **Phone**: +91 6394842216
+- **GitHub**: [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **LinkedIn**: [linkedin.com/in/diwakarsharma-fullstackdev](https://www.linkedin.com/in/diwakarsharma-fullstackdev/)
 
 ---
 
-© 2026 Tarang Rajpara. All rights reserved.
+© 2026 Diwakar Sharma. All rights reserved.

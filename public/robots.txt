@@ -1,9 +1,50 @@
-# Allow all crawlers
+# Diwakar Sharma (diwakarsharma) — robots.txt
+# Portfolio & AI Agent Crawling Directives
+
 User-agent: *
 Allow: /
 
+# OpenAI / ChatGPT Search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini / AI Search
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (Foundation model datasets)
+User-agent: CCBot
+Allow: /
+
+# Microsoft Bing Copilot
+User-agent: Bingbot
+Allow: /
+
 # Host
-Host: https://tarang.space
+Host: https://diwakarsharma2216.github.io
 
 # Sitemap
-Sitemap: https://tarang.space/sitemap.xml
+Sitemap: https://diwakarsharma2216.github.io/sitemap.xml
+
+# LLM Agent Information (llms.txt standard)
+# https://llmstxt.org
+# Concise agent summary: https://diwakarsharma2216.github.io/llms.txt
+# Comprehensive context: https://diwakarsharma2216.github.io/llms-full.txt

@@ -9,13 +9,11 @@
   <rect width="64" height="64" rx="16" fill="#0a0a0a" />
   <rect width="62" height="62" x="1" y="1" rx="15" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none" />
   
-  <!-- Stylized Geometric T & R monogram -->
-  <!-- Top bar of T -->
-  <path d="M14 20 H34" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" />
-  <!-- Stem of T -->
-  <path d="M24 20 V44" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" />
+  <!-- Stylized Geometric D & S monogram for Diwakar Sharma -->
+  <!-- Stem and loop of D -->
+  <path d="M16 20 V44" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M16 20 H23 C31 20 34.5 24.5 34.5 32 C34.5 39.5 31 44 23 44 H16" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
   
-  <!-- Modern angled accent for R -->
-  <path d="M35 27 C35 22.5 39 19 44 19 C48.5 19 51 22 51 25.5 C51 29 48 32 44 32 H36" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M43 32 L51 44" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linecap="round" />
+  <!-- Modern fluid S in vibrant brand gradient -->
+  <path d="M47.5 25 C47 21 44 19.5 40.5 19.5 C36 19.5 33.5 22.5 33.5 26 C33.5 30 36.5 31.5 40.5 32.5 C45 33.5 47.5 35.5 47.5 39.5 C47.5 43.5 44.5 44.5 40.5 44.5 C36 44.5 33 42 32.5 38" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
 </svg>
