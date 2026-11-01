@@ -30,3 +30,4 @@ try {
   console.error('Deployment failed:', err)
   process.exit(1)
 }
+
