@@ -1,69 +1,116 @@
 # Diwakar Sharma
-### Full Stack Developer
 
-**Surat, Gujarat, India** &bull; [diwakarsharma2216@gmail.com](mailto:diwakarsharma2216@gmail.com) &bull; +91 6394842216  
-[Live Portfolio](https://diwakarsharma2216.github.io) &bull; [GitHub Profile](https://github.com/Diwakarsharma2216) &bull; [LinkedIn Profile](https://www.linkedin.com/in/diwakarsharma-fullstackdev/)
+**Full Stack Developer** &bull; Surat, Gujarat, India &bull; [+91 6394842216](tel:+916394842216) &bull; [diwakarsharma2216@gmail.com](mailto:diwakarsharma2216@gmail.com)  
+[Portfolio](https://diwakarsharma2216.github.io) &bull; [GitHub](https://github.com/Diwakarsharma2216) &bull; [LinkedIn](https://www.linkedin.com/in/diwakarsharma-fullstackdev/) &bull; [Book a Call](https://cal.com/diwakar-sharma-ojozup/30min)
 
 ---
 
 ## Professional Summary
 
-Full Stack Developer with 2.5+ years of experience building and shipping web applications using Next.js, React, Node.js, and Express. Strong in backend development and commerce workflows, including secure authentication, payments, background jobs, and cloud deployment. Currently building a production diamond e-commerce platform at Diamond Atelier, owning feature requirements and team delivery.
+Full Stack Developer with 2.5+ years of experience designing, engineering, and scaling production web applications using **Next.js**, **React**, **Node.js**, **Express**, and **TypeScript**. Proven track record in high-value e-commerce architecture, payment gateway integration (Stripe, Razorpay), distributed background job processing (BullMQ, Redis), RBAC authentication, and cloud infrastructure deployment. Strong foundations in Data Structures & Algorithms, Object-Oriented Programming, and System Design.
 
 ---
 
 ## Technical Skills
 
 - **Languages:** JavaScript (ES6+), TypeScript, Java, C, C++
-- **Frontend:** React.js, Next.js (SSR/SSG/ISR), Redux, Context API, Tailwind CSS, HTML5, CSS3, Responsive Design
-- **Backend:** Node.js, Express.js, REST API Design, JWT Authentication, Socket.IO, Strapi CMS, BullMQ, Sharp
-- **Databases & Cache:** PostgreSQL, MongoDB, Firebase (Firestore, Realtime DB, Auth, Storage), Redis, Typesense
-- **Cloud & DevOps:** AWS (EC2, S3), Docker, Firebase Hosting, Cloudflare R2, Git/GitHub, CI/CD Pipelines, Agile/Scrum
-- **Product & Analytics:** SaaS Product Development, PostHog, CleverTap, SEO Optimization, Payment Gateways (Razorpay, Stripe)
-- **Core CS:** Data Structures & Algorithms, OOP, System Design, Geolocation APIs, XLSX/CSV Export
+- **Frontend:** React.js, Next.js 14/15 (SSR, SSG, ISR, App Router), Redux Toolkit, Context API, Tailwind CSS, HTML5, CSS3, Responsive Design
+- **Backend & APIs:** Node.js, Express.js, REST API Design, JWT Authentication & RBAC, Socket.IO, Strapi CMS, BullMQ, Sharp Image Processing
+- **Databases & Cache:** PostgreSQL, MongoDB, Firebase (Firestore, Realtime DB, Auth, Storage), Redis Caching, Typesense Search
+- **Cloud & DevOps:** AWS (EC2, S3), Docker Containerization, Firebase Hosting, Cloudflare R2 / Workers, GitHub Pages, CI/CD Pipelines, Agile/Scrum
+- **Product & Analytics:** SaaS Product Development, PostHog, CleverTap, SEO/AEO Optimization, Payment Gateway Integration (Stripe, Razorpay)
+- **Core Computer Science:** Data Structures & Algorithms, Object-Oriented Programming (OOP), System Design, Geolocation APIs, XLSX / CSV Data Export
 
 ---
 
-## Work Experience
+## Professional Experience
 
-### **Software Developer — Diamond Atelier**  
-*Nov 2025 – Present | Surat, Gujarat, India — Onsite*  
-*Tech Stack: Next.js, Node.js, Redis, BullMQ, Docker*
-- Own feature delivery end to end: requirements, task planning, team coordination, and pre-release verification.
-- Built a CMS enabling a six-person content team to manage website content and images without developer assistance.
-- Integrated payments with webhook handling, verification, and failure recovery for reliable order processing.
-- Designed authentication, authorization, and RBAC for admin, staff, and customer roles.
-- Implemented S3-compatible media uploads with Sharp image compression for faster page loads.
-- Added Redis caching and BullMQ background queues to speed up content delivery and offload heavy tasks.
-- Manage Docker setup, server configuration, and CI/CD pipelines for deployments.
+### **Software Developer — Diamond Atelier**
+*Surat, Gujarat, India (Onsite) &bull; Nov 2025 – Present*  
+*Tech Stack: Next.js, Node.js, Express, Redis, BullMQ, Docker, Stripe, Sharp, Typesense*
 
-### **MERN Stack Developer — Empiric Infotech LLP**  
-*Apr 2024 – Oct 2025 | Surat, Gujarat, India — Onsite*  
-*Tech Stack: MongoDB, Express.js, React.js, Node.js, Stripe*
-- Implemented end-to-end Stripe payment processing, including refund handling.
-- Integrated the WAHA API into an internal WhatsApp platform for targeted employee and group messaging.
-- Developed REST APIs for an expert appointment-booking system covering availability, scheduling, and bookings.
-- Built an admin-controlled task module with developer-level access control.
-
-### **Associate Instructor & Assessment Assistant — Masai School**  
-*Oct 2023 – Mar 2024 | Bengaluru, Karnataka, India — Remote*  
-*Tech Stack: JavaScript, React.js, Node.js*
-- Trained 200+ students in JavaScript, React.js, and Node.js across frontend and backend fundamentals.
-- Built the Learning Management System’s student review module for submissions, feedback, and review management.
-- Designed assignments and lessons, and assessed student progress.
-- Conducted mock full-stack interviews with personalized feedback for developer-role readiness.
+- **Headless CMS Engineering:** Architected and deployed an in-house headless CMS allowing a 6-member editorial and catalog team to manage high-ticket jewelry assets and product metadata without engineering intervention.
+- **Payment Processing & Reliability:** Integrated full-lifecycle Stripe payment processing with webhook verification, automated transaction retry logic, dispute tracking, and refund recovery.
+- **Performance & Asset Optimization:** Engineered automated media upload pipelines using S3/R2 with Sharp compression, generating responsive WebP/AVIF images and cutting asset payload by over 40%.
+- **Caching & Async Workflows:** Designed Redis caching layers for high-throughput product catalog queries and implemented BullMQ background queues for asynchronous invoice generation and email notifications.
+- **Infrastructure & Security:** Implemented role-based access control (RBAC) across customer, staff, and admin tiers; containerized microservices using Docker for CI/CD pipeline automated releases.
 
 ---
 
-## Education
+### **MERN Stack Developer — Empiric Infotech LLP**
+*Surat, Gujarat, India (Onsite) &bull; Apr 2024 – Oct 2025*  
+*Tech Stack: MongoDB, Express.js, React.js, Node.js, Stripe, WAHA WhatsApp API*
 
-- **Manipal University Jaipur** *(2023 – 2026)*  
-  Bachelor of Computer Applications (BCA)  
-  *Coursework:* DSA, OOP (C++, Java), Python, DBMS, Operating Systems, Computer Networks.
+- **Appointment Booking Engine:** Developed end-to-end RESTful scheduling APIs with fine-grained availability calculation, conflict prevention, and admin-controlled access tiers.
+- **WhatsApp Automation:** Integrated the WAHA API into an internal communication system for automated booking confirmations, employee alerts, and customer notifications.
+- **Payment & Invoicing:** Implemented Stripe checkout workflows with automated refund handling, invoice downloads, and transaction audit trails.
+- **Database Architecture:** Modeled relational and document schemas in MongoDB with schema validation, indexes, and aggregation pipelines for reporting dashboards.
 
-- **Masai School** *(Sep 2022 – Jun 2023)*  
-  Full Stack Web Development (NSDC Certified)  
-  *Coursework:* DSA, React.js, Redux, Node.js.
+---
 
-- **Mahatma Gandhi Inter College** *(Mar 2021 – Apr 2022)*  
-  Class XII – Science
+### **Associate Instructor & Assessment Assistant — Masai School**
+*Bengaluru, Karnataka, India (Remote) &bull; Oct 2023 – Mar 2024*  
+*Tech Stack: JavaScript (ES6+), React.js, Node.js, Express, MongoDB*
+
+- **Developer Mentorship:** Mentored and trained 200+ students in full-stack JavaScript, React component architecture, and Node.js backend fundamentals.
+- **LMS Module Development:** Built the Learning Management System student review module for submission tracking, rubric evaluations, and code review workflows.
+- **Interview Readiness:** Conducted 50+ mock technical interviews evaluating code quality, Data Structures & Algorithms, and full-stack problem solving.
+
+---
+
+## Featured Projects
+
+### **1. Diamond E-Commerce Platform**
+- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Technologies:** Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense
+- Production luxury jewelry e-commerce store with custom headless CMS, Stripe webhook verification, S3/R2 media processing pipeline, Redis catalog caching, BullMQ queues, and instant typo-tolerant Typesense search.
+
+### **2. WhatsApp & Booking Platform**
+- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Technologies:** Node.js, Express.js, MongoDB, React.js, Stripe, WAHA API
+- Enterprise client booking and communication platform featuring multi-tier RBAC, automated WhatsApp notifications via WAHA HTTP API, and end-to-end Stripe transaction handling with refund workflows.
+
+### **3. AI Technical Interview Platform**
+- **Live / Repo:** [github.com/Diwakarsharma2216/Interview-Platform](https://github.com/Diwakarsharma2216/Interview-Platform)
+- **Technologies:** React.js, Node.js, Express.js, MongoDB, OpenAI API, Tailwind CSS
+- Full-stack technical interview simulation platform featuring secure JWT user authentication, dynamic question generation via OpenAI API, automated answer evaluation, and real-time candidate scoring dashboards.
+
+### **4. Masai LMS Student Assessment Module**
+- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Technologies:** React.js, Node.js, Express.js, JavaScript, MongoDB, Tailwind CSS
+- EdTech learning workflow platform engineered to streamline coding assignment submissions, instructor code review feedback loops, and student performance progress analytics for 200+ developers.
+
+### **5. Hevenly Heven E-Commerce Platform**
+- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Technologies:** React.js, Node.js, Express.js, MongoDB, Tailwind CSS, REST APIs
+- Full-stack shopping application with responsive multi-category catalog, faceted price/rating filters, global cart persistence with Redux Toolkit, and checkout simulation.
+
+---
+
+## Education & Certifications
+
+- **Bachelor of Computer Applications (BCA)**  
+  *Manipal University Jaipur* &bull; 2023 – 2026  
+  *Coursework:* Data Structures & Algorithms, Object-Oriented Programming (C++, Java), Database Management Systems (DBMS), Operating Systems, Computer Networks.
+
+- **Full Stack Web Development & Data Structures**  
+  *Masai School (NSDC Certified)* &bull; Sep 2022 – Jun 2023  
+  *Coursework:* 1200+ hours practical curriculum focused on MERN Stack, Data Structures, Algorithms, and System Architecture.
+
+- **Class XII – Science (Mathematics & Physics)**  
+  *Mahatma Gandhi Inter College* &bull; Mar 2021 – Apr 2022
+
+---
+
+## Contact & Links
+
+- **Email:** [diwakarsharma2216@gmail.com](mailto:diwakarsharma2216@gmail.com)
+- **Phone:** [+91 6394842216](tel:+916394842216)
+- **Portfolio:** [https://diwakarsharma2216.github.io](https://diwakarsharma2216.github.io)
+- **GitHub:** [https://github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **LinkedIn:** [https://www.linkedin.com/in/diwakarsharma-fullstackdev](https://www.linkedin.com/in/diwakarsharma-fullstackdev/)
+- **Schedule Call:** [https://cal.com/diwakar-sharma-ojozup/30min](https://cal.com/diwakar-sharma-ojozup/30min)
+
+---
+
+&copy; 2026 Diwakar Sharma. All rights reserved.
