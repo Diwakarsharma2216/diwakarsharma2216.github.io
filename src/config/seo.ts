@@ -68,7 +68,7 @@ export const structuredData = {
       knowsAbout: [
         'TypeScript',
         'JavaScript (ES6+)',
-        'React.js (v19)',
+        'React.js',
         'Next.js',
         'Tailwind CSS',
         'Node.js',
@@ -82,7 +82,6 @@ export const structuredData = {
         'Docker',
         'Stripe Payments & Webhooks',
         'Sharp Media Pipeline',
-        'Typesense Full-Text Search',
         'Git & GitHub',
         'Data Structures & Algorithms',
         'System Design',
@@ -205,7 +204,7 @@ export const structuredData = {
           name: 'What technologies do I specialize in?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'I specialize in Next.js, React (v19), TypeScript, JavaScript, Node.js, Express.js, MongoDB, PostgreSQL, Redis caching, BullMQ background queues, Docker, and Stripe payment processing.',
+            text: 'I specialize in Next.js, React.js, TypeScript, JavaScript, Node.js, Express.js, MongoDB, PostgreSQL, Redis caching, BullMQ background queues, Docker, and Stripe payment processing.',
           },
         },
         {

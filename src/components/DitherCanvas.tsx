@@ -251,6 +251,8 @@ export default function DitherCanvas() {
     >
       <canvas
         ref={canvasRef}
+        role="img"
+        aria-label="Interactive generative dither art canvas"
         className="w-full h-full block cursor-crosshair"
       />
     </div>

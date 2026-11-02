@@ -6,6 +6,8 @@
 - **Full Name**: Diwakar Sharma
 - **Primary Online Handle**: diwakarsharma / diwakarsharma2216
 - **Current Role**: Software Developer at Diamond Atelier (Nov 2025 – Present)
+- **Availability**: Notice period 60 days; open to relocation in India and remote roles worldwide
+- **Roles Sought**: Software Engineer / Full Stack Developer
 - **Location**: Surat, Gujarat, India (UTC+5:30)
 - **Portfolio Website**: https://diwakarsharma2216.github.io
 - **GitHub**: https://github.com/Diwakarsharma2216
@@ -16,35 +18,43 @@
 
 ---
 
-## Technical Competencies
+## Technical Competencies (Defensible in Technical Interviews)
 
-- **Languages**: JavaScript (ES6+), TypeScript, Java, C, C++
-- **Frontend**: React.js, Next.js (SSR/SSG/ISR), Redux, Context API, Tailwind CSS, HTML5, CSS3, Responsive Design
-- **Backend**: Node.js, Express.js, REST API Design, JWT Authentication, Socket.IO, Strapi CMS, BullMQ, Sharp
-- **Databases & Cache**: PostgreSQL, MongoDB, Firebase (Firestore, Realtime DB, Auth, Storage), Redis, Typesense
-- **Cloud & DevOps**: AWS (EC2, S3), Docker, Firebase Hosting, Cloudflare R2, Git/GitHub, CI/CD Pipelines, Agile/Scrum
-- **Product & Analytics**: SaaS Product Development, PostHog, CleverTap, SEO Optimization, Payment Gateways (Razorpay, Stripe)
-- **Core CS & Systems**: Data Structures & Algorithms, System Design, OOP, Geolocation APIs, XLSX/CSV Data Export
+- **Strong (Daily Production & Architecture)**: TypeScript, JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, Tailwind CSS, RESTful API Design, HTML5, CSS3
+- **Working (Production Delivery & Systems)**: Redis Caching, BullMQ Job Queues, Docker Containerization, MongoDB, PostgreSQL, Stripe Integration & Webhooks, Sharp Image Pipeline, Vite, Git & GitHub, Postman, JWT & RBAC
+- **Familiar (Foundational & Academic)**: Java, C, C++, Firebase, Typesense, WebSockets (Socket.IO), Linux / Bash
 
 ---
 
-## Work Experience & Production Projects
+## Work Experience & Production Systems
 
-1. **Diamond E-Commerce Platform** &bull; *Diamond Atelier*
-   - **Role**: Software Developer (Nov 2025 – Present)
-   - **Stack**: Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense
+1. **Diamond E-Commerce Platform** • *Diamond Atelier*
+   - **Period**: Nov 2025 – Present • Surat (Onsite)
+   - **Role**: Software Developer (Core Platform Delivery)
    - **Live**: https://www.diamondforest.com/
-   - **Highlights**: Built headless CMS enabling a six-person content team to manage catalog assets without developer intervention; Stripe payments with automated webhook recovery; S3/R2 image pipelines with Sharp compression; Redis caching & BullMQ queues for asynchronous order events.
+   - **Key Achievements**:
+     - I own requirements end to end and distribute work among teammates.
+     - Built headless CMS used by a 6-person content and graphics team to manage catalog assets independently without developer assistance.
+     - Built media pipeline serving images from backend, compressed with Sharp (measured 82.3% size reduction) and cached in Redis.
+     - Integrated Stripe payment gateway with cryptographic HMAC webhook verification and BullMQ queues for idempotent order processing.
+     - Containerized application services with Docker and automated CI/CD deployment pipelines.
 
-2. **WhatsApp & Appointment Booking Platform** &bull; *Empiric Infotech LLP*
-   - **Role**: MERN Stack Developer (Apr 2024 – Oct 2025)
-   - **Stack**: Node.js, Express.js, MongoDB, React.js, Stripe, WAHA API
-   - **Highlights**: Built scheduling REST APIs with conflict-free slot calculation; automated WhatsApp notifications via WAHA API; integrated Stripe payment processing with refund workflows.
+2. **WhatsApp & Appointment Booking Platform** • *Empiric Infotech LLP*
+   - **Period**: Apr 2024 – Oct 2025 • Surat (Onsite)
+   - **Role**: MERN Stack Developer
+   - **Nature**: Private Enterprise Platform
+   - **Key Achievements**:
+     - Built scheduling REST APIs with conflict-free slot calculation algorithms.
+     - Integrated WAHA WhatsApp HTTP API into internal workflow automation for automated notifications and group messaging.
+     - Integrated Stripe checkout workflows with automated customer refund handling.
 
-3. **Masai LMS Student Assessment Module** &bull; *Masai School*
-   - **Role**: Associate Instructor & LMS Engineer (Oct 2023 – Mar 2024)
-   - **Stack**: React.js, Node.js, Express.js, JavaScript, MongoDB, Tailwind CSS
-   - **Highlights**: Built student submission review module, rubric scoring, and progress feedback tracking serving 200+ students.
+3. **Masai LMS Student Assessment Module** • *Masai School*
+   - **Period**: Oct 2023 – Mar 2024 • Remote
+   - **Role**: Associate Instructor & LMS Engineer
+   - **Nature**: Private Educational Platform
+   - **Key Achievements**:
+     - Built student submission review module, rubric scoring, and mentor feedback tracking.
+     - Mentored and trained 200+ students in full-stack JavaScript, React, and Node.js fundamentals, conducting 50+ mock technical interviews.
 
 ---
 
@@ -53,18 +63,23 @@
 1. **Drone E-Commerce Platform**
    - **Live**: https://dji-air.vercel.app/
    - **Stack**: React.js, Vite, Tailwind CSS, Razorpay, Node.js, REST APIs
-   - **Highlights**: Modern drone e-commerce storefront for DJI aerial systems with interactive hardware showcases, dynamic specifications, and Razorpay checkout.
+   - **Highlights**: Drone e-commerce storefront for DJI aerial systems with interactive hardware showcases, dynamic specifications comparison, cart management, and Razorpay payment checkout.
 
 2. **Hevenly Heven E-Commerce Platform**
    - **Live**: https://hev-en.vercel.app/
    - **Repository**: https://github.com/Diwakarsharma2216/overrated-chicken-3237
    - **Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
-   - **Highlights**: Full-stack online shopping platform with faceted search, Redux Toolkit cart persistence, and RESTful APIs.
+   - **Highlights**: Full-stack shopping platform with faceted search, Redux Toolkit cart persistence, and RESTful APIs.
+
+3. **[AI Project: Real-Time Technical Interview Evaluator]**
+   - **Status**: Upcoming AI Project Slot
+   - **Stack**: Next.js, OpenAI / Gemini API, Node.js, WebSockets, Tailwind CSS
+   - **Highlights**: Real-time technical interview simulator that generates dynamic coding challenges, evaluates algorithmic complexity via LLM prompts, and scores candidates on structured rubrics.
 
 ---
 
 ## Education
 
-- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (2023 – 2026)
-- **Full Stack Web Development & Data Structures** &bull; Masai School (Sep 2022 – Jun 2023)
-- **Class XII – Science (Mathematics & Physics)** &bull; Mahatma Gandhi Inter College (Mar 2021 – Apr 2022)
+- **Bachelor of Computer Applications (BCA)** • Manipal University Jaipur (2023 – 2026) — *Online (while working full-time)*
+- **Full Stack Web Development (NSDC Certified)** • Masai School (Sep 2022 – Jun 2023)
+- **Class XII – Science** • Mahatma Gandhi Inter College (Mar 2021 – Apr 2022)

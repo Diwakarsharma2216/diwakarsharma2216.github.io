@@ -7,6 +7,11 @@ import DitherCanvas from '../components/DitherCanvas'
 
 import { SITE_CONFIG } from '../config/seo'
 import { env } from '../config/env'
+import {
+  WORK_TIMELINE,
+  PERSONAL_PROJECTS,
+  EDUCATION_TIMELINE,
+} from '../config/timeline'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -41,126 +46,116 @@ export const Route = createFileRoute('/')({
   component: PortfolioPage,
 })
 
-const TECH_STACK_CATEGORIES = [
+// ─────────────────────────────────────────────────────────────────────────────
+// SKILL TIERS (Strong / Working / Familiar — Defensible in Interviews)
+// ─────────────────────────────────────────────────────────────────────────────
+const SKILL_TIERS = [
   {
-    number: '01',
-    category: 'LANGUAGES',
-    title: 'Core Programming',
-    skills: ['JavaScript (ES6+)', 'TypeScript', 'Java', 'C', 'C++'],
+    tier: 'Strong',
+    badge: 'Daily Production & Deep Architecture',
     description:
-      'Strong algorithmic foundations with deep production expertise in TypeScript, JavaScript (ES6+), Java, and system concepts in C/C++.',
-  },
-  {
-    number: '02',
-    category: 'FRONTEND',
-    title: 'UI & Web Architecture',
+      'Technologies I use daily in production, have built core commercial systems with, and can defend in depth in any technical interview.',
     skills: [
+      'TypeScript',
+      'JavaScript (ES6+)',
       'React.js',
-      'Next.js (SSR/SSG/ISR)',
-      'Redux',
-      'Context API',
-      'Tailwind CSS',
-      'HTML5',
-      'CSS3',
-      'Responsive Design',
-    ],
-    description:
-      'Production-grade user interfaces with Next.js rendering strategies, predictive state management, accessible component architectures, and responsive design.',
-  },
-  {
-    number: '03',
-    category: 'BACKEND',
-    title: 'APIs & Services',
-    skills: [
+      'Next.js',
       'Node.js',
       'Express.js',
-      'REST API Design',
-      'JWT Authentication',
-      'Socket.IO',
-      'Strapi CMS',
-      'BullMQ',
-      'Sharp',
+      'Tailwind CSS',
+      'RESTful API Design',
+      'HTML5 / CSS3',
     ],
-    description:
-      'High-throughput RESTful endpoints, robust JWT/RBAC security, real-time WebSockets, headless CMS integrations, and distributed background processing.',
   },
   {
-    number: '04',
-    category: 'DATABASES & CACHE',
-    title: 'Storage & Search',
+    tier: 'Working',
+    badge: 'Production Delivery & Systems',
+    description:
+      'Technologies and infrastructure tools I have deployed, configured, and maintained in production workflows and backend architectures.',
     skills: [
-      'PostgreSQL',
-      'MongoDB',
-      'Firebase (Firestore & Realtime)',
       'Redis',
-      'Typesense',
-    ],
-    description:
-      'Relational and NoSQL schema design, real-time cloud data sync, aggressive Redis caching, and instant typo-tolerant full-text search indexing.',
-  },
-  {
-    number: '05',
-    category: 'CLOUD & DEVOPS',
-    title: 'Infrastructure & CI/CD',
-    skills: [
-      'AWS (EC2, S3)',
+      'BullMQ',
       'Docker',
-      'Firebase Hosting',
-      'Cloudflare R2',
+      'MongoDB',
+      'PostgreSQL',
+      'Stripe Integration',
+      'Sharp Image Pipeline',
+      'Vite',
       'Git & GitHub',
-      'CI/CD Pipelines',
-      'Agile / Scrum',
+      'Postman',
+      'JWT & RBAC',
     ],
-    description:
-      'Scalable cloud infrastructure on AWS and Cloudflare, containerized services with Docker, automated deployment pipelines, and agile delivery.',
   },
   {
-    number: '06',
-    category: 'PRODUCT & COMMERCE',
-    title: 'SaaS & Analytics',
-    skills: [
-      'SaaS Development',
-      'Stripe',
-      'Razorpay',
-      'PostHog',
-      'CleverTap',
-      'SEO Optimization',
-    ],
+    tier: 'Familiar',
+    badge: 'Foundational & Academic',
     description:
-      'Payment gateway integrations with automated webhook recovery, event-driven user telemetry with PostHog and CleverTap, and high-ranking SEO/AEO.',
-  },
-  {
-    number: '07',
-    category: 'CORE CS & SYSTEMS',
-    title: 'Computer Science',
+      'Technologies studied academically, used in earlier coursework or prototypes, and capable of picking up quickly as needed.',
     skills: [
-      'Data Structures & Algorithms',
-      'System Design',
-      'OOP',
-      'Geolocation APIs',
-      'XLSX / CSV Export',
+      'Java',
+      'C',
+      'C++',
+      'Firebase',
+      'Typesense',
+      'WebSockets (Socket.IO)',
+      'Linux / Bash',
     ],
-    description:
-      'Robust algorithmic problem solving, object-oriented design patterns, distributed architecture, geospatial mapping, and high-volume data export utilities.',
   },
 ]
 
+// ─────────────────────────────────────────────────────────────────────────────
+// HOW I WORK (Disciplines & Engineering Habits)
+// ─────────────────────────────────────────────────────────────────────────────
+const WORK_HABITS = [
+  {
+    title: 'Testing & Verification',
+    badge: 'Code Quality',
+    description:
+      'Unit test core business logic and API contracts with Jest and Supertest. Test payment webhooks, queue state transitions, and edge cases with mock payloads before staging or production releases.',
+  },
+  {
+    title: 'Code Review & Git Hygiene',
+    badge: 'Collaboration',
+    description:
+      'Commit small, single-purpose branches with descriptive PR descriptions and architectural rationale. Enforce strict type-checking (tsc --noEmit), linting, and branch protection prior to merging.',
+  },
+  {
+    title: 'Monitoring & Observability',
+    badge: 'Reliability',
+    description:
+      'Implement structured request logging with correlation IDs, health-check endpoints, and queue metrics via BullMQ dashboards to spot bottlenecks and API latency spikes proactively.',
+  },
+  {
+    title: 'Security & Defensive Habits',
+    badge: 'Security',
+    description:
+      'Enforce cryptographic webhook signature verification (Stripe HMAC), short-lived JWTs with token rotation, rate limiting on public endpoints, and strict schema validation with input sanitization against injection.',
+  },
+]
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FAQS (First Person & Verified Knowledge Graph)
+// ─────────────────────────────────────────────────────────────────────────────
 const FAQS = [
   {
-    q: 'Who is Diwakar Sharma (diwakarsharma)?',
-    a: 'Diwakar Sharma (known online as diwakarsharma and diwakarsharma2216) is a Full Stack Developer based in Surat, Gujarat, India with 2.5+ years of experience engineering scalable web applications using Next.js, React, Node.js, Express, TypeScript, and cloud services. He currently serves as Software Developer at Diamond Atelier.',
+    q: 'Who is Diwakar Sharma?',
+    a: 'I am a Full Stack Developer based in Surat, Gujarat, India with 2.5+ years of production experience building web applications and backend systems using Next.js, React, Node.js, Express, TypeScript, and MongoDB/PostgreSQL. I currently work as a Software Developer at Diamond Atelier.',
   },
   {
-    q: "What are Diwakar Sharma's primary technical skills?",
-    a: 'Diwakar specializes in Next.js, React 19, TypeScript, JavaScript, Node.js, Express.js, MongoDB, PostgreSQL, Redis caching, BullMQ background queues, Docker, AWS S3, Cloudflare Workers, and Stripe payment processing.',
+    q: 'What is your core technical stack?',
+    a: 'My core stack centers on TypeScript, JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, and Tailwind CSS on the full-stack tier, backed by Redis caching, BullMQ background queues, MongoDB, PostgreSQL, Stripe payment processing, Sharp media pipelines, and Docker containerization.',
   },
   {
-    q: 'What companies and production systems has Diwakar worked on?',
-    a: 'Diwakar is currently Software Developer at Diamond Atelier building a production diamond e-commerce platform and custom headless CMS. Previously, he developed WhatsApp automation & appointment booking platforms at Empiric Infotech LLP and mentored 200+ developers while building LMS review modules at Masai School.',
+    q: 'What systems and companies have you engineered for?',
+    a: 'I am currently a Software Developer at Diamond Atelier, where I own requirements end to end and distribute work among teammates to build our production diamond e-commerce platform and custom headless CMS. Previously, I developed WhatsApp automation and appointment booking platforms at Empiric Infotech LLP, and trained 200+ students in full-stack JavaScript while building LMS review modules at Masai School.',
   },
   {
-    q: 'How can I contact or book a meeting with Diwakar Sharma?',
-    a: 'You can email Diwakar at diwakarsharma2216@gmail.com, book a 30-minute consultation call on Cal.com (https://cal.com/diwakar-sharma-ojozup/30min), connect on LinkedIn (https://www.linkedin.com/in/diwakarsharma-fullstackdev/), or explore his code and projects on GitHub (https://github.com/Diwakarsharma2216).',
+    q: 'What is your availability and preferred work arrangement?',
+    a: 'My notice period is 60 days. I am seeking Software Engineer and Full Stack Developer roles, and I am open to relocation in India as well as remote opportunities worldwide.',
+  },
+  {
+    q: 'How can I get in touch or schedule an interview?',
+    a: 'You can email me directly at diwakarsharma2216@gmail.com, book a 30-minute introductory call via my Cal.com link (https://cal.com/diwakar-sharma-ojozup/30min), connect with me on LinkedIn (https://www.linkedin.com/in/diwakarsharma-fullstackdev/), or review my code on GitHub (https://github.com/Diwakarsharma2216).',
   },
 ]
 
@@ -168,7 +163,7 @@ function PortfolioPage() {
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    (async function () {
+    ;(async function () {
       const cal = await getCalApi({ namespace: env.calNamespace })
       cal('floatingButton', {
         calLink: env.calLink,
@@ -186,14 +181,18 @@ function PortfolioPage() {
     setTimeout(() => setCopied(false), 2000)
   }
 
+  // Find flagship Diamond Atelier entry from single timeline
+  const diamondTimeline = WORK_TIMELINE.find((w) => w.id === 'diamond-atelier')
+  const otherWorkTimeline = WORK_TIMELINE.filter((w) => w.id !== 'diamond-atelier')
+
   return (
     <main className="container-narrow pt-8 sm:pt-14 pb-12 sm:pb-16">
       {/* ────────────────────────────────────────────────────────── */}
-      {/* HERO SECTION                                             */}
+      {/* 1. HERO SECTION                                            */}
       {/* ────────────────────────────────────────────────────────── */}
       <section className="mb-14 sm:mb-20">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          {/* Left Column: Kicker, Headline, Bio, Actions */}
+          {/* Left Column: Kicker, Headline, Bio, Actions, Availability */}
           <div className="lg:col-span-8">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5">
               <Badge variant="accent" size="sm" dot>
@@ -211,10 +210,24 @@ function PortfolioPage() {
               </span>
             </h1>
 
-            <p className="text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-7 max-w-xl">
-              Engineering clean architecture and scalable cloud systems. Full Stack Developer with 2.5+ years of experience building and shipping web applications using Next.js, React, Node.js, and Express. Strong in backend development, commerce workflows, authentication, payments, background queues, and cloud deployment. Currently at <span className="text-[var(--text-primary)] font-medium">Diamond Atelier</span> engineering a production diamond e-commerce platform.
+            {/* Impact Statement with Placeholders & Measured Metric */}
+            <p className="text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-4 max-w-xl">
+              Full Stack Developer with 2.5+ years of experience engineering high-reliability commerce and web applications — reducing image payloads by up to <strong className="text-[var(--text-primary)] font-medium">82.3%</strong> via Sharp pipelines, processing <strong className="text-[var(--text-primary)] font-medium">[N orders/day]</strong> with BullMQ and Stripe, and serving <strong className="text-[var(--text-primary)] font-medium">[N req/s]</strong> with sub-[X00ms] latency.
             </p>
 
+            {/* Availability Line */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-[var(--accent-text)] mb-6 py-2 px-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] max-w-xl">
+              <span className="flex items-center gap-1.5 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Notice: 60 days
+              </span>
+              <span className="text-[var(--text-muted)]">&bull;</span>
+              <span className="text-[var(--text-secondary)]">Seeking: Software Engineer / Full Stack Developer</span>
+              <span className="text-[var(--text-muted)]">&bull;</span>
+              <span className="text-[var(--text-muted)]">Relocation in India &amp; Remote Worldwide</span>
+            </div>
+
+            {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <Button
                 type="button"
@@ -303,7 +316,202 @@ function PortfolioPage() {
       </section>
 
       {/* ────────────────────────────────────────────────────────── */}
-      {/* PROJECTS SECTION                                           */}
+      {/* 2. CASE STUDY: DIAMOND ATELIER                             */}
+      {/* ────────────────────────────────────────────────────────── */}
+      <section id="case-study" className="mb-14 sm:mb-20 scroll-mt-24">
+        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+          <div className="flex items-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+            <h2 className="text-xs uppercase tracking-widest font-mono font-semibold text-[var(--text-primary)]">
+              Diamond Atelier: Case Study
+            </h2>
+          </div>
+          <span className="text-xs font-mono text-[var(--accent-text)]">
+            Flagship Engineering &bull; Production
+          </span>
+        </div>
+
+        <div className="p-6 sm:p-8 rounded-[12px] border border-[var(--border-strong)] bg-[var(--bg-surface)] shadow-sm">
+          {/* Header & Meta */}
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-[var(--border-subtle)]">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-wider text-[var(--accent-text)]">
+                Production E-Commerce &bull; {diamondTimeline?.period || 'Nov 2025–Present'}
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl text-[var(--text-primary)] mt-1">
+                Headless E-Commerce &amp; Media Pipeline Architecture
+              </h3>
+            </div>
+            {diamondTimeline?.projectUrl && (
+              <a
+                href={diamondTimeline.projectUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--accent-text)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors no-underline cursor-pointer"
+              >
+                <span>Live Site</span>
+                <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                  <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                </svg>
+              </a>
+            )}
+          </div>
+
+          {/* Problem & Role Grid */}
+          <div className="grid md:grid-cols-2 gap-6 py-6 border-b border-[var(--border-subtle)]">
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-2">
+                01 / The Problem
+              </h4>
+              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+                Diamond Atelier required a unified, high-performance commerce platform capable of rendering high-resolution diamond and jewelry catalog assets with instant search, reliable international checkout, and autonomous catalog publishing. The existing setup created engineering bottlenecks whenever content or marketing assets needed updates.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-2">
+                02 / My Role &amp; Ownership
+              </h4>
+              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+                <strong className="text-[var(--text-primary)] font-medium">I own requirements end to end and distribute work among teammates.</strong> Guided architectural decisions across the Next.js frontend, Node.js API layer, Redis caching tier, BullMQ queues, and Docker containerized deployments.
+              </p>
+            </div>
+          </div>
+
+          {/* Key Architectural Decisions */}
+          <div className="py-6 border-b border-[var(--border-subtle)]">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-4">
+              03 / Key Technical Decisions
+            </h4>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xs font-mono text-[var(--accent-text)] block mb-1">Headless CMS</span>
+                <p className="text-xs text-[var(--text-secondary)] font-sans leading-relaxed">
+                  Decoupled content management enabling a 6-person content and graphics team to independently publish banners, products, and specs without developer intervention.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xs font-mono text-[var(--accent-text)] block mb-1">Sharp Image Pipeline</span>
+                <p className="text-xs text-[var(--text-secondary)] font-sans leading-relaxed">
+                  Served images directly from the backend with Sharp on-the-fly compression into WebP and AVIF, reducing media payload sizes by up to 82.3%.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xs font-mono text-[var(--accent-text)] block mb-1">Redis Caching Tier</span>
+                <p className="text-xs text-[var(--text-secondary)] font-sans leading-relaxed">
+                  Cached high-frequency catalog queries, category facets, and user session payloads in Redis, dropping database read overhead and lowering query latencies to sub-[X0ms].
+                </p>
+              </div>
+
+              <div className="p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xs font-mono text-[var(--accent-text)] block mb-1">BullMQ &amp; Stripe</span>
+                <p className="text-xs text-[var(--text-secondary)] font-sans leading-relaxed">
+                  Built BullMQ job queues for async order dispatch and email receipts. Cryptographically verified Stripe webhook signatures to guarantee idempotent payments.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Inline SVG Architecture Diagram */}
+          <div className="py-6 border-b border-[var(--border-subtle)]">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-4">
+              04 / System Architecture Diagram
+            </h4>
+            <div className="w-full overflow-x-auto p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+              <svg
+                viewBox="0 0 860 210"
+                className="w-full min-w-[700px] h-auto text-[var(--text-primary)]"
+                fill="none"
+                role="img"
+                aria-label="Diamond Atelier Architecture Flowchart Diagram"
+              >
+                {/* Storefront Box */}
+                <rect x="20" y="25" width="160" height="70" rx="8" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.4" fill="currentColor" fillOpacity="0.04" />
+                <text x="100" y="52" textAnchor="middle" fill="currentColor" fontSize="12" fontFamily="monospace" fontWeight="bold">Storefront (Next.js)</text>
+                <text x="100" y="72" textAnchor="middle" fill="currentColor" fillOpacity="0.6" fontSize="10" fontFamily="monospace">SSR • Faceted Filter UI</text>
+
+                {/* 6-Person CMS Box */}
+                <rect x="20" y="115" width="160" height="70" rx="8" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.4" fill="currentColor" fillOpacity="0.04" />
+                <text x="100" y="142" textAnchor="middle" fill="currentColor" fontSize="12" fontFamily="monospace" fontWeight="bold">Headless CMS</text>
+                <text x="100" y="162" textAnchor="middle" fill="currentColor" fillOpacity="0.6" fontSize="10" fontFamily="monospace">6-Person Content Team</text>
+
+                {/* Arrows to Gateway */}
+                <path d="M180 60 L240 95" stroke="#ea580c" strokeWidth="1.5" strokeDasharray="3 3" />
+                <path d="M180 150 L240 115" stroke="#ea580c" strokeWidth="1.5" strokeDasharray="3 3" />
+
+                {/* API Gateway Box */}
+                <rect x="240" y="70" width="180" height="70" rx="8" stroke="#ea580c" strokeWidth="1.5" fill="#ea580c" fillOpacity="0.08" />
+                <text x="330" y="97" textAnchor="middle" fill="#ea580c" fontSize="13" fontFamily="monospace" fontWeight="bold">Node.js API Gateway</text>
+                <text x="330" y="117" textAnchor="middle" fill="currentColor" fillOpacity="0.7" fontSize="10" fontFamily="monospace">RBAC • Routes • Docker</text>
+
+                {/* Arrows to Services */}
+                <path d="M420 85 L500 45" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.5" />
+                <path d="M420 105 L500 105" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.5" />
+                <path d="M420 125 L500 165" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.5" />
+
+                {/* Sharp Box */}
+                <rect x="500" y="15" width="170" height="55" rx="8" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.4" fill="currentColor" fillOpacity="0.04" />
+                <text x="585" y="38" textAnchor="middle" fill="currentColor" fontSize="11" fontFamily="monospace" fontWeight="bold">Sharp Image Engine</text>
+                <text x="585" y="54" textAnchor="middle" fill="#10b981" fontSize="10" fontFamily="monospace">WebP/AVIF (-82.3%)</text>
+
+                {/* Redis Box */}
+                <rect x="500" y="80" width="170" height="55" rx="8" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.4" fill="currentColor" fillOpacity="0.04" />
+                <text x="585" y="103" textAnchor="middle" fill="currentColor" fontSize="11" fontFamily="monospace" fontWeight="bold">Redis Cache Tier</text>
+                <text x="585" y="120" textAnchor="middle" fill="currentColor" fillOpacity="0.6" fontSize="10" fontFamily="monospace">Sub-[X0ms] Query Store</text>
+
+                {/* BullMQ Box */}
+                <rect x="500" y="145" width="170" height="55" rx="8" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.4" fill="currentColor" fillOpacity="0.04" />
+                <text x="585" y="168" textAnchor="middle" fill="currentColor" fontSize="11" fontFamily="monospace" fontWeight="bold">BullMQ Job Queues</text>
+                <text x="585" y="184" textAnchor="middle" fill="currentColor" fillOpacity="0.6" fontSize="10" fontFamily="monospace">Async Tasks &amp; Workers</text>
+
+                {/* Arrow to Stripe */}
+                <path d="M670 172 L710 172" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.5" />
+
+                {/* Stripe Box */}
+                <rect x="710" y="145" width="130" height="55" rx="8" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.4" fill="currentColor" fillOpacity="0.04" />
+                <text x="775" y="168" textAnchor="middle" fill="currentColor" fontSize="11" fontFamily="monospace" fontWeight="bold">Stripe Payments</text>
+                <text x="775" y="184" textAnchor="middle" fill="currentColor" fillOpacity="0.6" fontSize="10" fontFamily="monospace">Verified Webhooks</text>
+              </svg>
+            </div>
+          </div>
+
+          {/* Measurable Results */}
+          <div className="pt-6">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-3">
+              05 / Measurable Results &amp; Impact
+            </h4>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-3.5 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xl sm:text-2xl font-serif text-[var(--accent)] block">82.3%</span>
+                <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Image Payload Reduction</span>
+                <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">Measured via Sharp WebP/AVIF compression on high-res catalog assets.</span>
+              </div>
+
+              <div className="p-3.5 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xl sm:text-2xl font-serif text-[var(--text-primary)] block">[X% faster]</span>
+                <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Catalog LCP Speed</span>
+                <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">Accelerated initial product gallery render via Redis-cached queries.</span>
+              </div>
+
+              <div className="p-3.5 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xl sm:text-2xl font-serif text-[var(--text-primary)] block">[N orders/day]</span>
+                <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Processed Checkout Volume</span>
+                <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">Reliable Stripe transaction execution with verified webhook retries.</span>
+              </div>
+
+              <div className="p-3.5 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                <span className="text-xl sm:text-2xl font-serif text-[var(--text-primary)] block">[X hrs/week]</span>
+                <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Content Team Hours Saved</span>
+                <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">Direct self-serve publishing for 6-person content and graphics team.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ────────────────────────────────────────────────────────── */}
+      {/* 3. FEATURED PROJECTS SECTION                               */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="projects" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-8">
@@ -313,7 +521,7 @@ function PortfolioPage() {
             </h2>
           </div>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Production &bull; Personal &bull; 2023–Present
+            Full-Stack Commerce &bull; Web Applications &bull; Systems Engineering
           </span>
         </div>
 
@@ -325,7 +533,7 @@ function PortfolioPage() {
             <div className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent)]"></span>
               <h3 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
-                01 / Work Experience & Production Systems
+                01 / Work Experience &amp; Production Systems
               </h3>
             </div>
             <span className="text-[11px] font-mono text-[var(--text-muted)]">
@@ -333,262 +541,283 @@ function PortfolioPage() {
             </span>
           </div>
           <p className="text-xs text-[var(--text-secondary)] font-sans mb-6 max-w-2xl">
-            Enterprise systems, commerce backends, and internal platforms engineered during full-time company tenure.
+            Enterprise platforms, commerce backends, and internal tooling engineered during full-time company employment. Rendered directly from single-source timeline data.
           </p>
 
-          {/* Flagship Feature: Diamond Atelier */}
-          <div className="mb-6 p-6 sm:p-8 rounded-[10px] border border-[var(--border-strong)] bg-[var(--bg-surface)]">
-            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-medium text-[var(--accent-text)] uppercase tracking-wider">
-                  Diamond Atelier
-                </span>
-                <span className="text-xs font-mono text-[var(--text-muted)]">&bull;</span>
-                <span className="text-xs font-mono text-[var(--text-muted)]">Nov 2025–Present</span>
+          {/* Flagship: Diamond Atelier */}
+          {diamondTimeline && (
+            <div className="mb-6 p-6 sm:p-8 rounded-[10px] border border-[var(--border-strong)] bg-[var(--bg-surface)]">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono font-medium text-[var(--accent-text)] uppercase tracking-wider">
+                    {diamondTimeline.company}
+                  </span>
+                  <span className="text-xs font-mono text-[var(--text-muted)]">&bull;</span>
+                  <span className="text-xs font-mono text-[var(--text-muted)]">{diamondTimeline.period}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  {diamondTimeline.projectUrl && (
+                    <a
+                      href={diamondTimeline.projectUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--accent-text)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors no-underline cursor-pointer"
+                      title="Open Live Link"
+                    >
+                      <span>Live Link</span>
+                      <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                        <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                  )}
+                  <span className="text-xs font-mono px-2 py-0.5 rounded-[4px] bg-[var(--bg-canvas)] text-[var(--text-secondary)] border border-[var(--border-subtle)]">
+                    {diamondTimeline.role} &bull; Core Delivery
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
+
+              <div className="mb-3">
                 <a
-                  href={env.projectLinks.diamondAtelier}
+                  href={diamondTimeline.projectUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--accent-text)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors no-underline cursor-pointer"
-                  title="Open Live Link"
+                  className="group inline-flex items-center gap-2.5 text-inherit no-underline"
                 >
-                  <span>Live Link</span>
-                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                  <h4 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                    {diamondTimeline.projectTitle}
+                  </h4>
+                  <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
                     <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
                   </svg>
                 </a>
-                <span className="text-xs font-mono px-2 py-0.5 rounded-[4px] bg-[var(--bg-canvas)] text-[var(--text-secondary)] border border-[var(--border-subtle)]">
-                  Software Developer &bull; Core Platform Delivery
-                </span>
               </div>
-            </div>
 
-            <div className="mb-3">
-              <a
-                href={env.projectLinks.diamondAtelier}
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-2.5 text-inherit no-underline"
-              >
-                <h4 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                  Diamond E-Commerce Platform
-                </h4>
-                <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                  <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                </svg>
-              </a>
-            </div>
+              <p className="text-base sm:text-lg text-[var(--text-secondary)] font-sans leading-relaxed max-w-3xl mb-6">
+                {diamondTimeline.projectSummary}
+              </p>
 
-            <p className="text-base sm:text-lg text-[var(--text-secondary)] font-sans leading-relaxed max-w-3xl mb-6">
-              Production diamond e-commerce platform. Owned feature delivery end-to-end: built a headless CMS enabling a six-person content team to manage website assets without developer intervention, integrated Stripe payments with webhook verification & failure recovery, designed RBAC authentication, implemented S3-compatible media uploads with Sharp image compression, and scaled performance using Redis caching, BullMQ background queues, and Docker CI/CD pipelines.
-            </p>
-
-            <div className="flex flex-wrap gap-1.5 pt-2">
-              {['Next.js', 'Node.js', 'Redis', 'BullMQ', 'Docker', 'Stripe', 'Sharp', 'Typesense'].map(
-                (tech) => (
+              <div className="flex flex-wrap gap-1.5 pt-2">
+                {diamondTimeline.skills.map((tech) => (
                   <span
                     key={tech}
                     className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
                   >
                     {tech}
                   </span>
-                )
-              )}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          {/* Grid: WhatsApp & Booking Platform + Masai LMS Module */}
+          {/* Grid: Other Company Work (Private Projects with clean safe summaries, NO lock icons) */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {/* WhatsApp & Booking Platform */}
-            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                  <div className="flex items-center gap-1.5">
-                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">Empiric Infotech</span>
-                    <span>&bull; Apr 2024–Oct 2025</span>
+            {otherWorkTimeline.map((work) => (
+              <div
+                key={work.id}
+                className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                    <div className="flex items-center gap-1.5">
+                      <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">
+                        {work.company}
+                      </span>
+                      <span>&bull; {work.period}</span>
+                    </div>
+                    {work.privateNotice && (
+                      <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono border border-amber-500/30 bg-amber-500/10 text-amber-400">
+                        Private Project
+                      </span>
+                    )}
                   </div>
-                </div>
-                <div className="mb-2">
-                  <h4 className="font-serif text-2xl text-[var(--text-primary)]">
-                    WhatsApp & Booking Platform
-                  </h4>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                  Expert appointment-booking system and communication platform at Empiric Infotech. Implemented end-to-end Stripe payment processing with refund workflows, integrated the WAHA API into an internal WhatsApp platform for automated employee and group messaging, and developed scheduling REST APIs with admin-controlled access tiers.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-                {['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Stripe', 'WAHA API'].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-            </div>
 
-            {/* Masai LMS Assessment Module */}
-            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                  <div className="flex items-center gap-1.5">
-                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">Masai School</span>
-                    <span>&bull; Oct 2023–Mar 2024</span>
+                  <div className="mb-2">
+                    <h4 className="font-serif text-2xl text-[var(--text-primary)]">
+                      {work.projectTitle}
+                    </h4>
                   </div>
+
+                  <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-4">
+                    {work.projectSummary}
+                  </p>
+
+                  {work.privateNotice && (
+                    <div className="p-3 mb-6 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-xs text-[var(--text-muted)] font-mono leading-relaxed">
+                      <span className="text-[var(--accent-text)] font-semibold block mb-0.5">
+                        {work.privateNotice.badge}
+                      </span>
+                      {work.privateNotice.summary}
+                    </div>
+                  )}
                 </div>
-                <div className="mb-2">
-                  <h4 className="font-serif text-2xl text-[var(--text-primary)]">
-                    Masai LMS Assessment Module
-                  </h4>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                  Engineered the Learning Management System student review module for submission tracking, feedback collection, and review workflows. Mentored 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-                {['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'].map(
-                  (tech) => (
+
+                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                  {work.skills.map((tech) => (
                     <span
                       key={tech}
                       className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
                     >
                       {tech}
                     </span>
-                  )
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
         {/* ══════════════════════════════════════════════════════════ */}
-        {/* CATEGORY 2: PERSONAL PROJECTS                             */}
+        {/* CATEGORY 2: PERSONAL PROJECTS & APPLICATION SUITE          */}
         {/* ══════════════════════════════════════════════════════════ */}
         <div>
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pt-8 border-t border-[var(--border-subtle)]">
             <div className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
               <h3 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
-                02 / Personal Projects
+                02 / Personal Projects &amp; Applications
               </h3>
             </div>
             <span className="text-[11px] font-mono text-[var(--text-muted)]">
-              AI Integrations &bull; Full-Stack MERN &bull; Web Applications
+              Full-Stack Commerce &bull; Web Applications &bull; Systems Engineering
             </span>
           </div>
           <p className="text-xs text-[var(--text-secondary)] font-sans mb-6 max-w-2xl">
-            Full-stack platforms, AI-driven evaluation tools, and modern web applications built from scratch.
+            Full-stack commerce storefronts and production web applications built independently.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            {/* Drone E-Commerce Platform (DJI Air) */}
-            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                  <div className="flex items-center gap-1.5">
-                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">Personal Project</span>
-                    <span>&bull; Drone & Hardware Commerce</span>
-                  </div>
-                  <a
-                    href={env.projectLinks.droneEcommerce}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                    title="Open Live Link"
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {PERSONAL_PROJECTS.map((proj) => {
+              if (proj.isPlaceholder) {
+                return (
+                  <div
+                    key={proj.id}
+                    className="p-6 rounded-[10px] border border-dashed border-[var(--border-strong)] bg-[var(--bg-surface)] flex flex-col justify-between opacity-85 hover:opacity-100 transition-opacity"
                   >
-                    <span>Live Link</span>
-                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </div>
-                <div className="mb-2">
-                  <a
-                    href={env.projectLinks.droneEcommerce}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group inline-flex items-center gap-2 text-inherit no-underline"
-                  >
-                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                      Drone E-Commerce Platform
-                    </h4>
-                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                  Modern drone e-commerce storefront showcasing premium DJI aerial systems and camera hardware. Engineered with interactive product showcases, dynamic specification comparisons, cart management, and seamless Razorpay payment gateway integration for real-time order transactions.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-                {['React.js', 'Vite', 'Tailwind CSS', 'Razorpay', 'Node.js', 'REST APIs'].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-            </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                        <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-amber-500/40 bg-amber-500/10 text-amber-400">
+                          Upcoming AI Slot
+                        </span>
+                        <span>{proj.category}</span>
+                      </div>
 
-            {/* Hevenly Heven E-Commerce */}
-            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                  <div className="flex items-center gap-1.5">
-                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">Personal Project</span>
-                    <span>&bull; Full Stack E-Commerce</span>
+                      <div className="mb-2">
+                        <h4 className="font-serif text-xl text-[var(--text-primary)]">
+                          {proj.title}
+                        </h4>
+                      </div>
+
+                      <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6 italic">
+                        {proj.summary}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                      {proj.skills.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)]"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-               
+                )
+              }
+
+              return (
+                <div
+                  key={proj.id}
+                  className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                      <div className="flex items-center gap-1.5">
+                        <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">
+                          Personal Project
+                        </span>
+                        <span>&bull; {proj.category}</span>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        {proj.liveUrl && (
+                          <a
+                            href={proj.liveUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                            title="Open Live Link"
+                          >
+                            <span>Live</span>
+                            <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                              <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                            </svg>
+                          </a>
+                        )}
+                        {proj.repoUrl && (
+                          <a
+                            href={proj.repoUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors no-underline cursor-pointer"
+                            title="GitHub Repository"
+                          >
+                            <span>Repo</span>
+                            <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="mb-2">
+                      {proj.liveUrl ? (
+                        <a
+                          href={proj.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="group inline-flex items-center gap-2 text-inherit no-underline"
+                        >
+                          <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                            {proj.title}
+                          </h4>
+                          <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                            <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <h4 className="font-serif text-2xl text-[var(--text-primary)]">
+                          {proj.title}
+                        </h4>
+                      )}
+                    </div>
+
+                    <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
+                      {proj.summary}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                    {proj.skills.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="mb-2">
-                  <a
-                    href={env.projectLinks.hevenlyHeven}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group inline-flex items-center gap-2 text-inherit no-underline"
-                  >
-                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                      Hevenly Heven E-Commerce
-                    </h4>
-                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                  Full-stack online shopping platform designed for product discovery, faceted filtering, cart persistence via Redux Toolkit, and seamless transaction checkout. Built with modular component architecture, responsive styling, and clean RESTful APIs.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-                {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux Toolkit'].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-            </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* ────────────────────────────────────────────────────────── */}
-      {/* EXPERIENCE & EDUCATION SECTION                             */}
+      {/* 4. WORK EXPERIENCE SECTION (Action + Tech + Result)       */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="experience" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
@@ -601,53 +830,33 @@ function PortfolioPage() {
         </div>
 
         <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
-          {/* Diamond Atelier */}
-          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
-            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              Nov 2025 — Present
+          {WORK_TIMELINE.map((exp) => (
+            <div key={exp.id} className="py-6 sm:py-7 grid sm:grid-cols-12 gap-3 sm:gap-6 items-baseline">
+              <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
+                {exp.period}
+              </div>
+              <div className="sm:col-span-4">
+                <span className="font-serif text-xl text-[var(--text-primary)]">{exp.company}</span>
+                <span className="block text-xs font-mono text-[var(--accent-text)] mt-0.5">
+                  {exp.role} &bull; {exp.location} ({exp.workplaceType})
+                </span>
+              </div>
+              <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+                <ul className="space-y-2 list-none p-0 m-0">
+                  {exp.experienceBullets.map((bullet, idx) => (
+                    <li key={idx} className="relative pl-4 before:content-['•'] before:absolute before:left-0 before:text-[var(--accent)]">
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Diamond Atelier</span>
-              <span className="block text-xs font-mono text-[var(--accent-text)]">Software Developer &bull; Surat (Onsite)</span>
-            </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-              Own feature delivery end-to-end: built a headless CMS for self-serve content management, Stripe webhook payment processing, RBAC authorization, S3/R2 media uploads with Sharp compression, Redis caching, BullMQ queues, and Docker CI/CD.
-            </div>
-          </div>
-
-          {/* Empiric Infotech LLP */}
-          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
-            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              Apr 2024 — Oct 2025
-            </div>
-            <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Empiric Infotech LLP</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">MERN Stack Developer &bull; Surat (Onsite)</span>
-            </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-              Implemented end-to-end Stripe payment processing with refund handling, integrated the WAHA API into an internal WhatsApp platform for targeted messaging, and developed REST APIs for an appointment-booking system with RBAC.
-            </div>
-          </div>
-
-          {/* Masai School - Experience */}
-          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
-            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              Oct 2023 — Mar 2024
-            </div>
-            <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Masai School</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Associate Instructor &bull; Remote</span>
-            </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-              Trained 200+ students in JavaScript, React.js, and Node.js fundamentals. Built the LMS student review module for submission tracking, feedback, and review workflows; conducted mock full-stack interviews.
-            </div>
-          </div>
-
+          ))}
         </div>
       </section>
 
       {/* ────────────────────────────────────────────────────────── */}
-      {/* EDUCATION SECTION                                          */}
+      {/* 5. EDUCATION SECTION                                       */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="education" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
@@ -655,57 +864,37 @@ function PortfolioPage() {
             Education
           </h2>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Academic & Certifications
+            Academic &amp; Certifications
           </span>
         </div>
 
         <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
-          {/* Manipal University Jaipur - Education */}
-          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
-            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              2023 — 2026
+          {EDUCATION_TIMELINE.map((edu) => (
+            <div key={edu.id} className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+              <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
+                {edu.period}
+              </div>
+              <div className="sm:col-span-4">
+                <span className="font-serif text-lg text-[var(--text-primary)]">{edu.institution}</span>
+                <span className="block text-xs font-mono text-[var(--text-muted)]">
+                  {edu.degree}
+                  {edu.note && (
+                    <span className="block text-[var(--accent-text)] text-[11px] font-mono mt-0.5">
+                      {edu.note}
+                    </span>
+                  )}
+                </span>
+              </div>
+              <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
+                {edu.coursework}
+              </div>
             </div>
-            <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Manipal University Jaipur</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Bachelor of Computer Applications (BCA)</span>
-            </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
-              Coursework: DSA, OOP (C++, Java), Python, DBMS, Operating Systems, Computer Networks.
-            </div>
-          </div>
-
-          {/* Masai School - Education */}
-          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
-            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              Sep 2022 — Jun 2023
-            </div>
-            <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Masai School</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Full Stack Web Development (NSDC Certified)</span>
-            </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
-              Coursework: Data Structures & Algorithms, React.js, Redux, Node.js fundamentals.
-            </div>
-          </div>
-
-          {/* Mahatma Gandhi Inter College */}
-          <div className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
-            <div className="sm:col-span-3 text-xs font-mono text-[var(--text-muted)]">
-              Mar 2021 — Apr 2022
-            </div>
-            <div className="sm:col-span-4">
-              <span className="font-serif text-lg text-[var(--text-primary)]">Mahatma Gandhi Inter College</span>
-              <span className="block text-xs font-mono text-[var(--text-muted)]">Class XII – Science</span>
-            </div>
-            <div className="sm:col-span-5 text-sm text-[var(--text-muted)] font-sans">
-              Science & Mathematics foundations.
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* ────────────────────────────────────────────────────────── */}
-      {/* CORE STACK SECTION                                         */}
+      {/* 6. CORE STACK & SKILLS (Strong / Working / Familiar)        */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="stack" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
@@ -713,23 +902,23 @@ function PortfolioPage() {
             Core Stack &amp; Skills
           </h2>
           <span className="text-xs font-mono text-[var(--accent-text)]">
-            Technical Specification &bull; Production
+            Strong &bull; Working &bull; Familiar
           </span>
         </div>
 
         <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
-          {TECH_STACK_CATEGORIES.map((group) => (
-            <div key={group.category} className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
+          {SKILL_TIERS.map((tierGroup) => (
+            <div key={tierGroup.tier} className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
               <div className="sm:col-span-3">
-                <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider">
-                  {group.number} / {group.category}
+                <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider uppercase">
+                  {tierGroup.tier} Tier
                 </span>
                 <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
-                  {group.title}
+                  {tierGroup.badge}
                 </span>
               </div>
               <div className="sm:col-span-5 flex flex-wrap gap-1.5">
-                {group.skills.map((tech) => (
+                {tierGroup.skills.map((tech) => (
                   <span
                     key={tech}
                     className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors"
@@ -739,7 +928,7 @@ function PortfolioPage() {
                 ))}
               </div>
               <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
-                {group.description}
+                {tierGroup.description}
               </div>
             </div>
           ))}
@@ -747,7 +936,42 @@ function PortfolioPage() {
       </section>
 
       {/* ────────────────────────────────────────────────────────── */}
-      {/* FAQ & KNOWLEDGE GRAPH (AEO / AGENT SEARCH OPTIMIZED)       */}
+      {/* 7. HOW I WORK (Engineering Quality & Habits)                */}
+      {/* ────────────────────────────────────────────────────────── */}
+      <section id="how-i-work" className="mb-14 sm:mb-20 scroll-mt-24">
+        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+          <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
+            How I Work &bull; Engineering Discipline
+          </h2>
+          <span className="text-xs font-mono text-[var(--accent-text)]">
+            Quality &bull; Security &bull; Reliability
+          </span>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+          {WORK_HABITS.map((habit) => (
+            <div
+              key={habit.title}
+              className="p-5 sm:p-6 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-surface)]"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-serif text-lg text-[var(--text-primary)]">
+                  {habit.title}
+                </h3>
+                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-[3px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)]">
+                  {habit.badge}
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+                {habit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ────────────────────────────────────────────────────────── */}
+      {/* 8. FAQ & KNOWLEDGE GRAPH (First Person / Verified)         */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="faq" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
@@ -755,7 +979,7 @@ function PortfolioPage() {
             FAQ &bull; About Diwakar Sharma
           </h2>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            AEO & Quick Facts
+            First-Person Answers &bull; AEO
           </span>
         </div>
 
@@ -780,7 +1004,7 @@ function PortfolioPage() {
       </section>
 
       {/* ────────────────────────────────────────────────────────── */}
-      {/* CONTACT SECTION                                            */}
+      {/* 9. CONTACT SECTION                                         */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="contact" className="scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
@@ -797,7 +1021,7 @@ function PortfolioPage() {
             Let&apos;s build together.
           </h3>
           <p className="text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-            Open to full-time engineering roles and collaborative projects. Whether you have an open position or a system architecture to discuss, my inbox is open.
+            Open to full-time Software Engineer and Full Stack Developer roles. Whether you have an open position, team expansion, or architectural project to discuss, my inbox is open.
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
@@ -822,6 +1046,19 @@ function PortfolioPage() {
               </svg>
               Book a 30m Call
             </Button>
+
+            <a
+              href={env.resumeUrl}
+              download="Diwakar_Sharma_Resume.pdf"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-[6px] text-xs font-mono font-medium border border-[var(--border-strong)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors no-underline shadow-sm"
+              title="Download Resume PDF"
+            >
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
+                <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14H2.75z" />
+                <path d="M7.25 1.75v7.69L4.97 7.16a.75.75 0 1 0-1.06 1.06l3.5 3.5a.75.75 0 0 0 1.06 0l3.5-3.5a.75.75 0 0 0-1.06-1.06L8.75 9.44V1.75a.75.75 0 0 0-1.5 0z" />
+              </svg>
+              <span>Download Resume (PDF)</span>
+            </a>
 
             <Button
               type="button"

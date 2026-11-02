@@ -44,11 +44,11 @@ export const env = {
   // SEO & Headings
   shortTitle:
     import.meta.env.VITE_SHORT_TITLE ||
-    'Diwakar Sharma (diwakarsharma) — Full Stack Developer',
+    'Diwakar Sharma — Full Stack Developer',
   title:
     import.meta.env.VITE_TITLE ||
-    'Diwakar Sharma (diwakarsharma) — Full Stack Developer | Next.js, Node.js & Cloud Systems',
+    'Diwakar Sharma — Full Stack Developer',
   description:
     import.meta.env.VITE_DESCRIPTION ||
-    'Diwakar Sharma (diwakarsharma / diwakarsharma2216) — Full Stack Developer with 2.5+ years of experience engineering scalable web applications, headless commerce, Stripe payments, BullMQ queues, and cloud deployments. Software Developer at Diamond Atelier.',
+    'Full Stack Developer with 2.5+ years building scalable web applications, headless CMS, Stripe payments, Redis caching, and Node.js backend systems.',
 }
