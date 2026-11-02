@@ -60,12 +60,12 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 ## Projects & Production Systems
 
-### **A. Work Experience & Production Deliverables**
+### **A. Work Experience & Production Projects**
 *High-impact systems, e-commerce architectures, and internal platforms engineered during full-time company tenure.*
 
 #### **1. Diamond E-Commerce Platform** &bull; *Diamond Atelier*
 - **Role:** Software Developer (Core Platform Delivery) &bull; Nov 2025 – Present
-- **Live / Demo:** [diwakarsharma2216.github.io](https://diwakarsharma2216.github.io) &bull; [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Live / Demo:** [diamondforest.com](https://www.diamondforest.com/)
 - **Technologies:** Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense
 - **Key Engineering Highlights:**
   - Architected and shipped an in-house headless CMS enabling a 6-member non-technical catalog team to manage high-ticket jewelry assets, pricing, and content metadata without developer intervention.

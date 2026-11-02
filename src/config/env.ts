@@ -25,7 +25,7 @@ export const env = {
   projectLinks: {
     diamondAtelier:
       import.meta.env.VITE_PROJECT_DIAMOND_URL ||
-      'https://github.com/Diwakarsharma2216',
+      'https://www.diamondforest.com/',
     whatsappBooking:
       import.meta.env.VITE_PROJECT_BOOKING_URL ||
       'https://github.com/Diwakarsharma2216',

@@ -31,6 +31,7 @@
 1. **Diamond Atelier E-Commerce Platform**
    - **Role**: Software Developer (Diamond Atelier)
    - **Stack**: Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense.
+   - **Live**: https://www.diamondforest.com/
    - **Highlights**: Built headless CMS enabling non-technical teams to manage catalog assets; Stripe payments with automated webhook recovery; S3/R2 image pipelines with Sharp compression; Redis caching & BullMQ queues for asynchronous order events.
 
 2. **WhatsApp & Appointment Booking Platform**

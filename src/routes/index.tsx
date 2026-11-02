@@ -212,7 +212,7 @@ function PortfolioPage() {
             </h1>
 
             <p className="text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-7 max-w-xl">
-              Engineering clean architecture and scalable cloud systems. Full Stack Developer (<strong className="text-[var(--text-primary)] font-medium">diwakarsharma</strong>) with 2.5+ years of experience building and shipping web applications using Next.js, React, Node.js, and Express. Strong in backend development, commerce workflows, authentication, payments, background queues, and cloud deployment. Currently at <span className="text-[var(--text-primary)] font-medium">Diamond Atelier</span> engineering a production diamond e-commerce platform.
+              Engineering clean architecture and scalable cloud systems. Full Stack Developer with 2.5+ years of experience building and shipping web applications using Next.js, React, Node.js, and Express. Strong in backend development, commerce workflows, authentication, payments, background queues, and cloud deployment. Currently at <span className="text-[var(--text-primary)] font-medium">Diamond Atelier</span> engineering a production diamond e-commerce platform.
             </p>
 
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
@@ -332,9 +332,6 @@ function PortfolioPage() {
                 </span>
                 <span className="text-xs font-mono text-[var(--text-muted)]">&bull;</span>
                 <span className="text-xs font-mono text-[var(--text-muted)]">Nov 2025–Present</span>
-                <span className="hidden sm:inline-block px-2 py-0.5 rounded-[4px] text-[10px] font-mono uppercase tracking-wider border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-[var(--accent-text)]">
-                  Company Deliverable
-                </span>
               </div>
               <div className="flex items-center gap-2">
                 <a
