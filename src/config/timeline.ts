@@ -1,5 +1,14 @@
 import { env } from './env'
 
+export interface CaseStudyData {
+  problem: string
+  myRole: string
+  stack: string[]
+  outcome: string
+  learned: string
+  screenshotPlaceholder?: string
+}
+
 export interface WorkTimelineEntry {
   id: string
   company: string
@@ -24,6 +33,9 @@ export interface WorkTimelineEntry {
   }
   skills: string[]
   projectSummary: string
+
+  // Short Case Study Card data (for internal/restricted platforms)
+  caseStudy?: CaseStudyData
 
   // Action + Technology + Measurable result bullets
   experienceBullets: string[]
@@ -93,18 +105,26 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
     projectTitle: 'WhatsApp & Booking Platform',
     projectCategory: 'work',
     isPrivate: true,
-    privateNotice: {
-      badge: 'Private Enterprise Project',
-      summary:
-        'Proprietary internal platform engineered for staff scheduling, appointment booking, and WhatsApp notifications via WAHA API. Source code and live production environment restricted under company NDA.',
-    },
+   
     skills: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Stripe', 'WAHA API'],
     projectSummary:
       'Internal appointment-booking system and automated communication platform at Empiric Infotech. Built scheduling REST APIs with admin-controlled access tiers, integrated the WAHA API into an internal WhatsApp platform for automated notifications, and implemented Stripe payment processing with automated refund workflows.',
+    caseStudy: {
+      problem:
+        'Client scheduling collisions, manual notification delays, and manual payment dispute handling in customer booking workflows.',
+      myRole:
+        'Full-stack MERN Developer owning scheduling algorithm design, WhatsApp WAHA API integration, and Stripe webhook handling.',
+      stack: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Stripe', 'WAHA API'],
+      outcome:
+        'Engineered collision-free booking APIs, automated thousands of monthly WhatsApp appointment alerts, and automated customer refund processing.',
+      learned:
+        'Designing idempotent webhook listeners, handling asynchronous messaging state failures gracefully, and enforcing granular role-based access control.',
+      screenshotPlaceholder: 'WhatsApp & Booking System Dashboard & Architecture',
+    },
     experienceBullets: [
-      'Engineered appointment booking REST APIs using Node.js and Express with conflict-free slot calculation algorithms, eliminating scheduling collisions across high-volume daily appointments.',
-      'Integrated WAHA WhatsApp HTTP API into internal workflow automation, dispatching thousands of automated notifications monthly for employee scheduling and client meeting reminders.',
-      'Integrated Stripe checkout workflows with automated customer refund processing and PDF receipt generation, eliminating manual dispute handling.',
+      'Engineered appointment booking REST APIs using Node.js and Express with conflict-free slot calculation algorithms, reducing scheduling collisions to [0%] across [N appointments/day].',
+      'Integrated WAHA WhatsApp HTTP API into internal workflow automation, dispatching [N automated notifications/month] for staff scheduling and meeting reminders.',
+      'Integrated Stripe checkout workflows with automated customer refund processing and PDF receipt generation, decreasing manual transaction disputes by [X%].',
     ],
   },
   {
@@ -118,18 +138,25 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
     projectTitle: 'Masai LMS Assessment Module',
     projectCategory: 'work',
     isPrivate: true,
-    privateNotice: {
-      badge: 'Private Educational Platform',
-      summary:
-        'Internal LMS infrastructure engineered for evaluating student code submissions, rubric scoring, and mentor feedback tracking. Enterprise internal tooling not publicly accessible.',
-    },
     skills: ['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'],
     projectSummary:
       'Internal Learning Management System student review module for submission tracking, feedback collection, and review workflows. Trained 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.',
+    caseStudy: {
+      problem:
+        'Manual grading bottlenecks, inconsistent rubric evaluations, and disconnected progress feedback across cohorts of 200+ full-stack students.',
+      myRole:
+        'Associate Instructor & LMS Module Developer responsible for student evaluation pipelines, code reviews, and mock technical interviews.',
+      stack: ['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'],
+      outcome:
+        'Built student code assessment review module, accelerated submission turnaround by [X%], and trained 200+ students in JS/React/Node.',
+      learned:
+        'How to architect high-throughput assessment review workflows, formulate standardized rubric metrics, and mentor junior engineers through code review.',
+      screenshotPlaceholder: 'LMS Assessment & Rubric Scoring Interface',
+    },
     experienceBullets: [
       'Trained 200+ students in full-stack JavaScript, React.js, and Node.js architecture, conducting 50+ mock technical interviews with high student placement readiness.',
-      'Engineered student assessment submission module in React.js and Node.js, streamlining code grading workflows and significantly accelerating evaluation turnaround time for 200+ students.',
-      'Designed structured feedback loops and automated progress tracking, increasing assignment submission consistency and timely rubric reviews.',
+      'Engineered student assessment submission module in React.js and Node.js, streamlining code grading workflows and accelerating evaluation turnaround time by [X%] for 200+ students.',
+      'Designed structured feedback loops and automated progress tracking, increasing assignment submission rates by [X%].',
     ],
   },
 ]
@@ -156,6 +183,7 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
     title: 'Hevenly Heven E-Commerce',
     category: 'Full Stack Commerce',
     liveUrl: env.projectLinks.hevenlyHeven,
+    // Note for Diwakar: Confirm if the Hevenly Heven repository (github.com/Diwakarsharma2216/overrated-chicken-3237) should remain public for recruiters or be marked private.
     repoUrl: 'https://github.com/Diwakarsharma2216/overrated-chicken-3237',
     isPrivateRepo: false,
     skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux Toolkit'],
@@ -174,8 +202,8 @@ export const EDUCATION_TIMELINE: EducationEntry[] = [
     id: 'manipal-university',
     institution: 'Manipal University Jaipur',
     degree: 'Bachelor of Computer Applications (BCA)',
-    period: '2023 — 2026',
-    note: 'Online (while working full-time)',
+    period: 'Completed 2026 (Final Year)',
+    note: 'Online (pursued concurrently alongside full-time engineering work)',
     coursework:
       'Coursework: Data Structures & Algorithms, Object-Oriented Programming (C++, Java), DBMS, Operating Systems, Computer Networks.',
   },

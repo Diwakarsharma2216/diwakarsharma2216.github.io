@@ -47,14 +47,14 @@ export const Route = createFileRoute('/')({
 })
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SKILL TIERS (Strong / Working / Familiar — Defensible in Interviews)
+// SKILL TIERS (Core / Familiar / Tools — Tightened & Defensible in Interviews)
 // ─────────────────────────────────────────────────────────────────────────────
 const SKILL_TIERS = [
   {
-    tier: 'Strong',
-    badge: 'Daily Production & Deep Architecture',
+    tier: 'Core',
+    badge: 'Daily Production & Web Engineering',
     description:
-      'Technologies I use daily in production, have built core commercial systems with, and can defend in depth in any technical interview.',
+      'Technologies used daily in commercial production to engineer full-stack web applications, REST APIs, and responsive user interfaces.',
     skills: [
       'TypeScript',
       'JavaScript (ES6+)',
@@ -68,29 +68,10 @@ const SKILL_TIERS = [
     ],
   },
   {
-    tier: 'Working',
-    badge: 'Production Delivery & Systems',
-    description:
-      'Technologies and infrastructure tools I have deployed, configured, and maintained in production workflows and backend architectures.',
-    skills: [
-      'PostgreSQL',
-      'Redis',
-      'BullMQ',
-      'Docker',
-      'MongoDB',
-      'Stripe Integration',
-      'Sharp Image Pipeline',
-      'Vite',
-      'Git & GitHub',
-      'Postman',
-      'JWT & RBAC',
-    ],
-  },
-  {
     tier: 'Familiar',
     badge: 'Foundational & Academic',
     description:
-      'Technologies studied academically, used in earlier coursework or prototypes, and capable of picking up quickly as needed.',
+      'Foundational languages and platforms studied academically and capable of rapid deployment as project requirements demand.',
     skills: [
       'Java',
       'C',
@@ -99,6 +80,25 @@ const SKILL_TIERS = [
       'Typesense',
       'WebSockets (Socket.IO)',
       'Linux / Bash',
+    ],
+  },
+  {
+    tier: 'Tools',
+    badge: 'Infrastructure & Workflows',
+    description:
+      'Databases, caching layers, containerization, and developer tooling configured and maintained in production workflows.',
+    skills: [
+      'PostgreSQL',
+      'MongoDB',
+      'Redis Caching',
+      'BullMQ Queues',
+      'Docker',
+      'Stripe Integration',
+      'Sharp Image Pipeline',
+      'Vite',
+      'Git & GitHub',
+      'Postman',
+      'JWT & RBAC',
     ],
   },
 ]
@@ -145,9 +145,10 @@ const FAQS = [
     q: 'What is your core technical stack?',
     a: 'My core stack centers on TypeScript, JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, and Tailwind CSS on the full-stack tier, backed by PostgreSQL, Redis caching, BullMQ background queues, MongoDB, Stripe payment processing, Sharp media pipelines, and Docker containerization.',
   },
+  // TODO: Clarify with Diwakar whether Diamond Atelier uses Strapi CMS or an in-house custom headless CMS. Wording kept neutral as "headless CMS" until confirmed.
   {
     q: 'What systems and companies have you engineered for?',
-    a: 'I am currently a Software Developer at Diamond Atelier (diamondforest.com), where I own requirements end to end and distribute work among teammates to build our production diamond e-commerce platform and custom headless CMS. Previously, I developed WhatsApp automation and appointment booking platforms at Empiric Infotech LLP, and trained 200+ students in full-stack JavaScript while building LMS review modules at Masai School.',
+    a: 'I am currently a Software Developer at Diamond Atelier (diamondforest.com), where I own requirements end to end and distribute work among teammates to build our production diamond e-commerce platform and headless CMS. Previously, I developed WhatsApp automation and appointment booking platforms at Empiric Infotech LLP, and trained 200+ students in full-stack JavaScript while building LMS review modules at Masai School.',
   },
   {
     q: 'What is your availability and preferred work arrangement?',
@@ -210,9 +211,14 @@ function PortfolioPage() {
               </span>
             </h1>
 
-            {/* Exact One-Line Impact Statement */}
+            {/*
+              Hero Outcome-Focused Tagline Alternatives:
+              Option 1: "I build e-commerce systems that stay fast: cached product listings in 200-400 ms with Redis, and a headless CMS that lets a 6-person content team publish live without developers." [SELECTED - specific, metrics-driven, supported by production facts]
+              Option 2: "Full Stack Developer engineering fast, reliable commerce platforms — cutting cold catalog builds roughly 4x and automating payments with webhook-verified Stripe flows."
+              Option 3: "Engineering high-throughput web applications with sub-second Redis caching, resilient Stripe checkout pipelines, and self-serve content architecture."
+            */}
             <p className="text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-6 max-w-xl">
-              I build e-commerce systems that stay fast: cached product listings in 200-400 ms with Redis, and a CMS that lets a 6-person content team update the live site without developers.
+              I build e-commerce systems that stay fast: cached product listings in 200-400 ms with Redis, and a headless CMS that lets a 6-person content team publish live without developers.
             </p>
 
             {/* Action Buttons: Primary Filled Resume, Secondary Book Call, Copy Email, Icon Links */}
@@ -323,7 +329,7 @@ function PortfolioPage() {
                 <span>Available in 45 days (negotiable) &bull; Full-time Software Engineer / Full Stack</span>
               </div>
               <div className="text-[var(--text-secondary)] pl-3.5 mt-1 font-sans">
-                Noida / Delhi NCR (open to relocation in India) &bull; Remote worldwide
+                Noida / Delhi NCR 
               </div>
             </div>
           </div>
@@ -678,7 +684,7 @@ function PortfolioPage() {
             </div>
           )}
 
-          {/* Grid: Other Company Work (Private Projects with clean safe summaries, NO lock icons) */}
+          {/* Grid: Other Company Work (Internal Platforms rendered as Short Case Studies) */}
           <div className="grid sm:grid-cols-2 gap-6">
             {otherWorkTimeline.map((work) => (
               <div
@@ -693,6 +699,9 @@ function PortfolioPage() {
                       </span>
                       <span>&bull; {work.period}</span>
                     </div>
+                    <span className="text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-wider">
+                      Internal Case Study
+                    </span>
                   </div>
 
                   <div className="mb-2">
@@ -701,17 +710,63 @@ function PortfolioPage() {
                     </h4>
                   </div>
 
-                  <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-4">
-                    {work.projectSummary}
-                  </p>
+                  {work.caseStudy ? (
+                    <div className="space-y-3 mb-6 text-xs font-sans">
+                      <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                        <span className="font-mono text-[var(--accent-text)] block font-semibold mb-1">
+                          Problem
+                        </span>
+                        <p className="text-[var(--text-secondary)] leading-relaxed m-0 text-xs">
+                          {work.caseStudy.problem}
+                        </p>
+                      </div>
 
-                  {work.privateNotice && (
-                    <div className="p-3 mb-6 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-xs text-[var(--text-muted)] font-mono leading-relaxed">
-                      <span className="text-[var(--accent-text)] font-semibold block mb-0.5">
-                        {work.privateNotice.badge}
-                      </span>
-                      {work.privateNotice.summary}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                          <span className="font-mono text-[var(--text-primary)] block font-semibold mb-1">
+                            My Role
+                          </span>
+                          <p className="text-[var(--text-secondary)] leading-relaxed m-0 text-[11px]">
+                            {work.caseStudy.myRole}
+                          </p>
+                        </div>
+                        <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                          <span className="font-mono text-[var(--text-primary)] block font-semibold mb-1">
+                            Outcome
+                          </span>
+                          <p className="text-[var(--text-secondary)] leading-relaxed m-0 text-[11px]">
+                            {work.caseStudy.outcome}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+                        <span className="font-mono text-[var(--accent-text)] block font-semibold mb-1">
+                          What I Learned
+                        </span>
+                        <p className="text-[var(--text-secondary)] leading-relaxed m-0 text-xs">
+                          {work.caseStudy.learned}
+                        </p>
+                      </div>
+
+                      {/* Optional Screenshot / Architecture Slot */}
+                      <div className="p-2.5 rounded-[6px] border border-dashed border-[var(--border-strong)] bg-[var(--bg-canvas)] flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)]">
+                        <div className="flex items-center gap-2">
+                          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" className="opacity-70 shrink-0">
+                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                            <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+                          </svg>
+                          <span className="truncate">{work.caseStudy.screenshotPlaceholder}</span>
+                        </div>
+                        <span className="text-[9px] uppercase tracking-wider text-[var(--text-muted)] border border-[var(--border-subtle)] px-1.5 py-0.5 rounded-[3px] shrink-0 ml-2">
+                          Visual Slot
+                        </span>
+                      </div>
                     </div>
+                  ) : (
+                    <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-4">
+                      {work.projectSummary}
+                    </p>
                   )}
                 </div>
 
@@ -924,7 +979,7 @@ function PortfolioPage() {
             Core Stack &amp; Skills
           </h2>
           <span className="text-xs font-mono text-[var(--accent-text)]">
-            Strong &bull; Working &bull; Familiar
+            Core &bull; Familiar &bull; Tools
           </span>
         </div>
 
@@ -1031,11 +1086,43 @@ function PortfolioPage() {
       <section id="contact" className="scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
-            Contact
+            Contact &amp; Logistics
           </h2>
           <span className="text-xs font-mono text-[var(--text-muted)]">
             {env.email}
           </span>
+        </div>
+
+        {/* Hiring Logistics & Availability Block */}
+        <div className="mb-8 p-5 sm:p-6 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] max-w-2xl">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <h4 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
+              Hiring Logistics &amp; Availability
+            </h4>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3.5 sm:gap-4 text-xs font-mono">
+            <div>
+              <span className="text-[var(--text-muted)] block mb-0.5">Location &amp; Timezone:</span>
+              <span className="text-[var(--text-primary)]">Surat, Gujarat, India &bull; UTC+5:30 (IST)</span>
+            </div>
+            <div>
+              <span className="text-[var(--text-muted)] block mb-0.5">Work Mode:</span>
+              <span className="text-[var(--text-primary)]">Open to Onsite, Hybrid &amp; Remote roles</span>
+            </div>
+            <div>
+              <span className="text-[var(--text-muted)] block mb-0.5">Relocation Preference:</span>
+              <span className="text-[var(--text-primary)]">Open to relocation (Noida / Delhi NCR)</span>
+            </div>
+            <div>
+              <span className="text-[var(--text-muted)] block mb-0.5">Notice Period:</span>
+              <span className="text-[var(--text-primary)]">[45 days / negotiable]</span>
+            </div>
+            <div className="sm:col-span-2 pt-1 border-t border-[var(--border-subtle)]">
+              <span className="text-[var(--text-muted)] inline-block mr-2">English Proficiency:</span>
+              <span className="text-[var(--text-primary)]">[Professional Working Proficiency / Fluent]</span>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-xl">
@@ -1043,7 +1130,7 @@ function PortfolioPage() {
             Let&apos;s build together.
           </h3>
           <p className="text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-            Open to full-time Software Engineer and Full Stack Developer roles. Whether you have an open position, team expansion, or architectural project to discuss, my inbox is open.
+            Open to full-time Software Engineer and Full Stack Developer roles. Whether you have an open requisition, team expansion, or architectural project to discuss, my inbox is open.
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
@@ -1105,19 +1192,18 @@ function PortfolioPage() {
                 </>
               )}
             </Button>
-
-            <Button
-              as="a"
-              href={SITE_CONFIG.links.email}
-              onClick={() => {
-                window.location.href = SITE_CONFIG.links.email
-              }}
-              variant="secondary"
-              size="md"
-            >
-              Open in Mail App &rarr;
-            </Button>
           </div>
+
+          {/* Mailto fallback link */}
+          <p className="text-xs font-mono text-[var(--text-muted)] mt-4">
+            Direct email:{' '}
+            <a
+              href={`mailto:${env.email}`}
+              className="text-[var(--accent-text)] underline hover:text-[var(--accent)] transition-colors"
+            >
+              {env.email}
+            </a>
+          </p>
         </div>
       </section>
     </main>
