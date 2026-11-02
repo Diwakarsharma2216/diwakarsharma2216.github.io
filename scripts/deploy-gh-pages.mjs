@@ -15,7 +15,7 @@ const commands = [
   'git init',
   'git checkout -B gh-pages',
   'git add -A',
-  'git commit -m "deploy: update portfolio build [skip ci]"',
+  'git commit -m "deploy: update portfolio build [skip ci]" --allow-empty',
   `git push -f ${remoteUrl} gh-pages`,
 ]
 
