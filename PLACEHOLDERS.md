@@ -53,3 +53,4 @@ This document tracks every placeholder on **[diwakarsharma2216.github.io](https:
 * [ ] **Headless CMS clarification**: Confirm whether Diamond Atelier runs on Strapi CMS or a custom-built in-house headless CMS (tracked via `// TODO` in code).
 * [ ] **Hevenly Heven repository visibility**: Confirm if `github.com/Diwakarsharma2216/overrated-chicken-3237` should remain public for recruiter review or be flagged as private.
 * [ ] **Resume PDF upload**: Drop your latest PDF into `public/resume.pdf` to replace the placeholder file.
+

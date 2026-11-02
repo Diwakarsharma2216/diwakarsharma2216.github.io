@@ -119,7 +119,7 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
         'Engineered collision-free booking APIs, automated thousands of monthly WhatsApp appointment alerts, and automated customer refund processing.',
       learned:
         'Designing idempotent webhook listeners, handling asynchronous messaging state failures gracefully, and enforcing granular role-based access control.',
-      screenshotPlaceholder: 'WhatsApp & Booking System Dashboard & Architecture',
+      // screenshotPlaceholder: 'WhatsApp & Booking System Dashboard & Architecture',
     },
     experienceBullets: [
       'Engineered appointment booking REST APIs using Node.js and Express with conflict-free slot calculation algorithms, reducing scheduling collisions to [0%] across [N appointments/day].',
@@ -151,7 +151,7 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
         'Built student code assessment review module, accelerated submission turnaround by [X%], and trained 200+ students in JS/React/Node.',
       learned:
         'How to architect high-throughput assessment review workflows, formulate standardized rubric metrics, and mentor junior engineers through code review.',
-      screenshotPlaceholder: 'LMS Assessment & Rubric Scoring Interface',
+       screenshotPlaceholder: 'LMS Assessment & Rubric Scoring Interface',
     },
     experienceBullets: [
       'Trained 200+ students in full-stack JavaScript, React.js, and Node.js architecture, conducting 50+ mock technical interviews with high student placement readiness.',
@@ -182,10 +182,9 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
     id: 'hevenly-heven',
     title: 'Hevenly Heven E-Commerce',
     category: 'Full Stack Commerce',
-    liveUrl: env.projectLinks.hevenlyHeven,
+    
     // Note for Diwakar: Confirm if the Hevenly Heven repository (github.com/Diwakarsharma2216/overrated-chicken-3237) should remain public for recruiters or be marked private.
-    repoUrl: 'https://github.com/Diwakarsharma2216/overrated-chicken-3237',
-    isPrivateRepo: false,
+   
     skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux Toolkit'],
     summary:
       'Full-stack online shopping platform designed for product discovery, faceted filtering, cart persistence via Redux Toolkit, and seamless transaction checkout. Built with modular component architecture, responsive styling, and clean RESTful APIs.',

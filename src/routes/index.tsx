@@ -217,9 +217,15 @@ function PortfolioPage() {
               Option 2: "Full Stack Developer engineering fast, reliable commerce platforms — cutting cold catalog builds roughly 4x and automating payments with webhook-verified Stripe flows."
               Option 3: "Engineering high-throughput web applications with sub-second Redis caching, resilient Stripe checkout pipelines, and self-serve content architecture."
             */}
-            <p className="text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed mb-6 max-w-xl">
-              I build e-commerce systems that stay fast: cached product listings in 200-400 ms with Redis, and a headless CMS that lets a 6-person content team publish live without developers.
-            </p>
+            {/* Hero Outcome-Focused Value Statement */}
+            <div className="mb-6 max-w-xl space-y-2.5">
+              <p className="text-base sm:text-lg text-[var(--text-primary)] font-sans leading-relaxed">
+                I build high-performance e-commerce systems — fast storefronts, verified Stripe payment workflows, sub-second Redis caching, and headless CMS tooling that content teams run independently.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
+                2.5+ years engineering production web applications across product and client teams with Next.js, React, Node.js, and PostgreSQL — owning features end-to-end from requirements to deployment.
+              </p>
+            </div>
 
             {/* Action Buttons: Primary Filled Resume, Secondary Book Call, Copy Email, Icon Links */}
             <div className="flex items-center gap-2 sm:gap-2.5 flex-nowrap overflow-x-auto py-1">
@@ -323,15 +329,7 @@ function PortfolioPage() {
             </div>
 
             {/* Availability Box (Two Lines, No Trailing Dots, WCAG AA Contrast) */}
-            <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] max-w-xl text-xs font-mono leading-relaxed">
-              <div className="flex items-center gap-2 font-medium text-[var(--text-primary)]">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span>Available in 45 days (negotiable) &bull; Full-time Software Engineer / Full Stack</span>
-              </div>
-              <div className="text-[var(--text-secondary)] pl-3.5 mt-1 font-sans">
-                Noida / Delhi NCR 
-              </div>
-            </div>
+           
           </div>
 
           {/* Right Column: Generative Halftone Dither Canvas (Decorative Dot-Art) */}
@@ -749,19 +747,8 @@ function PortfolioPage() {
                         </p>
                       </div>
 
-                      {/* Optional Screenshot / Architecture Slot */}
-                      <div className="p-2.5 rounded-[6px] border border-dashed border-[var(--border-strong)] bg-[var(--bg-canvas)] flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)]">
-                        <div className="flex items-center gap-2">
-                          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" className="opacity-70 shrink-0">
-                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
-                          </svg>
-                          <span className="truncate">{work.caseStudy.screenshotPlaceholder}</span>
-                        </div>
-                        <span className="text-[9px] uppercase tracking-wider text-[var(--text-muted)] border border-[var(--border-subtle)] px-1.5 py-0.5 rounded-[3px] shrink-0 ml-2">
-                          Visual Slot
-                        </span>
-                      </div>
+                    
+                      
                     </div>
                   ) : (
                     <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-4">
@@ -1112,7 +1099,7 @@ function PortfolioPage() {
             </div>
             <div>
               <span className="text-[var(--text-muted)] block mb-0.5">Relocation Preference:</span>
-              <span className="text-[var(--text-primary)]">Open to relocation (Noida / Delhi NCR)</span>
+              <span className="text-[var(--text-primary)]">Open to relocation (Noida / Delhi NCR) &bull; Worldwide remote</span>
             </div>
             <div>
               <span className="text-[var(--text-muted)] block mb-0.5">Notice Period:</span>
