@@ -11,9 +11,9 @@
 ---
 
 ## Availability & Contact
-- **Notice Period:** 60 days
+- **Notice Period:** 45 days (negotiable)
 - **Roles Sought:** Software Engineer / Full Stack Developer
-- **Preference:** Open to relocation across India & remote roles worldwide
+- **Preference:** Open to relocation in Noida / Delhi NCR & remote roles worldwide
 - **Email:** [diwakarsharma2216@gmail.com](mailto:diwakarsharma2216@gmail.com)
 - **Phone:** [+91 6394842216](tel:+916394842216)
 
@@ -67,6 +67,7 @@
 
 ### **1. Drone E-Commerce Platform**
 - **Live / Demo:** [dji-air.vercel.app](https://dji-air.vercel.app/)
+- **Repository:** [GitHub Repo](https://github.com/Diwakarsharma2216/DjiAir)
 - **Stack:** React.js, Vite, Tailwind CSS, Razorpay, Node.js, REST APIs
 - **Highlights:** Modern drone e-commerce storefront for DJI aerial systems with interactive hardware showcases, dynamic specification comparisons, cart management, and Razorpay payment integration.
 
@@ -75,11 +76,6 @@
 - **Repository:** [GitHub Repo](https://github.com/Diwakarsharma2216/overrated-chicken-3237)
 - **Stack:** React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
 - **Highlights:** Full-stack online shopping platform with faceted search, Redux Toolkit cart persistence, and clean RESTful APIs.
-
-### **3. [AI Project: Real-Time Technical Interview Evaluator]**
-- **Status:** Upcoming Project Slot
-- **Stack:** Next.js, OpenAI / Gemini API, Node.js, WebSockets, Tailwind CSS
-- **Highlights:** Real-time technical interview simulator that generates dynamic coding challenges, evaluates algorithmic complexity via LLM prompts, and scores candidates on structured rubrics.
 
 ---
 

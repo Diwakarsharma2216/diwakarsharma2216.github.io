@@ -6,7 +6,7 @@
 - **Full Name**: Diwakar Sharma
 - **Primary Online Handle**: diwakarsharma / diwakarsharma2216
 - **Current Role**: Software Developer at Diamond Atelier (Nov 2025 – Present)
-- **Availability**: Notice period 60 days; open to relocation in India and remote roles worldwide
+- **Availability**: Notice period: 45 days (negotiable); open to relocation in Noida / Delhi NCR and remote roles worldwide
 - **Roles Sought**: Software Engineer / Full Stack Developer
 - **Location**: Surat, Gujarat, India (UTC+5:30)
 - **Portfolio Website**: https://diwakarsharma2216.github.io
@@ -62,6 +62,7 @@
 
 1. **Drone E-Commerce Platform**
    - **Live**: https://dji-air.vercel.app/
+   - **Repository**: https://github.com/Diwakarsharma2216/DjiAir
    - **Stack**: React.js, Vite, Tailwind CSS, Razorpay, Node.js, REST APIs
    - **Highlights**: Drone e-commerce storefront for DJI aerial systems with interactive hardware showcases, dynamic specifications comparison, cart management, and Razorpay payment checkout.
 
@@ -70,11 +71,6 @@
    - **Repository**: https://github.com/Diwakarsharma2216/overrated-chicken-3237
    - **Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
    - **Highlights**: Full-stack shopping platform with faceted search, Redux Toolkit cart persistence, and RESTful APIs.
-
-3. **[AI Project: Real-Time Technical Interview Evaluator]**
-   - **Status**: Upcoming AI Project Slot
-   - **Stack**: Next.js, OpenAI / Gemini API, Node.js, WebSockets, Tailwind CSS
-   - **Highlights**: Real-time technical interview simulator that generates dynamic coding challenges, evaluates algorithmic complexity via LLM prompts, and scores candidates on structured rubrics.
 
 ---
 

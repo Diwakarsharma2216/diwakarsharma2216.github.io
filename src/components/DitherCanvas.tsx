@@ -247,12 +247,12 @@ export default function DitherCanvas() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      aria-hidden="true"
       className="relative w-full aspect-square max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] mx-auto rounded-[14px] border border-[var(--border-subtle)] overflow-hidden transition-colors duration-300 hover:border-[var(--border-strong)]"
     >
       <canvas
         ref={canvasRef}
-        role="img"
-        aria-label="Interactive generative dither art canvas"
+        aria-hidden="true"
         className="w-full h-full block cursor-crosshair"
       />
     </div>

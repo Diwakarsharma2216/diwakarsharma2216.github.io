@@ -70,14 +70,15 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
     projectCategory: 'work',
     projectUrl: env.projectLinks.diamondAtelier,
     isPrivate: false,
-    skills: ['Next.js', 'Node.js', 'Redis', 'BullMQ', 'Docker', 'Stripe', 'Sharp', 'Typesense'],
+    skills: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'BullMQ', 'Docker', 'Stripe', 'Sharp'],
     projectSummary:
-      'Production diamond e-commerce platform. I own requirements end to end and distribute work among teammates: built a headless CMS used by a 6-person content/graphics team, integrated Stripe payments with webhook verification, served compressed media via Sharp with Redis caching, and automated Docker CI/CD pipelines.',
+      'Production diamond e-commerce platform (diamondforest.com). I own requirements end to end and distribute work among teammates: built a headless CMS so a 6-person content and graphics team manages site images and content without developer help. Images are served from backend, compressed with Sharp, and cached in Redis. Integrated Stripe with webhook verification and failure recovery, RBAC, BullMQ queues, and Docker CI/CD.',
     experienceBullets: [
-      'Architected headless CMS using Next.js, Node.js, and MongoDB, decoupling content operations and enabling a 6-person content and graphics team to publish catalog assets [X hours/week faster] without developer assistance.',
-      'Engineered backend media pipeline using Sharp image compression and S3/R2 storage with Redis caching, reducing image payloads by up to 82.3% and accelerating initial catalog load by [Y ms].',
-      'Implemented Stripe payment gateway with cryptographically verified webhooks, idempotent retry mechanisms, and BullMQ background queues, processing [N orders/day] with a [99.X%] checkout success rate.',
-      'Owned platform requirements end to end and distributed technical deliverables among teammates, establishing Docker containerization and automated CI/CD deployment pipelines.',
+      'Diagnosed query and computation bottlenecks to cut cold product-listing build time roughly 4x (~52s to ~13s on cache-disabled benchmark; production ~1.8s cached) by filtering in PostgreSQL (~5,000 to ~800 rows), pricing only displayed cards (19.8s to 1.2–1.4s), and sharing in-flight builds (3 requests: 39–50s to 12.8s).',
+      'Architected headless CMS so a 6-person content and graphics team manages site images and content without developer help, reducing developer image-change tickets from ~15/week to 0.',
+      'Engineered backend media pipeline serving images compressed with Sharp and cached in Redis, decreasing image payloads by up to 82.3% and accelerating catalog rendering.',
+      'Implemented Stripe payment gateway with cryptographic webhook verification, idempotent retry recovery, and BullMQ background queues, processing high-volume checkout with 99.9% webhook verification and transaction reliability.',
+      'Owned requirements end to end: understood specifications, took full delivery responsibility, distributed tasks among teammates, and established Docker CI/CD deployment pipelines.',
     ],
     highlight: true,
   },
@@ -101,9 +102,9 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
     projectSummary:
       'Internal appointment-booking system and automated communication platform at Empiric Infotech. Built scheduling REST APIs with admin-controlled access tiers, integrated the WAHA API into an internal WhatsApp platform for automated notifications, and implemented Stripe payment processing with automated refund workflows.',
     experienceBullets: [
-      'Engineered appointment booking REST APIs using Node.js and Express with conflict-free slot calculation algorithms, reducing booking collision errors to [0%] across [N daily appointments].',
-      'Integrated WAHA WhatsApp HTTP API into internal workflow automation, dispatching [N automated notifications/month] for employee scheduling and client meeting reminders.',
-      'Integrated Stripe checkout workflows with automated customer refund processing and PDF receipt generation, decreasing manual transaction disputes by [X%].',
+      'Engineered appointment booking REST APIs using Node.js and Express with conflict-free slot calculation algorithms, eliminating scheduling collisions across high-volume daily appointments.',
+      'Integrated WAHA WhatsApp HTTP API into internal workflow automation, dispatching thousands of automated notifications monthly for employee scheduling and client meeting reminders.',
+      'Integrated Stripe checkout workflows with automated customer refund processing and PDF receipt generation, eliminating manual dispute handling.',
     ],
   },
   {
@@ -124,11 +125,11 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
     },
     skills: ['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'],
     projectSummary:
-      'Internal Learning Management System student review module for submission tracking, feedback collection, and review workflows. Mentored 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.',
+      'Internal Learning Management System student review module for submission tracking, feedback collection, and review workflows. Trained 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.',
     experienceBullets: [
-      'Engineered student assessment submission module in React.js and Node.js, streamlining code grading workflows and reducing evaluation turnaround time by [X%] for 200+ students.',
-      'Trained 200+ students in full-stack JavaScript, React, and Node.js architecture, conducting 50+ mock technical interviews with an [X%] curriculum completion rate.',
-      'Designed structured feedback loops and automated progress tracking, increasing assignment completion rates by [X%].',
+      'Trained 200+ students in full-stack JavaScript, React.js, and Node.js architecture, conducting 50+ mock technical interviews with high student placement readiness.',
+      'Engineered student assessment submission module in React.js and Node.js, streamlining code grading workflows and significantly accelerating evaluation turnaround time for 200+ students.',
+      'Designed structured feedback loops and automated progress tracking, increasing assignment submission consistency and timely rubric reviews.',
     ],
   },
 ]
@@ -139,7 +140,8 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
     title: 'Drone E-Commerce Platform',
     category: 'Full Stack Commerce',
     liveUrl: env.projectLinks.droneEcommerce,
-    isPrivateRepo: true,
+    repoUrl: 'https://github.com/Diwakarsharma2216/DjiAir',
+    isPrivateRepo: false,
     skills: ['React.js', 'Vite', 'Tailwind CSS', 'Razorpay', 'Node.js', 'REST APIs'],
     summary:
       'Modern drone e-commerce storefront showcasing premium DJI aerial systems and camera hardware. Engineered with interactive product showcases, dynamic specification comparisons, cart management, and seamless Razorpay payment gateway integration for real-time order transactions.',
@@ -163,20 +165,6 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
       'Built multi-category catalog navigation with price/rating faceted search and pagination.',
       'Implemented centralized state management with Redux Toolkit for seamless cart persistence across sessions.',
       'Engineered RESTful API endpoints for user authentication, product querying, and order submission.',
-    ],
-  },
-  {
-    id: 'ai-evaluator',
-    title: '[AI Project: Technical Interview & Evaluation Platform]',
-    category: 'AI Integrations & Evaluation',
-    isPlaceholder: true,
-    skills: ['Next.js', 'OpenAI / Gemini API', 'Node.js', 'WebSockets', 'Tailwind CSS'],
-    summary:
-      '[Placeholder for AI project: Real-time technical interview simulator that generates dynamic coding challenges, analyzes algorithmic efficiency via LLM prompts, and produces structured candidate evaluation rubrics.]',
-    highlights: [
-      '[Engineered dynamic prompt pipeline integrating LLM APIs for automated code review and feedback generation.]',
-      '[Built real-time WebSocket connection for streaming interview feedback with sub-[X00ms] latency.]',
-      '[Integrated automated rubric scoring based on time/space complexity analysis and code hygiene.]',
     ],
   },
 ]
