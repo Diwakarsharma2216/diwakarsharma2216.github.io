@@ -58,32 +58,60 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 ---
 
-## Featured Projects
+## Projects & Production Systems
 
-### **1. Diamond E-Commerce Platform**
-- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+### **A. Work Experience & Production Deliverables**
+*High-impact systems, e-commerce architectures, and internal platforms engineered during full-time company tenure.*
+
+#### **1. Diamond E-Commerce Platform** &bull; *Diamond Atelier*
+- **Role:** Software Developer (Core Platform Delivery) &bull; Nov 2025 – Present
+- **Live / Demo:** [diwakarsharma2216.github.io](https://diwakarsharma2216.github.io) &bull; [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
 - **Technologies:** Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense
-- Production luxury jewelry e-commerce store with custom headless CMS, Stripe webhook verification, S3/R2 media processing pipeline, Redis catalog caching, BullMQ queues, and instant typo-tolerant Typesense search.
+- **Key Engineering Highlights:**
+  - Architected and shipped an in-house headless CMS enabling a 6-member non-technical catalog team to independently manage high-ticket jewelry assets, pricing, and content metadata.
+  - Implemented end-to-end Stripe payment processing with cryptographically verified webhooks, idempotent transaction retries, and automated refund recovery.
+  - Engineered media optimization pipelines utilizing S3/R2 with Sharp image compression, generating next-gen WebP/AVIF formats and cutting page load payload by >40%.
+  - Scaled catalog query throughput via multi-tiered Redis caching and decoupled asynchronous invoicing and notification dispatches with BullMQ background job queues.
 
-### **2. WhatsApp & Booking Platform**
+#### **2. WhatsApp & Booking Platform** &bull; *Empiric Infotech LLP*
+- **Role:** MERN Stack Developer &bull; Apr 2024 – Oct 2025
 - **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
 - **Technologies:** Node.js, Express.js, MongoDB, React.js, Stripe, WAHA API
-- Enterprise client booking and communication platform featuring multi-tier RBAC, automated WhatsApp notifications via WAHA HTTP API, and end-to-end Stripe transaction handling with refund workflows.
+- **Key Engineering Highlights:**
+  - Engineered high-concurrency appointment scheduling REST APIs with availability slot calculation, conflict prevention, and admin-level overrides.
+  - Integrated the WAHA WhatsApp HTTP API into core business systems for automated candidate booking confirmations, employee dispatches, and group broadcasts.
+  - Integrated Stripe checkout workflows with automated customer refund handling, downloadable PDF invoice generation, and audit logging.
 
-### **3. AI Technical Interview Platform**
-- **Live / Repo:** [github.com/Diwakarsharma2216/Interview-Platform](https://github.com/Diwakarsharma2216/Interview-Platform)
-- **Technologies:** React.js, Node.js, Express.js, MongoDB, OpenAI API, Tailwind CSS
-- Full-stack technical interview simulation platform featuring secure JWT user authentication, dynamic question generation via OpenAI API, automated answer evaluation, and real-time candidate scoring dashboards.
-
-### **4. Masai LMS Student Assessment Module**
+#### **3. Masai LMS Student Assessment Module** &bull; *Masai School*
+- **Role:** Associate Instructor & LMS Engineer &bull; Oct 2023 – Mar 2024
 - **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
 - **Technologies:** React.js, Node.js, Express.js, JavaScript, MongoDB, Tailwind CSS
-- EdTech learning workflow platform engineered to streamline coding assignment submissions, instructor code review feedback loops, and student performance progress analytics for 200+ developers.
+- **Key Engineering Highlights:**
+  - Engineered the LMS submission review module enabling instructional teams to review student code submissions, assign standardized rubric scores, and log detailed feedback.
+  - Mentored 200+ aspiring software engineers in full-stack JavaScript, React component hierarchies, and Node.js backend foundations.
+  - Conducted 50+ mock technical interviews evaluating DSA proficiency, code cleanliness, and full-stack problem solving.
 
-### **5. Hevenly Heven E-Commerce Platform**
+---
+
+### **B. Personal & Open Source Projects**
+*Self-directed full-stack systems, dynamic AI integrations, and architectural prototypes built independently.*
+
+#### **1. AI Technical Interview Platform**
+- **Category:** Full-Stack AI Application &bull; Independent Project
+- **Live / Repo:** [github.com/Diwakarsharma2216/Interview-Platform](https://github.com/Diwakarsharma2216/Interview-Platform)
+- **Technologies:** React.js, Node.js, Express.js, MongoDB, OpenAI API, Tailwind CSS
+- **Key Engineering Highlights:**
+  - Designed and built a technical interview preparation platform with secure JWT authentication and role-based access controls.
+  - Integrated OpenAI API for dynamic question generation across algorithms, frontend, and system design, accompanied by automated real-time answer scoring and code evaluation rubrics.
+  - Engineered a candidate analytics dashboard summarizing performance trends, topic weaknesses, and actionable improvement feedback.
+
+#### **2. Hevenly Heven E-Commerce Platform**
+- **Category:** Full-Stack E-Commerce &bull; Independent Project
 - **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
-- **Technologies:** React.js, Node.js, Express.js, MongoDB, Tailwind CSS, REST APIs
-- Full-stack shopping application with responsive multi-category catalog, faceted price/rating filters, global cart persistence with Redux Toolkit, and checkout simulation.
+- **Technologies:** React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
+- **Key Engineering Highlights:**
+  - Built an end-to-end online shopping application featuring responsive multi-category catalog navigation, price/rating faceted search, and full cart persistence using Redux Toolkit.
+  - Engineered modular React component hierarchy with reusable UI elements, client-side route guards, and clean RESTful API integration.
 
 ---
 

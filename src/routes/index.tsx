@@ -294,280 +294,339 @@ function PortfolioPage() {
       {/* ────────────────────────────────────────────────────────── */}
       <section id="projects" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-8">
-          <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
-            Projects
-          </h2>
+          <div>
+            <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
+              Featured Projects
+            </h2>
+          </div>
           <span className="text-xs font-mono text-[var(--text-muted)]">
-            Selected Work &bull; 2024–Present
+            Production &bull; Personal &bull; 2023–Present
           </span>
         </div>
 
-        {/* Flagship Feature: Diamond Atelier */}
-        <div className="mb-8 p-6 sm:p-8 rounded-[10px] border border-[var(--border-strong)] bg-[var(--bg-surface)]">
-          <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+        {/* ══════════════════════════════════════════════════════════ */}
+        {/* CATEGORY 1: WORK EXPERIENCE & PRODUCTION PLATFORMS        */}
+        {/* ══════════════════════════════════════════════════════════ */}
+        <div className="mb-12">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
             <div className="flex items-center gap-2">
-              <span className="text-xs font-mono font-medium text-[var(--accent-text)] uppercase tracking-wider">
-                Diamond Atelier
-              </span>
-              <span className="text-xs font-mono text-[var(--text-muted)]">&bull;</span>
-              <span className="text-xs font-mono text-[var(--text-muted)]">Nov 2025–Present</span>
+              <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+              <h3 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
+                01 / Work Experience & Production Systems
+              </h3>
             </div>
-            <div className="flex items-center gap-2">
+            <span className="text-[11px] font-mono text-[var(--text-muted)]">
+              Diamond Atelier &bull; Empiric Infotech &bull; Masai School
+            </span>
+          </div>
+          <p className="text-xs text-[var(--text-secondary)] font-sans mb-6 max-w-2xl">
+            Enterprise systems, commerce backends, and internal platforms engineered during full-time company tenure.
+          </p>
+
+          {/* Flagship Feature: Diamond Atelier */}
+          <div className="mb-6 p-6 sm:p-8 rounded-[10px] border border-[var(--border-strong)] bg-[var(--bg-surface)]">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-medium text-[var(--accent-text)] uppercase tracking-wider">
+                  Diamond Atelier
+                </span>
+                <span className="text-xs font-mono text-[var(--text-muted)]">&bull;</span>
+                <span className="text-xs font-mono text-[var(--text-muted)]">Nov 2025–Present</span>
+                <span className="hidden sm:inline-block px-2 py-0.5 rounded-[4px] text-[10px] font-mono uppercase tracking-wider border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-[var(--accent-text)]">
+                  Company Deliverable
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={env.projectLinks.diamondAtelier}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--accent-text)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors no-underline cursor-pointer"
+                  title="Open Live Link"
+                >
+                  <span>Live Link</span>
+                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                  </svg>
+                </a>
+                <span className="text-xs font-mono px-2 py-0.5 rounded-[4px] bg-[var(--bg-canvas)] text-[var(--text-secondary)] border border-[var(--border-subtle)]">
+                  Software Developer &bull; Core Platform Delivery
+                </span>
+              </div>
+            </div>
+
+            <div className="mb-3">
               <a
                 href={env.projectLinks.diamondAtelier}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--accent-text)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors no-underline cursor-pointer"
-                title="Open Live Link"
+                className="group inline-flex items-center gap-2.5 text-inherit no-underline"
               >
-                <span>Live Link</span>
-                <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                <h4 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                  Diamond E-Commerce Platform
+                </h4>
+                <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
                   <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
                 </svg>
               </a>
-              <span className="text-xs font-mono px-2 py-0.5 rounded-[4px] bg-[var(--bg-canvas)] text-[var(--text-secondary)] border border-[var(--border-subtle)]">
-                Software Developer &bull; Core Platform Delivery
-              </span>
+            </div>
+
+            <p className="text-base sm:text-lg text-[var(--text-secondary)] font-sans leading-relaxed max-w-3xl mb-6">
+              Production diamond e-commerce platform. Owned feature delivery end-to-end: built a headless CMS enabling a six-person content team to manage website assets without developer intervention, integrated Stripe payments with webhook verification & failure recovery, designed RBAC authentication, implemented S3-compatible media uploads with Sharp image compression, and scaled performance using Redis caching, BullMQ background queues, and Docker CI/CD pipelines.
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 pt-2">
+              {['Next.js', 'Node.js', 'Redis', 'BullMQ', 'Docker', 'Stripe', 'Sharp', 'Typesense'].map(
+                (tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                  >
+                    {tech}
+                  </span>
+                )
+              )}
             </div>
           </div>
 
-          <div className="mb-3">
-            <a
-              href={env.projectLinks.diamondAtelier}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-2.5 text-inherit no-underline"
-            >
-              <h3 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                Diamond E-Commerce Platform
-              </h3>
-              <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-              </svg>
-            </a>
-          </div>
+          {/* Grid: WhatsApp & Booking Platform + Masai LMS Module */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {/* WhatsApp & Booking Platform */}
+            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
+              <div>
+                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">Empiric Infotech</span>
+                    <span>&bull; Apr 2024–Oct 2025</span>
+                  </div>
+                  <a
+                    href={env.projectLinks.whatsappBooking}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                    title="Open Live Link"
+                  >
+                    <span>Live Link</span>
+                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="mb-2">
+                  <a
+                    href={env.projectLinks.whatsappBooking}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-center gap-2 text-inherit no-underline"
+                  >
+                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                      WhatsApp & Booking Platform
+                    </h4>
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
+                  Expert appointment-booking system and communication platform at Empiric Infotech. Implemented end-to-end Stripe payment processing with refund workflows, integrated the WAHA API into an internal WhatsApp platform for automated employee and group messaging, and developed scheduling REST APIs with admin-controlled access tiers.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                {['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Stripe', 'WAHA API'].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
 
-          <p className="text-base sm:text-lg text-[var(--text-secondary)] font-sans leading-relaxed max-w-3xl mb-6">
-            Production diamond e-commerce platform. Owned feature delivery end-to-end: built a headless CMS enabling a six-person content team to manage website assets without developer intervention, integrated Stripe payments with webhook verification & failure recovery, designed RBAC authentication, implemented S3-compatible media uploads with Sharp image compression, and scaled performance using Redis caching, BullMQ background queues, and Docker CI/CD pipelines.
-          </p>
-
-          <div className="flex flex-wrap gap-1.5 pt-2">
-            {['Next.js', 'Node.js', 'Redis', 'BullMQ', 'Docker', 'Stripe', 'Sharp', 'Typesense'].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+            {/* Masai LMS Assessment Module */}
+            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
+              <div>
+                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">Masai School</span>
+                    <span>&bull; Oct 2023–Mar 2024</span>
+                  </div>
+                  <a
+                    href={env.projectLinks.masaiLms}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                    title="Open Live Link"
+                  >
+                    <span>Live Link</span>
+                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="mb-2">
+                  <a
+                    href={env.projectLinks.masaiLms}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-center gap-2 text-inherit no-underline"
+                  >
+                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                      Masai LMS Assessment Module
+                    </h4>
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
+                  Engineered the Learning Management System student review module for submission tracking, feedback collection, and review workflows. Mentored 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                {['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Selected Projects Editorial Grid */}
-        <div className="grid sm:grid-cols-2 gap-6">
-          {/* WhatsApp & Booking Platform */}
-          <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>Backend & Commerce &bull; Apr 2024–Oct 2025</span>
-                <a
-                  href={env.projectLinks.whatsappBooking}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                  title="Open Live Link"
-                >
-                  <span>Live Link</span>
-                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <div className="mb-2">
-                <a
-                  href={env.projectLinks.whatsappBooking}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group inline-flex items-center gap-2 text-inherit no-underline"
-                >
-                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                    WhatsApp & Booking Platform
-                  </h3>
-                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Expert appointment-booking system and communication platform at Empiric Infotech. Implemented end-to-end Stripe payment processing with refund workflows, integrated the WAHA API into an internal WhatsApp platform for automated employee and group messaging, and developed scheduling REST APIs with admin-controlled access tiers.
-              </p>
+        {/* ══════════════════════════════════════════════════════════ */}
+        {/* CATEGORY 2: PERSONAL & OPEN SOURCE PROJECTS               */}
+        {/* ══════════════════════════════════════════════════════════ */}
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pt-8 border-t border-[var(--border-subtle)]">
+            <div className="flex items-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+              <h3 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
+                02 / Personal & Open Source Projects
+              </h3>
             </div>
-            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Stripe', 'WAHA API'].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
-                  >
-                    {tech}
-                  </span>
-                )
-              )}
-            </div>
+            <span className="text-[11px] font-mono text-[var(--text-muted)]">
+              Independent Architecture &bull; OpenAI API &bull; Full-Stack Systems
+            </span>
           </div>
+          <p className="text-xs text-[var(--text-secondary)] font-sans mb-6 max-w-2xl">
+            Independent full-stack platforms, AI-driven evaluation tools, and open-source applications built from scratch.
+          </p>
 
-          {/* Masai LMS Assessment Module */}
-          <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>EdTech & Workflow &bull; Oct 2023–Mar 2024</span>
-                <a
-                  href={env.projectLinks.masaiLms}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                  title="Open Live Link"
-                >
-                  <span>Live Link</span>
-                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <div className="mb-2">
-                <a
-                  href={env.projectLinks.masaiLms}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group inline-flex items-center gap-2 text-inherit no-underline"
-                >
-                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                    Masai LMS Assessment Module
-                  </h3>
-                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Engineered the Learning Management System student review module for submission tracking, feedback collection, and review workflows. Mentored 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+          <div className="grid sm:grid-cols-2 gap-6">
+            {/* AI Technical Interview Platform */}
+            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
+              <div>
+                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">Personal Project</span>
+                    <span>&bull; Full Stack AI</span>
+                  </div>
+                  <a
+                    href={env.projectLinks.aiInterview}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                    title="Open Live Link"
                   >
-                    {tech}
-                  </span>
-                )
-              )}
+                    <span>Live Link</span>
+                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="mb-2">
+                  <a
+                    href={env.projectLinks.aiInterview}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-center gap-2 text-inherit no-underline"
+                  >
+                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                      AI Technical Interview Platform
+                    </h4>
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
+                  Full-stack MERN platform built for interactive technical interview practice. Features secure JWT user authentication, dynamic question generation and answer evaluation via OpenAI API, real-time candidate scoring metrics, and administrative analytics.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'OpenAI API', 'Tailwind CSS'].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* AI Interview Platform */}
-          <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>AI & Full Stack &bull; Open Source</span>
-                <a
-                  href={env.projectLinks.aiInterview}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                  title="Open Live Link"
-                >
-                  <span>Live Link</span>
-                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <div className="mb-2">
-                <a
-                  href={env.projectLinks.aiInterview}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group inline-flex items-center gap-2 text-inherit no-underline"
-                >
-                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                    AI Interview Platform
-                  </h3>
-                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Full-stack MERN platform built for interactive technical interview practice. Features JWT user authentication, OpenAI API integration for automated question generation and response evaluation, a real-time scoring system, and admin controls.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'OpenAI API', 'Tailwind CSS'].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+            {/* Hevenly Heven E-Commerce */}
+            <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
+              <div>
+                <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">Personal Project</span>
+                    <span>&bull; Full Stack E-Commerce</span>
+                  </div>
+                  <a
+                    href={env.projectLinks.hevenlyHeven}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
+                    title="Open Live Link"
                   >
-                    {tech}
-                  </span>
-                )
-              )}
-            </div>
-          </div>
-
-          {/* Hevenly Heven E-Commerce */}
-          <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
-                <span>Retail & E-Commerce &bull; Full Stack</span>
-                <a
-                  href={env.projectLinks.hevenlyHeven}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                  title="Open Live Link"
-                >
-                  <span>Live Link</span>
-                  <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <div className="mb-2">
-                <a
-                  href={env.projectLinks.hevenlyHeven}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group inline-flex items-center gap-2 text-inherit no-underline"
-                >
-                  <h3 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                    Hevenly Heven E-Commerce
-                  </h3>
-                  <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                Full-stack online shopping platform designed for product discovery, facet filtering, cart management, and seamless transaction checkout. Built with modular component architecture, state management, and responsive styling.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-              {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'REST APIs'].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                    <span>Live Link</span>
+                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="mb-2">
+                  <a
+                    href={env.projectLinks.hevenlyHeven}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-center gap-2 text-inherit no-underline"
                   >
-                    {tech}
-                  </span>
-                )
-              )}
+                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
+                      Hevenly Heven E-Commerce
+                    </h4>
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
+                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
+                  Full-stack online shopping platform designed for product discovery, faceted filtering, cart persistence via Redux Toolkit, and seamless transaction checkout. Built with modular component architecture, responsive styling, and clean RESTful APIs.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux Toolkit'].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-0.5 rounded-[4px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
             </div>
           </div>
         </div>
