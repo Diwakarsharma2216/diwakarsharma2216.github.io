@@ -7,13 +7,6 @@ export const env = {
   locationDetail:
     import.meta.env.VITE_LOCATION_DETAIL || 'Surat, Gujarat, India (UTC+5:30)',
   phone: import.meta.env.VITE_PHONE || '+91 6394842216',
-
-  // Career & Availability
-  noticePeriod: import.meta.env.VITE_NOTICE_PERIOD || '[X weeks / Immediate]',
-  rolesSought:
-    import.meta.env.VITE_ROLES_SOUGHT || 'Software Engineer / Full Stack Engineer',
-  workPreference:
-    import.meta.env.VITE_WORK_PREFERENCE || 'Remote / Hybrid / Onsite in [City/Relocation]',
   resumeUrl: import.meta.env.VITE_RESUME_URL || '/resume.pdf',
 
   // Contact & Social Links
@@ -48,14 +41,14 @@ export const env = {
       'https://hev-en.vercel.app/',
   },
 
-  // SEO & Headings (Clean, under 160 characters, no keyword stuffing)
+  // SEO & Headings
   shortTitle:
     import.meta.env.VITE_SHORT_TITLE ||
-    'Diwakar Sharma — Full Stack Developer',
+    'Diwakar Sharma (diwakarsharma) — Full Stack Developer',
   title:
     import.meta.env.VITE_TITLE ||
-    'Diwakar Sharma — Full Stack Developer',
+    'Diwakar Sharma (diwakarsharma) — Full Stack Developer | Next.js, Node.js & Cloud Systems',
   description:
     import.meta.env.VITE_DESCRIPTION ||
-    'Full Stack Developer specializing in React, Next.js, Node.js, and scalable cloud systems. Building high-performance web applications and e-commerce platforms.',
+    'Diwakar Sharma (diwakarsharma / diwakarsharma2216) — Full Stack Developer with 2.5+ years of experience engineering scalable web applications, headless commerce, Stripe payments, BullMQ queues, and cloud deployments. Software Developer at Diamond Atelier.',
 }

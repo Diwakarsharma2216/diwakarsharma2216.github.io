@@ -18,21 +18,13 @@
 
 ## Technical Competencies
 
-### Strong (Core Production Competencies — Interview Ready)
-- **Languages**: TypeScript, JavaScript (ES6+)
-- **Frontend**: React.js (v19), Next.js (App/Pages Router, SSR, SSG, ISR), Tailwind CSS, HTML5, CSS3
-- **Backend**: Node.js, Express.js, RESTful API Design, JWT Authentication & RBAC
-- **Databases**: MongoDB (Aggregation Pipelines, Indexing), PostgreSQL (Relational Modeling, Indexing)
-- **Version Control**: Git & GitHub (Atomic Commits, Pull Request Reviews)
-
-### Working (Production-Tested in Real Systems)
-- **Caching & Queues**: Redis (TTL Strategies, Caching Layers), BullMQ (Distributed Asynchronous Workers)
-- **Containerization & CI/CD**: Docker (Multi-stage Builds), CI/CD Automation Pipelines
-- **Commerce & Media**: Stripe Payment Gateway (Webhooks, Idempotency), Sharp (WebP/AVIF Compression Pipeline)
-- **Search & Tooling**: Typesense (Typo-Tolerant Search), Vite, Postman, Linux / Bash
-
-### Familiar (Academic & Project Exposure)
-- Java (OOP, DSA), C / C++ (Pointers, Memory Management), Firebase (Firestore, Auth), WebSockets (Socket.IO), AWS (EC2, S3), Cloudflare R2, Geolocation APIs
+- **Languages**: JavaScript (ES6+), TypeScript, Java, C, C++
+- **Frontend**: React.js, Next.js (SSR/SSG/ISR), Redux, Context API, Tailwind CSS, HTML5, CSS3, Responsive Design
+- **Backend**: Node.js, Express.js, REST API Design, JWT Authentication, Socket.IO, Strapi CMS, BullMQ, Sharp
+- **Databases & Cache**: PostgreSQL, MongoDB, Firebase (Firestore, Realtime DB, Auth, Storage), Redis, Typesense
+- **Cloud & DevOps**: AWS (EC2, S3), Docker, Firebase Hosting, Cloudflare R2, Git/GitHub, CI/CD Pipelines, Agile/Scrum
+- **Product & Analytics**: SaaS Product Development, PostHog, CleverTap, SEO Optimization, Payment Gateways (Razorpay, Stripe)
+- **Core CS & Systems**: Data Structures & Algorithms, System Design, OOP, Geolocation APIs, XLSX/CSV Data Export
 
 ---
 
@@ -42,17 +34,15 @@
    - **Role**: Software Developer (Nov 2025 – Present)
    - **Stack**: Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense
    - **Live**: https://www.diamondforest.com/
-   - **Highlights**: Built headless CMS enabling a 6-person team to manage catalog assets; Stripe payments with automated webhook recovery; S3/R2 image pipelines with Sharp compression; Redis caching & BullMQ queues for asynchronous order events.
+   - **Highlights**: Built headless CMS enabling a six-person content team to manage catalog assets without developer intervention; Stripe payments with automated webhook recovery; S3/R2 image pipelines with Sharp compression; Redis caching & BullMQ queues for asynchronous order events.
 
 2. **WhatsApp & Appointment Booking Platform** &bull; *Empiric Infotech LLP*
    - **Role**: MERN Stack Developer (Apr 2024 – Oct 2025)
-   - **Scope**: Private Enterprise Project (Proprietary internal platform under NDA)
    - **Stack**: Node.js, Express.js, MongoDB, React.js, Stripe, WAHA API
    - **Highlights**: Built scheduling REST APIs with conflict-free slot calculation; automated WhatsApp notifications via WAHA API; integrated Stripe payment processing with refund workflows.
 
 3. **Masai LMS Student Assessment Module** &bull; *Masai School*
    - **Role**: Associate Instructor & LMS Engineer (Oct 2023 – Mar 2024)
-   - **Scope**: Private Educational Platform (Internal LMS infrastructure)
    - **Stack**: React.js, Node.js, Express.js, JavaScript, MongoDB, Tailwind CSS
    - **Highlights**: Built student submission review module, rubric scoring, and progress feedback tracking serving 200+ students.
 
@@ -71,15 +61,10 @@
    - **Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
    - **Highlights**: Full-stack online shopping platform with faceted search, Redux Toolkit cart persistence, and RESTful APIs.
 
-3. **[AI Project: Technical Interview & Evaluation Platform]**
-   - **Status**: [Slot: Upcoming / In Development]
-   - **Stack**: Next.js, OpenAI / Gemini API, Node.js, WebSockets, Tailwind CSS
-   - **Highlights**: [Placeholder: Real-time technical interview simulator that generates dynamic coding challenges and analyzes algorithmic efficiency via LLM prompts.]
-
 ---
 
 ## Education
 
-- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (2023 – 2026) &bull; Online (while working full-time)
+- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (2023 – 2026)
 - **Full Stack Web Development & Data Structures** &bull; Masai School (Sep 2022 – Jun 2023)
 - **Class XII – Science (Mathematics & Physics)** &bull; Mahatma Gandhi Inter College (Mar 2021 – Apr 2022)
