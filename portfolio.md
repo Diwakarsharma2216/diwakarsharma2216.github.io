@@ -21,12 +21,12 @@
 
 ## Technical Competencies (Defensible in Technical Interviews)
 
-- **Strong (Daily Production & Deep Architecture):**
+- **Core (Daily Production & Web Engineering):**
   TypeScript, JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, Tailwind CSS, RESTful API Design, HTML5/CSS3
-- **Working (Production Delivery & Systems):**
-  Redis Caching, BullMQ Job Queues, Docker Containerization, MongoDB, PostgreSQL, Stripe Payments & Webhooks, Sharp Image Pipeline, Vite, Git & GitHub, Postman, JWT & RBAC
 - **Familiar (Foundational & Academic):**
   Java, C, C++, Firebase, Typesense, WebSockets (Socket.IO), Linux / Bash
+- **Tools (Infrastructure & Workflows):**
+  PostgreSQL, MongoDB, Redis Caching, BullMQ Queues, Docker, Stripe Payments & Webhooks, Sharp Image Pipeline, Vite, Git & GitHub, Postman, JWT & RBAC
 
 ---
 
@@ -81,6 +81,6 @@
 
 ## Education & Certifications
 
-- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (2023 – 2026) — *Online (while working full-time)*
+- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (Completed 2026 - Final Year) — *Online (pursued concurrently alongside full-time engineering work)*
 - **Full Stack Web Development & Data Structures** &bull; Masai School (NSDC Certified &bull; Sep 2022 – Jun 2023)
 - **Class XII – Science** &bull; Mahatma Gandhi Inter College (Mar 2021 – Apr 2022)
