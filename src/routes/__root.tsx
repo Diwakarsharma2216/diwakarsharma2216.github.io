@@ -27,59 +27,15 @@ export const Route = createRootRoute({
         content: SITE_CONFIG.description,
       },
       {
-        name: 'keywords',
-        content: SITE_CONFIG.keywords,
-      },
-      {
         name: 'author',
         content: SITE_CONFIG.author,
       },
       {
-        name: 'creator',
-        content: SITE_CONFIG.author,
-      },
-      {
-        name: 'publisher',
-        content: SITE_CONFIG.author,
-      },
-      {
         name: 'robots',
-        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-      },
-      {
-        name: 'googlebot',
-        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-      },
-      {
-        name: 'bingbot',
-        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-      },
-      {
-        name: 'subject',
-        content: 'Diwakar Sharma (diwakarsharma) — Full Stack Developer Portfolio',
-      },
-      {
-        name: 'rating',
-        content: 'general',
-      },
-      {
-        name: 'geo.region',
-        content: 'IN-GJ',
-      },
-      {
-        name: 'geo.placename',
-        content: 'Surat',
-      },
-      {
-        name: 'application-name',
-        content: SITE_CONFIG.shortTitle,
-      },
-      {
-        name: 'apple-mobile-web-app-title',
-        content: SITE_CONFIG.name,
+        content: 'index, follow',
       },
 
-      /* Open Graph tags (Facebook, LinkedIn, Discord, Slack, WhatsApp) */
+      /* Open Graph tags */
       {
         property: 'og:type',
         content: 'website',
@@ -90,7 +46,7 @@ export const Route = createRootRoute({
       },
       {
         property: 'og:title',
-        content: SITE_CONFIG.shortTitle,
+        content: SITE_CONFIG.title,
       },
       {
         property: 'og:description',
@@ -107,14 +63,6 @@ export const Route = createRootRoute({
       {
         property: 'og:image',
         content: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
-      },
-      {
-        property: 'og:image:secure_url',
-        content: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
-      },
-      {
-        property: 'og:image:type',
-        content: 'image/png',
       },
       {
         property: 'og:image:width',
@@ -144,7 +92,7 @@ export const Route = createRootRoute({
       },
       {
         name: 'twitter:title',
-        content: SITE_CONFIG.shortTitle,
+        content: SITE_CONFIG.title,
       },
       {
         name: 'twitter:description',
