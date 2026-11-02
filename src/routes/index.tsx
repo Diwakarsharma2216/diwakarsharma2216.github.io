@@ -207,7 +207,7 @@ function PortfolioPage() {
             <h1 className="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-[var(--text-primary)] mb-5 leading-[1.08] sm:leading-[1.06]">
               Diwakar Sharma <br />
               <span className="italic text-[var(--accent)] font-serif text-3xl sm:text-5xl lg:text-[3.5rem] block mt-1">
-                Full Stack Developer & Architect.
+                Full Stack Developer.
               </span>
             </h1>
 
