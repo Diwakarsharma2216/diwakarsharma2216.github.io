@@ -75,7 +75,7 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 #### **2. WhatsApp & Booking Platform** &bull; *Empiric Infotech LLP*
 - **Role:** MERN Stack Developer &bull; Apr 2024 – Oct 2025
-- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Access / Status:** Restricted Access &bull; Internal Enterprise Platform
 - **Technologies:** Node.js, Express.js, MongoDB, React.js, Stripe, WAHA API
 - **Key Engineering Highlights:**
   - Engineered high-concurrency appointment scheduling REST APIs with availability slot calculation, conflict prevention, and admin-level overrides.
@@ -84,7 +84,7 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 #### **3. Masai LMS Student Assessment Module** &bull; *Masai School*
 - **Role:** Associate Instructor & LMS Engineer &bull; Oct 2023 – Mar 2024
-- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Access / Status:** Restricted Access &bull; Internal LMS Platform
 - **Technologies:** React.js, Node.js, Express.js, JavaScript, MongoDB, Tailwind CSS
 - **Key Engineering Highlights:**
   - Engineered the LMS submission review module enabling instructional teams to review student code submissions, assign standardized rubric scores, and log detailed feedback.
@@ -107,7 +107,7 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 #### **2. Hevenly Heven E-Commerce Platform**
 - **Category:** Full-Stack E-Commerce &bull; Personal Project
-- **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
+- **Access / Status:** Restricted Access &bull; Private Platform
 - **Technologies:** React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
 - **Key Engineering Highlights:**
   - Built an end-to-end online shopping application featuring responsive multi-category catalog navigation, price/rating faceted search, and full cart persistence using Redux Toolkit.

@@ -399,33 +399,30 @@ function PortfolioPage() {
                     <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">Empiric Infotech</span>
                     <span>&bull; Apr 2024–Oct 2025</span>
                   </div>
-                  <a
-                    href={env.projectLinks.whatsappBooking}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                    title="Open Live Link"
-                  >
-                    <span>Live Link</span>
-                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
+                  <div className="relative group/restricted flex items-center">
+                    <div
+                      tabIndex={0}
+                      role="img"
+                      aria-label="Restricted Access: Internal Enterprise Platform"
+                      className="flex items-center justify-center w-6 h-6 rounded-[4px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors cursor-help"
+                    >
+                      <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor">
+                        <path fillRule="evenodd" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4V4zm2 2h4V4a2 2 0 1 0-4 0v2zm-1.25 2a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    {/* Hover Tooltip */}
+                    <div className="pointer-events-none absolute bottom-full right-0 mb-1.5 hidden group-hover/restricted:flex group-focus-within/restricted:flex flex-col items-center z-30">
+                      <div className="whitespace-nowrap rounded-[5px] bg-[var(--bg-surface-raised)] px-2.5 py-1 text-[11px] font-mono text-[var(--text-primary)] border border-[var(--border-strong)] shadow-lg">
+                        Restricted Access &bull; Internal Platform
+                      </div>
+                      <div className="w-1.5 h-1.5 -mt-1 rotate-45 bg-[var(--bg-surface-raised)] border-r border-b border-[var(--border-strong)]"></div>
+                    </div>
+                  </div>
                 </div>
                 <div className="mb-2">
-                  <a
-                    href={env.projectLinks.whatsappBooking}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group inline-flex items-center gap-2 text-inherit no-underline"
-                  >
-                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                      WhatsApp & Booking Platform
-                    </h4>
-                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
+                  <h4 className="font-serif text-2xl text-[var(--text-primary)]">
+                    WhatsApp & Booking Platform
+                  </h4>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
                   Expert appointment-booking system and communication platform at Empiric Infotech. Implemented end-to-end Stripe payment processing with refund workflows, integrated the WAHA API into an internal WhatsApp platform for automated employee and group messaging, and developed scheduling REST APIs with admin-controlled access tiers.
@@ -453,33 +450,30 @@ function PortfolioPage() {
                     <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">Masai School</span>
                     <span>&bull; Oct 2023–Mar 2024</span>
                   </div>
-                  <a
-                    href={env.projectLinks.masaiLms}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                    title="Open Live Link"
-                  >
-                    <span>Live Link</span>
-                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
+                  <div className="relative group/restricted flex items-center">
+                    <div
+                      tabIndex={0}
+                      role="img"
+                      aria-label="Restricted Access: Internal LMS Platform"
+                      className="flex items-center justify-center w-6 h-6 rounded-[4px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors cursor-help"
+                    >
+                      <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor">
+                        <path fillRule="evenodd" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4V4zm2 2h4V4a2 2 0 1 0-4 0v2zm-1.25 2a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    {/* Hover Tooltip */}
+                    <div className="pointer-events-none absolute bottom-full right-0 mb-1.5 hidden group-hover/restricted:flex group-focus-within/restricted:flex flex-col items-center z-30">
+                      <div className="whitespace-nowrap rounded-[5px] bg-[var(--bg-surface-raised)] px-2.5 py-1 text-[11px] font-mono text-[var(--text-primary)] border border-[var(--border-strong)] shadow-lg">
+                        Restricted Access &bull; Internal LMS
+                      </div>
+                      <div className="w-1.5 h-1.5 -mt-1 rotate-45 bg-[var(--bg-surface-raised)] border-r border-b border-[var(--border-strong)]"></div>
+                    </div>
+                  </div>
                 </div>
                 <div className="mb-2">
-                  <a
-                    href={env.projectLinks.masaiLms}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group inline-flex items-center gap-2 text-inherit no-underline"
-                  >
-                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                      Masai LMS Assessment Module
-                    </h4>
-                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
+                  <h4 className="font-serif text-2xl text-[var(--text-primary)]">
+                    Masai LMS Assessment Module
+                  </h4>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
                   Engineered the Learning Management System student review module for submission tracking, feedback collection, and review workflows. Mentored 200+ students in full-stack JavaScript, React, and Node.js fundamentals, and conducted mock interview evaluations for developer role readiness.
@@ -583,33 +577,30 @@ function PortfolioPage() {
                     <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">Personal Project</span>
                     <span>&bull; Full Stack E-Commerce</span>
                   </div>
-                  <a
-                    href={env.projectLinks.hevenlyHeven}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
-                    title="Open Live Link"
-                  >
-                    <span>Live Link</span>
-                    <svg viewBox="0 0 16 16" width="11" height="11" fill="currentColor">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
+                  <div className="relative group/restricted flex items-center">
+                    <div
+                      tabIndex={0}
+                      role="img"
+                      aria-label="Restricted Access: Private Platform"
+                      className="flex items-center justify-center w-6 h-6 rounded-[4px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors cursor-help"
+                    >
+                      <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor">
+                        <path fillRule="evenodd" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4V4zm2 2h4V4a2 2 0 1 0-4 0v2zm-1.25 2a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    {/* Hover Tooltip */}
+                    <div className="pointer-events-none absolute bottom-full right-0 mb-1.5 hidden group-hover/restricted:flex group-focus-within/restricted:flex flex-col items-center z-30">
+                      <div className="whitespace-nowrap rounded-[5px] bg-[var(--bg-surface-raised)] px-2.5 py-1 text-[11px] font-mono text-[var(--text-primary)] border border-[var(--border-strong)] shadow-lg">
+                        Restricted Access &bull; Private Platform
+                      </div>
+                      <div className="w-1.5 h-1.5 -mt-1 rotate-45 bg-[var(--bg-surface-raised)] border-r border-b border-[var(--border-strong)]"></div>
+                    </div>
+                  </div>
                 </div>
                 <div className="mb-2">
-                  <a
-                    href={env.projectLinks.hevenlyHeven}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group inline-flex items-center gap-2 text-inherit no-underline"
-                  >
-                    <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                      Hevenly Heven E-Commerce
-                    </h4>
-                    <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
-                      <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
+                  <h4 className="font-serif text-2xl text-[var(--text-primary)]">
+                    Hevenly Heven E-Commerce
+                  </h4>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
                   Full-stack online shopping platform designed for product discovery, faceted filtering, cart persistence via Redux Toolkit, and seamless transaction checkout. Built with modular component architecture, responsive styling, and clean RESTful APIs.
