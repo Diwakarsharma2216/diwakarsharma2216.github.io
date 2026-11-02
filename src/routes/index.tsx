@@ -502,22 +502,22 @@ function PortfolioPage() {
         </div>
 
         {/* ══════════════════════════════════════════════════════════ */}
-        {/* CATEGORY 2: PERSONAL & INDEPENDENT PROJECTS               */}
+        {/* CATEGORY 2: PERSONAL PROJECTS                             */}
         {/* ══════════════════════════════════════════════════════════ */}
         <div>
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pt-8 border-t border-[var(--border-subtle)]">
             <div className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
               <h3 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
-                02 / Personal & Independent Projects
+                02 / Personal Projects
               </h3>
             </div>
             <span className="text-[11px] font-mono text-[var(--text-muted)]">
-              Independent Architecture &bull; OpenAI API &bull; Full-Stack Systems
+              AI Integrations &bull; Full-Stack MERN &bull; Web Applications
             </span>
           </div>
           <p className="text-xs text-[var(--text-secondary)] font-sans mb-6 max-w-2xl">
-            Independent full-stack platforms, AI-driven evaluation tools, and modern web applications built from scratch.
+            Full-stack platforms, AI-driven evaluation tools, and modern web applications built from scratch.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -656,7 +656,7 @@ function PortfolioPage() {
               <span className="block text-xs font-mono text-[var(--accent-text)]">Software Developer &bull; Surat (Onsite)</span>
             </div>
             <div className="sm:col-span-5 text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-              Own feature delivery end-to-end: built a headless CMS for independent content management, Stripe webhook payment processing, RBAC authorization, S3/R2 media uploads with Sharp compression, Redis caching, BullMQ queues, and Docker CI/CD.
+              Own feature delivery end-to-end: built a headless CMS for self-serve content management, Stripe webhook payment processing, RBAC authorization, S3/R2 media uploads with Sharp compression, Redis caching, BullMQ queues, and Docker CI/CD.
             </div>
           </div>
 

@@ -68,7 +68,7 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 - **Live / Demo:** [diwakarsharma2216.github.io](https://diwakarsharma2216.github.io) &bull; [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
 - **Technologies:** Next.js, Node.js, Redis, BullMQ, Docker, Stripe, Sharp, Typesense
 - **Key Engineering Highlights:**
-  - Architected and shipped an in-house headless CMS enabling a 6-member non-technical catalog team to independently manage high-ticket jewelry assets, pricing, and content metadata.
+  - Architected and shipped an in-house headless CMS enabling a 6-member non-technical catalog team to manage high-ticket jewelry assets, pricing, and content metadata without developer intervention.
   - Implemented end-to-end Stripe payment processing with cryptographically verified webhooks, idempotent transaction retries, and automated refund recovery.
   - Engineered media optimization pipelines utilizing S3/R2 with Sharp image compression, generating next-gen WebP/AVIF formats and cutting page load payload by >40%.
   - Scaled catalog query throughput via multi-tiered Redis caching and decoupled asynchronous invoicing and notification dispatches with BullMQ background job queues.
@@ -93,11 +93,11 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 ---
 
-### **B. Personal & Independent Projects**
-*Self-directed full-stack systems, dynamic AI integrations, and architectural prototypes built independently.*
+### **B. Personal Projects**
+*Full-stack web applications, dynamic AI integrations, and architectural systems.*
 
 #### **1. AI Technical Interview Platform**
-- **Category:** Full-Stack AI Application &bull; Independent Project
+- **Category:** Full-Stack AI Application &bull; Personal Project
 - **Live / Repo:** [github.com/Diwakarsharma2216/Interview-Platform](https://github.com/Diwakarsharma2216/Interview-Platform)
 - **Technologies:** React.js, Node.js, Express.js, MongoDB, OpenAI API, Tailwind CSS
 - **Key Engineering Highlights:**
@@ -106,7 +106,7 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
   - Engineered a candidate analytics dashboard summarizing performance trends, topic weaknesses, and actionable improvement feedback.
 
 #### **2. Hevenly Heven E-Commerce Platform**
-- **Category:** Full-Stack E-Commerce &bull; Independent Project
+- **Category:** Full-Stack E-Commerce &bull; Personal Project
 - **Live / Repo:** [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216)
 - **Technologies:** React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
 - **Key Engineering Highlights:**
