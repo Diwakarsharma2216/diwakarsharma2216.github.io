@@ -43,10 +43,11 @@
    - **Stack**: React.js, Node.js, Express, MongoDB.
    - **Highlights**: Built student submission evaluation rubrics, progress feedback tracking, and workflow modules serving 200+ students.
 
-4. **AI Technical Interview Platform**
+4. **Drone E-Commerce Platform**
    - **Role**: Creator & Developer (Personal Project)
-   - **Stack**: React.js, Node.js, Express.js, MongoDB, OpenAI API.
-   - **Highlights**: Full-stack technical interview simulation platform featuring JWT authentication, automated question generation via OpenAI, and real-time candidate scoring.
+   - **Stack**: React.js, Vite, Tailwind CSS, Razorpay, Node.js.
+   - **Live**: https://dji-air.vercel.app/
+   - **Highlights**: High-performance drone e-commerce application featuring interactive hardware showcases, flight spec comparisons, cart management, and Razorpay payment gateway integration.
 
 5. **Hevenly Heven E-Commerce**
    - **Role**: Creator & Developer (Personal Project)

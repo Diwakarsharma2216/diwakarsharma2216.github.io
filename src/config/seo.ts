@@ -240,12 +240,12 @@ export const structuredData = {
           position: 4,
           item: {
             '@type': 'SoftwareApplication',
-            name: 'AI Technical Interview Platform',
-            applicationCategory: 'DeveloperApplication',
+            name: 'Drone E-Commerce Platform',
+            applicationCategory: 'ShoppingApplication',
             operatingSystem: 'Web',
             description:
-              'Full-stack MERN platform integrating OpenAI APIs for automated technical interview question generation, response evaluation, and real-time scoring.',
-            url: env.projectLinks.aiInterview,
+              'Modern full-stack drone e-commerce storefront for DJI aerial systems and camera hardware, featuring interactive showcases, cart persistence, and Razorpay payment checkout.',
+            url: env.projectLinks.droneEcommerce,
             author: { '@id': `${SITE_CONFIG.url}/#person` },
           },
         },

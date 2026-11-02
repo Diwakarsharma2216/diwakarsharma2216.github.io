@@ -515,16 +515,16 @@ function PortfolioPage() {
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            {/* AI Technical Interview Platform */}
+            {/* Drone E-Commerce Platform (DJI Air) */}
             <div className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
                   <div className="flex items-center gap-1.5">
                     <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-emerald-500/30 bg-emerald-500/10 text-emerald-400">Personal Project</span>
-                    <span>&bull; Full Stack AI</span>
+                    <span>&bull; Drone & Hardware Commerce</span>
                   </div>
                   <a
-                    href={env.projectLinks.aiInterview}
+                    href={env.projectLinks.droneEcommerce}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent-text)] hover:text-[var(--accent)] transition-colors no-underline cursor-pointer"
@@ -538,13 +538,13 @@ function PortfolioPage() {
                 </div>
                 <div className="mb-2">
                   <a
-                    href={env.projectLinks.aiInterview}
+                    href={env.projectLinks.droneEcommerce}
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex items-center gap-2 text-inherit no-underline"
                   >
                     <h4 className="font-serif text-2xl text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent)]">
-                      AI Technical Interview Platform
+                      Drone E-Commerce Platform
                     </h4>
                     <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" className="text-[var(--text-muted)] transition-transform duration-200 group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
                       <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0z" clipRule="evenodd" />
@@ -552,11 +552,11 @@ function PortfolioPage() {
                   </a>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
-                  Full-stack MERN platform built for interactive technical interview practice. Features secure JWT user authentication, dynamic question generation and answer evaluation via OpenAI API, real-time candidate scoring metrics, and administrative analytics.
+                  Modern drone e-commerce storefront showcasing premium DJI aerial systems and camera hardware. Engineered with interactive product showcases, dynamic specification comparisons, cart management, and seamless Razorpay payment gateway integration for real-time order transactions.
                 </p>
               </div>
               <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
-                {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'OpenAI API', 'Tailwind CSS'].map(
+                {['React.js', 'Vite', 'Tailwind CSS', 'Razorpay', 'Node.js', 'REST APIs'].map(
                   (tech) => (
                     <span
                       key={tech}

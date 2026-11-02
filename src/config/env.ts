@@ -32,9 +32,9 @@ export const env = {
     masaiLms:
       import.meta.env.VITE_PROJECT_LMS_URL ||
       'https://github.com/Diwakarsharma2216',
-    aiInterview:
-      import.meta.env.VITE_PROJECT_INTERVIEW_URL ||
-      'https://github.com/Diwakarsharma2216/Interview-Platform',
+    droneEcommerce:
+      import.meta.env.VITE_PROJECT_DRONE_URL ||
+      'https://dji-air.vercel.app/',
     hevenlyHeven:
       import.meta.env.VITE_PROJECT_HEVENLY_URL ||
       'https://github.com/Diwakarsharma2216',

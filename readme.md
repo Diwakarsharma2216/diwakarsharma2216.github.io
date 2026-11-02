@@ -94,16 +94,16 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 ---
 
 ### **B. Personal Projects**
-*Full-stack web applications, dynamic AI integrations, and architectural systems.*
+*Full-stack web applications, dynamic commerce integrations, and architectural systems.*
 
-#### **1. AI Technical Interview Platform**
-- **Category:** Full-Stack AI Application &bull; Personal Project
-- **Live / Repo:** [github.com/Diwakarsharma2216/Interview-Platform](https://github.com/Diwakarsharma2216/Interview-Platform)
-- **Technologies:** React.js, Node.js, Express.js, MongoDB, OpenAI API, Tailwind CSS
+#### **1. Drone E-Commerce Platform**
+- **Category:** Full-Stack E-Commerce &bull; Personal Project
+- **Live / Demo:** [dji-air.vercel.app](https://dji-air.vercel.app/)
+- **Technologies:** React.js, Vite, Tailwind CSS, Razorpay, Node.js, REST APIs
 - **Key Engineering Highlights:**
-  - Designed and built a technical interview preparation platform with secure JWT authentication and role-based access controls.
-  - Integrated OpenAI API for dynamic question generation across algorithms, frontend, and system design, accompanied by automated real-time answer scoring and code evaluation rubrics.
-  - Engineered a candidate analytics dashboard summarizing performance trends, topic weaknesses, and actionable improvement feedback.
+  - Architected high-performance drone commerce application featuring interactive DJI aerial system showcase, dynamic flight/camera specifications, and variant selection.
+  - Integrated Razorpay payment checkout workflow with order generation and transaction verification.
+  - Engineered responsive catalog interface with client-side state persistence, real-time cart updates, and mobile-first UX.
 
 #### **2. Hevenly Heven E-Commerce Platform**
 - **Category:** Full-Stack E-Commerce &bull; Personal Project
