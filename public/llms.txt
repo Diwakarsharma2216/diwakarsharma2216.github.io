@@ -44,12 +44,12 @@
    - **Highlights**: Built student submission evaluation rubrics, progress feedback tracking, and workflow modules serving 200+ students.
 
 4. **AI Technical Interview Platform**
-   - **Role**: Creator & Maintainer (Open Source)
+   - **Role**: Creator & Developer (Personal Project)
    - **Stack**: React.js, Node.js, Express.js, MongoDB, OpenAI API.
    - **Highlights**: Full-stack technical interview simulation platform featuring JWT authentication, automated question generation via OpenAI, and real-time candidate scoring.
 
 5. **Hevenly Heven E-Commerce**
-   - **Role**: Creator & Maintainer (Open Source)
+   - **Role**: Creator & Developer (Personal Project)
    - **Stack**: React.js, Redux Toolkit, Node.js, Express.js, MongoDB.
    - **Highlights**: Responsive multi-category storefront with cart state persistence, dynamic product filters, and secure checkout simulation.
 

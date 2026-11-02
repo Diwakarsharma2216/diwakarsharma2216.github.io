@@ -93,7 +93,7 @@ Full Stack Developer with 2.5+ years of experience designing, engineering, and s
 
 ---
 
-### **B. Personal & Open Source Projects**
+### **B. Personal & Independent Projects**
 *Self-directed full-stack systems, dynamic AI integrations, and architectural prototypes built independently.*
 
 #### **1. AI Technical Interview Platform**

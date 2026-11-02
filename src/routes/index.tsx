@@ -160,7 +160,7 @@ const FAQS = [
   },
   {
     q: 'How can I contact or book a meeting with Diwakar Sharma?',
-    a: 'You can email Diwakar at diwakarsharma2216@gmail.com, book a 30-minute consultation call on Cal.com (https://cal.com/diwakar-sharma-ojozup/30min), connect on LinkedIn (https://www.linkedin.com/in/diwakarsharma-fullstackdev/), or explore his open-source work on GitHub (https://github.com/Diwakarsharma2216).',
+    a: 'You can email Diwakar at diwakarsharma2216@gmail.com, book a 30-minute consultation call on Cal.com (https://cal.com/diwakar-sharma-ojozup/30min), connect on LinkedIn (https://www.linkedin.com/in/diwakarsharma-fullstackdev/), or explore his code and projects on GitHub (https://github.com/Diwakarsharma2216).',
   },
 ]
 
@@ -502,14 +502,14 @@ function PortfolioPage() {
         </div>
 
         {/* ══════════════════════════════════════════════════════════ */}
-        {/* CATEGORY 2: PERSONAL & OPEN SOURCE PROJECTS               */}
+        {/* CATEGORY 2: PERSONAL & INDEPENDENT PROJECTS               */}
         {/* ══════════════════════════════════════════════════════════ */}
         <div>
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pt-8 border-t border-[var(--border-subtle)]">
             <div className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
               <h3 className="text-xs font-mono uppercase tracking-widest font-semibold text-[var(--text-primary)]">
-                02 / Personal & Open Source Projects
+                02 / Personal & Independent Projects
               </h3>
             </div>
             <span className="text-[11px] font-mono text-[var(--text-muted)]">
@@ -517,7 +517,7 @@ function PortfolioPage() {
             </span>
           </div>
           <p className="text-xs text-[var(--text-secondary)] font-sans mb-6 max-w-2xl">
-            Independent full-stack platforms, AI-driven evaluation tools, and open-source applications built from scratch.
+            Independent full-stack platforms, AI-driven evaluation tools, and modern web applications built from scratch.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
