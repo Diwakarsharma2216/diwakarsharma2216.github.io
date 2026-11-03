@@ -189,11 +189,11 @@ function PortfolioPage() {
   return (
     <main className="container-narrow pt-8 sm:pt-14 pb-12 sm:pb-16">
       {/* ────────────────────────────────────────────────────────── */}
-      {/* 1. HERO SECTION                                            */}
+      {/* 1. SUMMARY (HERO) SECTION                                   */}
       {/* ────────────────────────────────────────────────────────── */}
-      <section className="mb-14 sm:mb-20">
+      <section id="summary" className="mb-14 sm:mb-20 scroll-mt-24">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          {/* Left Column: Kicker, Headline, Impact, Availability, Actions */}
+          {/* Left Column: Kicker, Headline, 5-Paragraph Summary, Actions */}
           <div className="lg:col-span-8">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5">
               <Badge variant="accent" size="sm" dot>
@@ -207,27 +207,30 @@ function PortfolioPage() {
             <h1 className="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-[var(--text-primary)] mb-5 leading-[1.08] sm:leading-[1.06]">
               Diwakar Sharma <br />
               <span className="italic text-[var(--accent)] font-serif text-3xl sm:text-5xl lg:text-[3.5rem] block mt-1">
-                Full Stack Developer.
+                Full Stack Developer
               </span>
             </h1>
 
-            {/*
-              Hero Outcome-Focused Tagline Alternatives:
-              Option 1: "I build e-commerce systems that stay fast: cached product listings in 200-400 ms with Redis, and a headless CMS that lets a 6-person content team publish live without developers." [SELECTED - specific, metrics-driven, supported by production facts]
-              Option 2: "Full Stack Developer engineering fast, reliable commerce platforms — cutting cold catalog builds roughly 4x and automating payments with webhook-verified Stripe flows."
-              Option 3: "Engineering high-throughput web applications with sub-second Redis caching, resilient Stripe checkout pipelines, and self-serve content architecture."
-            */}
-            {/* Hero Outcome-Focused Value Statement */}
-            <div className="mb-6 max-w-xl space-y-2.5">
-              <p className="text-base sm:text-lg text-[var(--text-primary)] font-sans leading-relaxed">
-                I build high-performance e-commerce systems — fast storefronts, verified Stripe payment workflows, sub-second Redis caching, and headless CMS tooling that content teams run independently.
+            {/* 5 Short Summary Paragraphs (Exact Recruiter Copy) */}
+            <div className="space-y-3 mb-6 max-w-2xl text-sm sm:text-base text-[var(--text-secondary)] font-sans leading-relaxed">
+              <p>
+                I write the code behind online stores: storefronts, payment flows, queues, caching and the CMS teams use to run them.
               </p>
-              <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
-                2.5+ years engineering production web applications across product and client teams with Next.js, React, Node.js, and PostgreSQL — owning features end-to-end from requirements to deployment.
+              <p>
+                2.5+ years across product-based and service-based companies, building with Next.js, React, Node.js, MongoDB and PostgreSQL, and owning features from requirements to production.
+              </p>
+              <p>
+                At Diamond Atelier, I shipped Stripe payments with webhook verification, BullMQ jobs, Redis caching, RBAC and a headless CMS. At Empiric Infotech, I built booking and WhatsApp platforms with Stripe refunds.
+              </p>
+              <p>
+                I work directly with design, content and marketing teams, and build with SEO and analytics in mind.
+              </p>
+              <p>
+                Based in Surat, India. Open to full-time roles.
               </p>
             </div>
 
-            {/* Action Buttons: Primary Filled Resume, Secondary Book Call, Copy Email, Icon Links */}
+            {/* Action Buttons: Download Resume, Book a 30m Call, Copy Email, Socials */}
             <div className="flex items-center gap-2 sm:gap-2.5 flex-nowrap overflow-x-auto py-1">
               <Button
                 as="a"
@@ -242,7 +245,7 @@ function PortfolioPage() {
                   <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14H2.75z" />
                   <path d="M7.25 1.75v7.69L4.97 7.16a.75.75 0 1 0-1.06 1.06l3.5 3.5a.75.75 0 0 0 1.06 0l3.5-3.5a.75.75 0 0 0-1.06-1.06L8.75 9.44V1.75a.75.75 0 0 0-1.5 0z" />
                 </svg>
-                <span>Download Resume (PDF)</span>
+                <span>Download Resume</span>
               </Button>
 
               <Button
@@ -327,9 +330,14 @@ function PortfolioPage() {
               <span className="text-[var(--text-muted)]">&bull;</span>
               <span className="font-medium text-[var(--text-primary)]">6-person team, no developer needed</span>
             </div>
+          </div>
 
-            {/* Availability Box (Two Lines, No Trailing Dots, WCAG AA Contrast) */}
-           
+          {/* Right Column: Generative Halftone Dither Canvas (Decorative Dot-Art) */}
+          <div className="lg:col-span-4 flex items-center justify-center pt-6 lg:pt-0" aria-hidden="true">
+            <DitherCanvas />
+          </div>
+        </div>
+      </section>
           </div>
 
           {/* Right Column: Generative Halftone Dither Canvas (Decorative Dot-Art) */}
