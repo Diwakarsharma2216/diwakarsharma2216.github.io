@@ -300,7 +300,7 @@ function PortfolioPage() {
       {/* 2. TECHNICAL SKILLS SECTION (7 Tightened Competencies)     */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="skills" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
             Technical Skills
           </h2>
@@ -354,7 +354,7 @@ function PortfolioPage() {
       {/* 3. WORK EXPERIENCE SECTION (Timeline & 2-3 Action Bullets) */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="experience" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
             Work Experience
           </h2>
@@ -393,7 +393,7 @@ function PortfolioPage() {
       {/* 4. CASE STUDIES (Work Systems Only)                        */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="case-studies" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent)]"></span>
             <h2 className="text-xs uppercase tracking-widest font-mono font-semibold text-[var(--text-primary)]">
@@ -407,7 +407,7 @@ function PortfolioPage() {
 
         {/* 1. Flagship Deep Dive: Diamond Atelier */}
         <div className="mb-8 p-6 sm:p-8 rounded-[12px] border border-[var(--border-strong)] bg-[var(--bg-surface)] shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-[var(--border-subtle)]">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-6 border-b border-[var(--border-subtle)]">
             <div>
               <span className="text-xs font-mono uppercase tracking-wider text-[var(--accent-text)]">
                 Production E-Commerce &bull; diamondforest.com &bull; Nov 2025–Present
@@ -673,7 +673,7 @@ function PortfolioPage() {
       {/* 5. PERSONAL PROJECTS SECTION                               */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="projects" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
             <h2 className="text-xs uppercase tracking-widest font-mono font-semibold text-[var(--text-primary)]">
@@ -759,7 +759,7 @@ function PortfolioPage() {
       {/* 6. EDUCATION SECTION                                       */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="education" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
             Education
           </h2>
@@ -797,7 +797,7 @@ function PortfolioPage() {
       {/* 7. FAQ (First-Person Verified Answers)                      */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="faq" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
             FAQ
           </h2>
@@ -830,7 +830,7 @@ function PortfolioPage() {
       {/* 8. CONTACT SECTION                                         */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="contact" className="scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6 gap-1 sm:gap-4">
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
             Contact
           </h2>
