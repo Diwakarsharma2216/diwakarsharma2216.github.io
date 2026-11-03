@@ -47,59 +47,51 @@ export const Route = createFileRoute('/')({
 })
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SKILL TIERS (Core / Familiar / Tools — Tightened & Defensible in Interviews)
+// TECHNICAL SKILLS (7 Tightened Groups — Defensible in Interviews)
 // ─────────────────────────────────────────────────────────────────────────────
-const SKILL_TIERS = [
+interface SkillGroup {
+  category: string
+  skills: string[]
+  familiarWith?: string[]
+  note: string
+}
+
+const TECHNICAL_SKILLS_GROUPS: SkillGroup[] = [
   {
-    tier: 'Core',
-    badge: 'Daily Production & Web Engineering',
-    description:
-      'Technologies used daily in commercial production to engineer full-stack web applications, REST APIs, and responsive user interfaces.',
-    skills: [
-      'TypeScript',
-      'JavaScript (ES6+)',
-      'React.js',
-      'Next.js',
-      'Node.js',
-      'Express.js',
-      'Tailwind CSS',
-      'RESTful API Design',
-      'HTML5 / CSS3',
-    ],
+    category: 'Languages',
+    skills: ['JavaScript (ES6+)', 'TypeScript'],
+    familiarWith: ['Java', 'C/C++'],
+    note: 'Primary commercial languages for full-stack web and backend platforms.',
   },
   {
-    tier: 'Familiar',
-    badge: 'Foundational & Academic',
-    description:
-      'Foundational languages and platforms studied academically and capable of rapid deployment as project requirements demand.',
-    skills: [
-      'Java',
-      'C',
-      'C++',
-      'Firebase',
-      'Typesense',
-      'WebSockets (Socket.IO)',
-      'Linux / Bash',
-    ],
+    category: 'Frontend',
+    skills: ['React.js', 'Next.js (SSR/SSG/ISR)', 'Redux', 'Context API', 'Tailwind CSS', 'HTML5', 'CSS3'],
+    note: 'Component architecture, state management, responsive styling, and rendering modes.',
   },
   {
-    tier: 'Tools',
-    badge: 'Infrastructure & Workflows',
-    description:
-      'Databases, caching layers, containerization, and developer tooling configured and maintained in production workflows.',
-    skills: [
-      'PostgreSQL',
-      'MongoDB',
-      'Redis Caching',
-      'BullMQ Queues',
-      'Docker',
-      'Stripe Integration',
-      'Sharp Image Pipeline',
-      'Vite',
-      'Git & GitHub',
-      'Postman',
-      'JWT & RBAC',
-    ],
+    category: 'Backend',
+    skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT auth', 'RBAC', 'Socket.IO', 'BullMQ', 'Sharp'],
+    note: 'RESTful API engineering, authentication tiers, background job queues, and media pipelines.',
+  },
+  {
+    category: 'Databases & Cache',
+    skills: ['PostgreSQL', 'MongoDB', 'Firebase', 'Redis', 'Typesense'],
+    note: 'Relational & document stores, sub-second cache layers, and search indexing.',
+  },
+  {
+    category: 'Cloud & DevOps',
+    skills: ['AWS (EC2, S3)', 'Cloudflare R2', 'Docker', 'CI/CD', 'Git/GitHub'],
+    note: 'Containerization, cloud object storage pipelines, and continuous deployment.',
+  },
+  {
+    category: 'Product & Commerce',
+    skills: ['Stripe', 'Razorpay', 'PostHog', 'CleverTap', 'SEO'],
+    note: 'Payment gateway integrations, customer analytics telemetry, and technical SEO structure.',
+  },
+  {
+    category: 'Tools & Workflow',
+    skills: ['Vite', 'Postman', 'Linux / Bash', 'npm / pnpm'],
+    note: 'Developer toolchains, API test automation, and terminal environments.',
   },
 ]
 
@@ -338,12 +330,60 @@ function PortfolioPage() {
           </div>
         </div>
       </section>
-          </div>
 
-          {/* Right Column: Generative Halftone Dither Canvas (Decorative Dot-Art) */}
-          <div className="lg:col-span-4 flex items-center justify-center pt-6 lg:pt-0" aria-hidden="true">
-            <DitherCanvas />
-          </div>
+      {/* ────────────────────────────────────────────────────────── */}
+      {/* 2. TECHNICAL SKILLS SECTION (7 Tightened Competencies)     */}
+      {/* ────────────────────────────────────────────────────────── */}
+      <section id="skills" className="mb-14 sm:mb-20 scroll-mt-24">
+        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
+          <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
+            Technical Skills
+          </h2>
+          <span className="text-xs font-mono text-[var(--accent-text)]">
+            7 Competencies &bull; Defensible in Interviews
+          </span>
+        </div>
+
+        <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
+          {TECHNICAL_SKILLS_GROUPS.map((group) => (
+            <div key={group.category} className="py-4 sm:py-5 grid sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+              <div className="sm:col-span-3">
+                <span className="font-serif text-lg text-[var(--text-primary)] block">
+                  {group.category}
+                </span>
+                <span className="text-[11px] font-sans text-[var(--text-muted)] block mt-0.5">
+                  {group.note}
+                </span>
+              </div>
+              <div className="sm:col-span-9 flex flex-col gap-2">
+                <div className="flex flex-wrap gap-1.5">
+                  {group.skills.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                {group.familiarWith && group.familiarWith.length > 0 && (
+                  <div className="text-xs font-mono text-[var(--text-muted)] flex items-center gap-2 pt-0.5">
+                    <span className="italic text-[11px]">Familiar with:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {group.familiarWith.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 rounded-[3px] text-[11px] font-mono border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -962,47 +1002,6 @@ function PortfolioPage() {
         </div>
       </section>
 
-      {/* ────────────────────────────────────────────────────────── */}
-      {/* 6. CORE STACK & SKILLS (Strong / Working / Familiar)        */}
-      {/* ────────────────────────────────────────────────────────── */}
-      <section id="stack" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="flex items-baseline justify-between border-b border-[var(--border-subtle)] pb-2.5 mb-6">
-          <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
-            Core Stack &amp; Skills
-          </h2>
-          <span className="text-xs font-mono text-[var(--accent-text)]">
-            Core &bull; Familiar &bull; Tools
-          </span>
-        </div>
-
-        <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
-          {SKILL_TIERS.map((tierGroup) => (
-            <div key={tierGroup.tier} className="py-5 sm:py-6 grid sm:grid-cols-12 gap-3 sm:gap-6 items-start">
-              <div className="sm:col-span-3">
-                <span className="text-xs font-mono text-[var(--accent-text)] tracking-wider uppercase">
-                  {tierGroup.tier} Tier
-                </span>
-                <span className="block font-serif text-lg text-[var(--text-primary)] mt-0.5">
-                  {tierGroup.badge}
-                </span>
-              </div>
-              <div className="sm:col-span-5 flex flex-wrap gap-1.5">
-                {tierGroup.skills.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 rounded-[4px] text-xs font-mono border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="sm:col-span-4 text-xs font-sans text-[var(--text-secondary)] leading-relaxed">
-                {tierGroup.description}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ────────────────────────────────────────────────────────── */}
       {/* 7. HOW I WORK (Engineering Quality & Habits)                */}
