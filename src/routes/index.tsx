@@ -182,9 +182,7 @@ function PortfolioPage() {
               <p>
                 I work directly with design, content and marketing teams, and build with SEO and analytics in mind.
               </p>
-              <p>
-                Based in Surat, India. Open to full-time roles.
-              </p>
+             
             </div>
 
             {/* Action Buttons: Download Resume, Book a 30m Call, Copy Email, Socials */}
@@ -304,9 +302,7 @@ function PortfolioPage() {
           <h2 className="text-xs uppercase tracking-widest font-mono text-[var(--text-muted)]">
             Technical Skills
           </h2>
-          <span className="text-xs font-mono text-[var(--accent-text)]">
-            7 Competencies &bull; Defensible in Interviews
-          </span>
+          
         </div>
 
         <div className="divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)]">
@@ -596,9 +592,9 @@ function PortfolioPage() {
                     </span>
                     <span>&bull; {work.period}</span>
                   </div>
-                  <span className="text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-wider">
-                    Internal platform, details shared on request
-                  </span>
+                 
+
+                 
                 </div>
 
                 <div className="mb-3">
@@ -639,7 +635,7 @@ function PortfolioPage() {
 
                     <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
                       <span className="font-mono text-[var(--accent-text)] block font-semibold mb-1">
-                        What I Learned
+                        Engineering Insights
                       </span>
                       <p className="text-[var(--text-secondary)] leading-relaxed m-0 text-xs">
                         {work.caseStudy.learned}
@@ -839,14 +835,7 @@ function PortfolioPage() {
         </div>
 
         {/* Small Availability Line */}
-        <div className="p-3.5 sm:p-4 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-xs font-mono text-[var(--text-secondary)] mb-6 flex flex-wrap items-center gap-x-4 gap-y-1.5">
-          <div><span className="text-[var(--text-muted)]">Location:</span> Surat, India (UTC+5:30)</div>
-          <span className="text-[var(--text-muted)] hidden sm:inline">&bull;</span>
-          <div><span className="text-[var(--text-muted)]">Work mode:</span> [Onsite / Hybrid / Remote]</div>
-          <span className="text-[var(--text-muted)] hidden sm:inline">&bull;</span>
-          <div><span className="text-[var(--text-muted)]">Notice period:</span> [45 days / negotiable]</div>
-        </div>
-
+       
         <div className="max-w-xl">
           <h3 className="font-serif text-3xl sm:text-4xl text-[var(--text-primary)] mb-2.5">
             Let&apos;s build together.

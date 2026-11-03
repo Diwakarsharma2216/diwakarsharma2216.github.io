@@ -15,6 +15,8 @@ const NAV_ITEMS = [
   { label: 'Contact', href: '#contact' },
 ]
 
+
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 

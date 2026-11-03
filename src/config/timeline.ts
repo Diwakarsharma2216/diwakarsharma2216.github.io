@@ -179,8 +179,7 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
     id: 'hevenly-heven',
     title: 'Hevenly Heven E-Commerce',
     category: 'Full Stack Commerce',
-    liveUrl: env.projectLinks.hevenlyHeven,
-    repoUrl: 'https://github.com/Diwakarsharma2216/overrated-chicken-3237',
+   
     // TODO: Confirm whether this repository (github.com/Diwakarsharma2216/overrated-chicken-3237) should remain public for recruiters or be marked private.
     isPrivateRepo: false,
     skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux Toolkit'],
