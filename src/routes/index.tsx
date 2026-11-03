@@ -687,9 +687,9 @@ function PortfolioPage() {
             {otherWorkTimeline.map((work) => (
               <div
                 key={work.id}
-                className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors"
+                className="p-5 sm:p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col hover:border-[var(--border-strong)] transition-colors"
               >
-                <div>
+                <div className="flex-1 flex flex-col">
                   <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
                     <div className="flex items-center gap-1.5">
                       <span className="px-1.5 py-0.5 rounded-[3px] text-[10px] font-mono uppercase border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]">
@@ -702,14 +702,14 @@ function PortfolioPage() {
                     </span>
                   </div>
 
-                  <div className="mb-2">
+                  <div className="mb-3">
                     <h4 className="font-serif text-2xl text-[var(--text-primary)]">
                       {work.projectTitle}
                     </h4>
                   </div>
 
                   {work.caseStudy ? (
-                    <div className="space-y-3 mb-6 text-xs font-sans">
+                    <div className="space-y-2.5 text-xs font-sans">
                       <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
                         <span className="font-mono text-[var(--accent-text)] block font-semibold mb-1">
                           Problem
@@ -719,7 +719,7 @@ function PortfolioPage() {
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
                           <span className="font-mono text-[var(--text-primary)] block font-semibold mb-1">
                             My Role
@@ -746,18 +746,15 @@ function PortfolioPage() {
                           {work.caseStudy.learned}
                         </p>
                       </div>
-
-                    
-                      
                     </div>
                   ) : (
-                    <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-4">
+                    <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
                       {work.projectSummary}
                     </p>
                   )}
                 </div>
 
-                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                <div className="mt-4 pt-3.5 border-t border-[var(--border-subtle)] flex flex-wrap gap-1.5">
                   {work.skills.map((tech) => (
                     <span
                       key={tech}
@@ -796,9 +793,9 @@ function PortfolioPage() {
               return (
                 <div
                   key={proj.id}
-                  className="p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col justify-between hover:border-[var(--border-strong)] transition-colors"
+                  className="p-5 sm:p-6 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col hover:border-[var(--border-strong)] transition-colors"
                 >
-                  <div>
+                  <div className="flex-1 flex flex-col">
                     <div className="flex items-center justify-between mb-3 text-xs font-mono text-[var(--text-muted)]">
                       <span className="text-[11px] font-mono text-[var(--accent-text)] uppercase tracking-wider font-medium">
                         {proj.category}
@@ -858,12 +855,12 @@ function PortfolioPage() {
                       )}
                     </div>
 
-                    <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed mb-6">
+                    <p className="text-sm text-[var(--text-secondary)] font-sans leading-relaxed">
                       {proj.summary}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)]">
+                  <div className="mt-4 pt-3.5 border-t border-[var(--border-subtle)] flex flex-wrap gap-1.5">
                     {proj.skills.map((tech) => (
                       <span
                         key={tech}
