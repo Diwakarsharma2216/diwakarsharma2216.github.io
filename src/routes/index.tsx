@@ -149,9 +149,9 @@ function PortfolioPage() {
       {/* 1. SUMMARY (HERO) SECTION                                   */}
       {/* ────────────────────────────────────────────────────────── */}
       <section id="summary" className="mb-14 sm:mb-20 scroll-mt-24">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center min-w-0">
           {/* Left Column: Kicker, Headline, 5-Paragraph Summary, Actions */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 min-w-0 max-w-full">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5">
               <Badge variant="accent" size="sm" dot>
                 {env.role}
@@ -161,9 +161,9 @@ function PortfolioPage() {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-[var(--text-primary)] mb-5 leading-[1.08] sm:leading-[1.06]">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-[4.25rem] font-normal tracking-tight text-[var(--text-primary)] mb-5 leading-[1.1] sm:leading-[1.06] break-words">
               Diwakar Sharma <br />
-              <span className="italic text-[var(--accent)] font-serif text-3xl sm:text-5xl lg:text-[3.5rem] block mt-1">
+              <span className="italic text-[var(--accent)] font-serif text-2xl sm:text-4xl lg:text-[3.5rem] block mt-1">
                 Full Stack Developer
               </span>
             </h1>
@@ -182,11 +182,13 @@ function PortfolioPage() {
               <p>
                 I work directly with design, content and marketing teams, and build with SEO and analytics in mind.
               </p>
-             
+              <p>
+                Based in Surat, India. Open to full-time roles.
+              </p>
             </div>
 
             {/* Action Buttons: Download Resume, Book a 30m Call, Copy Email, Socials */}
-            <div className="flex items-center gap-2 sm:gap-2.5 flex-nowrap overflow-x-auto py-1">
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 sm:gap-2.5 py-1 min-w-0 max-w-full">
               <Button
                 as="a"
                 href={env.resumeUrl}
@@ -278,17 +280,17 @@ function PortfolioPage() {
             </div>
 
             {/* Proof Strip Under Buttons */}
-            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs font-mono text-[var(--text-secondary)] mt-3.5 mb-4">
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs font-mono text-[var(--text-secondary)] mt-3.5 mb-4 leading-normal">
               <span className="font-medium text-[var(--text-primary)]">200-400 ms cached listings</span>
-              <span className="text-[var(--text-muted)]">&bull;</span>
+              <span className="text-[var(--text-muted)] hidden sm:inline">&bull;</span>
               <span className="font-medium text-[var(--text-primary)]">~4x faster cold build (52s to 13s)</span>
-              <span className="text-[var(--text-muted)]">&bull;</span>
+              <span className="text-[var(--text-muted)] hidden sm:inline">&bull;</span>
               <span className="font-medium text-[var(--text-primary)]">6-person team, no developer needed</span>
             </div>
           </div>
 
           {/* Right Column: Generative Halftone Dither Canvas (Decorative Dot-Art) */}
-          <div className="lg:col-span-4 flex items-center justify-center pt-6 lg:pt-0" aria-hidden="true">
+          <div className="lg:col-span-4 min-w-0 max-w-full flex items-center justify-center pt-6 lg:pt-0" aria-hidden="true">
             <DitherCanvas />
           </div>
         </div>
@@ -474,7 +476,10 @@ function PortfolioPage() {
             <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-3">
               Architecture Overview
             </h4>
-            <div className="w-full overflow-x-auto p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+            <div className="w-full min-w-0 max-w-full overflow-x-auto p-3 sm:p-4 rounded-[8px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
+              <div className="text-[11px] font-mono text-[var(--text-muted)] sm:hidden mb-2 flex items-center gap-1">
+                <span>&larr; Scroll architecture diagram &rarr;</span>
+              </div>
               <svg
                 viewBox="0 0 850 190"
                 className="w-full min-w-[720px] h-auto text-[var(--text-primary)]"
@@ -538,27 +543,27 @@ function PortfolioPage() {
             <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] mb-3">
               Measurable Results &amp; Metrics
             </h4>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 mb-4 min-w-0">
               <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
-                <span className="text-xl font-serif text-[var(--accent)] block">~52s &rarr; ~13s</span>
+                <span className="text-lg sm:text-xl font-serif text-[var(--accent)] block">~52s &rarr; ~13s</span>
                 <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Cold Build (~4x faster)</span>
                 <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">Cache-off benchmark; production cached: ~1.8s.</span>
               </div>
 
               <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
-                <span className="text-xl font-serif text-[var(--text-primary)] block">Dozens &rarr; 1</span>
+                <span className="text-lg sm:text-xl font-serif text-[var(--text-primary)] block">Dozens &rarr; 1</span>
                 <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Requests per Scroll</span>
                 <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">1 request per scroll, no background polling.</span>
               </div>
 
               <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
-                <span className="text-xl font-serif text-[var(--text-primary)] block">19.8s &rarr; 1.2–1.4s</span>
+                <span className="text-lg sm:text-xl font-serif text-[var(--text-primary)] block">19.8s &rarr; 1.2–1.4s</span>
                 <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Pricing Calculation</span>
                 <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">Eliminated ~25,200 variant calls across 20 cards.</span>
               </div>
 
               <div className="p-3 rounded-[6px] border border-[var(--border-subtle)] bg-[var(--bg-canvas)]">
-                <span className="text-xl font-serif text-[var(--text-primary)] block">82.3%</span>
+                <span className="text-lg sm:text-xl font-serif text-[var(--text-primary)] block">82.3%</span>
                 <span className="text-xs font-mono text-[var(--text-muted)] block mt-0.5">Sharp Compression</span>
                 <span className="text-[11px] font-sans text-[var(--text-secondary)] mt-1 block">WebP/AVIF backend media size reduction.</span>
               </div>
@@ -578,7 +583,7 @@ function PortfolioPage() {
         </div>
 
         {/* 2. Secondary Work Systems Case Studies: Empiric Infotech & Masai School */}
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-w-0">
           {otherWorkTimeline.map((work) => (
             <div
               key={work.id}
@@ -680,7 +685,7 @@ function PortfolioPage() {
           </span>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-w-0">
           {PERSONAL_PROJECTS.map((proj) => (
             <div
               key={proj.id}

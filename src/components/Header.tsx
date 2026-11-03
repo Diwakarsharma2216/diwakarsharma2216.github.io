@@ -5,7 +5,7 @@ import Logo from './Logo'
 import { env } from '../config/env'
 
 const NAV_ITEMS = [
-  
+  { label: 'Summary', href: '#summary' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Case Studies', href: '#case-studies' },
