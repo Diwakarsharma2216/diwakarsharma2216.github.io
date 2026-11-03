@@ -5,7 +5,7 @@ import Logo from './Logo'
 import { env } from '../config/env'
 
 const NAV_ITEMS = [
-  { label: 'Summary', href: '#summary' },
+  
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Case Studies', href: '#case-studies' },
@@ -29,12 +29,7 @@ export default function Header() {
           >
             <Logo size="sm" />
           </Link>
-          <span className="hidden text-xs text-[var(--text-muted)] font-mono sm:inline-block">
-            /
-          </span>
-          <span className="hidden text-xs text-[var(--text-secondary)] font-mono sm:inline-block whitespace-nowrap">
-            {env.role}
-          </span>
+          
         </div>
 
         {/* Desktop Navigation Links (Exact 8-Section Target Order) */}
