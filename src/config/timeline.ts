@@ -168,9 +168,9 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
     isPrivateRepo: false,
     skills: ['React.js', 'Vite', 'Tailwind CSS', 'Razorpay', 'Node.js', 'REST APIs'],
     summary:
-      'Modern drone e-commerce storefront showcasing premium DJI aerial systems and camera hardware. Engineered with interactive product showcases, dynamic specification comparisons, cart management, and seamless Razorpay payment gateway integration for real-time order transactions.',
+      'A responsive drone e-commerce storefront built independently to practice complex payment workflows and interactive product specification comparisons. Engineered with modular component architecture, Razorpay checkout, and responsive styling (independent project with no DJI affiliation).',
     highlights: [
-      'Architected high-performance drone commerce interface with interactive DJI hardware catalog and variant filtering.',
+      'Architected high-performance drone commerce interface with interactive hardware catalog and variant filtering.',
       'Integrated Razorpay payment gateway with client/server transaction signature verification and error recovery.',
       'Engineered responsive catalog UI with client-side state persistence and real-time cart synchronization.',
     ],
@@ -179,12 +179,13 @@ export const PERSONAL_PROJECTS: PersonalProjectEntry[] = [
     id: 'hevenly-heven',
     title: 'Hevenly Heven E-Commerce',
     category: 'Full Stack Commerce',
-    
-    // Note for Diwakar: Confirm if the Hevenly Heven repository (github.com/Diwakarsharma2216/overrated-chicken-3237) should remain public for recruiters or be marked private.
-   
+    liveUrl: env.projectLinks.hevenlyHeven,
+    repoUrl: 'https://github.com/Diwakarsharma2216/overrated-chicken-3237',
+    // TODO: Confirm whether this repository (github.com/Diwakarsharma2216/overrated-chicken-3237) should remain public for recruiters or be marked private.
+    isPrivateRepo: false,
     skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Redux Toolkit'],
     summary:
-      'Full-stack online shopping platform designed for product discovery, faceted filtering, cart persistence via Redux Toolkit, and seamless transaction checkout. Built with modular component architecture, responsive styling, and clean RESTful APIs.',
+      'Full-stack online shopping platform built with the MERN stack and Redux Toolkit. Engineered for product discovery with price/category faceted filtering, persistent cart state across browser sessions, and clean RESTful APIs.',
     highlights: [
       'Built multi-category catalog navigation with price/rating faceted search and pagination.',
       'Implemented centralized state management with Redux Toolkit for seamless cart persistence across sessions.',
