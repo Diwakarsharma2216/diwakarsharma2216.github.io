@@ -200,8 +200,8 @@ export const EDUCATION_TIMELINE: EducationEntry[] = [
     id: 'manipal-university',
     institution: 'Manipal University Jaipur',
     degree: 'Bachelor of Computer Applications (BCA)',
-    period: 'Completed 2026 (Final Year)',
-    note: 'Online (pursued concurrently alongside full-time engineering work)',
+    period: '2023 — 2026 (Completed)',
+    note: 'Online (completed concurrently alongside full-time engineering work)',
     coursework:
       'Coursework: Data Structures & Algorithms, Object-Oriented Programming (C++, Java), DBMS, Operating Systems, Computer Networks.',
   },

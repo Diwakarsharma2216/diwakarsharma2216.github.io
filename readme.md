@@ -83,6 +83,6 @@
 
 ## Education & Certifications
 
-- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (Completed 2026 - Final Year) — *Online (pursued concurrently alongside full-time engineering work)*
+- **Bachelor of Computer Applications (BCA)** &bull; Manipal University Jaipur (2023 – 2026, Completed) — *Online (completed concurrently alongside full-time engineering work)*
 - **Full Stack Web Development & Data Structures** &bull; Masai School (NSDC Certified &bull; Sep 2022 – Jun 2023)
 - **Class XII – Science** &bull; Mahatma Gandhi Inter College (Mar 2021 – Apr 2022)
