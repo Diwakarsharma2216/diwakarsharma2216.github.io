@@ -351,7 +351,7 @@ function PortfolioPage() {
             </h2>
           </div>
           <span className="text-xs font-mono text-[var(--accent-text)]">
-            Engagement Rings Performance &amp; Architecture
+ Performance &amp; Architecture
           </span>
         </div>
 
@@ -1096,15 +1096,15 @@ function PortfolioPage() {
             </div>
             <div>
               <span className="text-[var(--text-muted)] block mb-0.5">Relocation Preference:</span>
-              <span className="text-[var(--text-primary)]">Open to relocation (Noida / Delhi NCR) &bull; Worldwide remote</span>
+              <span className="text-[var(--text-primary)]">Open to relocation (Noida / Delhi NCR) </span>
             </div>
             <div>
               <span className="text-[var(--text-muted)] block mb-0.5">Notice Period:</span>
-              <span className="text-[var(--text-primary)]">[45 days / negotiable]</span>
+              <span className="text-[var(--text-primary)]">45 days (negotiable)</span>
             </div>
             <div className="sm:col-span-2 pt-1 border-t border-[var(--border-subtle)]">
               <span className="text-[var(--text-muted)] inline-block mr-2">English Proficiency:</span>
-              <span className="text-[var(--text-primary)]">[Professional Working Proficiency / Fluent]</span>
+              <span className="text-[var(--text-primary)]">Professional Working Proficiency (Fluent)</span>
             </div>
           </div>
         </div>

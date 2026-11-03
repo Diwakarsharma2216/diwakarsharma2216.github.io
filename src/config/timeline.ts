@@ -122,9 +122,9 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
       // screenshotPlaceholder: 'WhatsApp & Booking System Dashboard & Architecture',
     },
     experienceBullets: [
-      'Engineered appointment booking REST APIs using Node.js and Express with conflict-free slot calculation algorithms, reducing scheduling collisions to [0%] across [N appointments/day].',
-      'Integrated WAHA WhatsApp HTTP API into internal workflow automation, dispatching [N automated notifications/month] for staff scheduling and meeting reminders.',
-      'Integrated Stripe checkout workflows with automated customer refund processing and PDF receipt generation, decreasing manual transaction disputes by [X%].',
+      'Engineered appointment-booking REST APIs using Node.js, Express, and MongoDB with atomic slot reservation algorithms, eliminating double-booking collisions across multi-provider schedules.',
+      'Integrated the WAHA WhatsApp HTTP API into internal business workflows, automating client appointment confirmations, schedule change alerts, and staff reminders without manual intervention.',
+      'Integrated Stripe checkout workflows with automated refund processing, idempotent webhook listeners, and receipt generation, streamlining payment recovery and resolving customer disputes automatically.',
     ],
   },
   {
@@ -148,15 +148,14 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
         'Associate Instructor & LMS Module Developer responsible for student evaluation pipelines, code reviews, and mock technical interviews.',
       stack: ['React.js', 'Node.js', 'Express.js', 'JavaScript', 'MongoDB', 'Tailwind CSS'],
       outcome:
-        'Built student code assessment review module, accelerated submission turnaround by [X%], and trained 200+ students in JS/React/Node.',
+        'Built centralized student code assessment module, streamlined cohort evaluation workflows, and mentored 200+ aspiring developers in full-stack JavaScript, React, and Node.js.',
       learned:
         'How to architect high-throughput assessment review workflows, formulate standardized rubric metrics, and mentor junior engineers through code review.',
-       screenshotPlaceholder: 'LMS Assessment & Rubric Scoring Interface',
     },
     experienceBullets: [
-      'Trained 200+ students in full-stack JavaScript, React.js, and Node.js architecture, conducting 50+ mock technical interviews with high student placement readiness.',
-      'Engineered student assessment submission module in React.js and Node.js, streamlining code grading workflows and accelerating evaluation turnaround time by [X%] for 200+ students.',
-      'Designed structured feedback loops and automated progress tracking, increasing assignment submission rates by [X%].',
+      'Mentored and trained 200+ students in full-stack JavaScript, React.js, Node.js, and RESTful architecture, conducting 50+ mock technical interviews with structured rubric evaluations.',
+      'Engineered the student assessment and code review module in React.js and Node.js, centralizing rubric scoring and accelerating assignment grading workflows across cohorts of 200+ students.',
+      'Designed automated submission tracking and structured feedback loops, providing actionable code improvements and increasing cohort assignment completion rates.',
     ],
   },
 ]

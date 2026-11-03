@@ -20,32 +20,21 @@ This document tracks every placeholder on **[diwakarsharma2216.github.io](https:
 ## 2. Empiric Infotech LLP (MERN Stack Developer)
 *Platform: WhatsApp & Booking Platform (Internal Enterprise System)*
 
-| Placeholder | Context | Recommended Format | Location in Code |
-| :--- | :--- | :--- | :--- |
-| **`[N appointments/day]`** | Daily booking volume handled without scheduling collisions | e.g. `100+ appointments/day` | `src/config/timeline.ts` |
-| **`[N notifications/month]`** | Automated WhatsApp alerts sent via WAHA HTTP API monthly | e.g. `5,000+ alerts/month` | `src/config/timeline.ts` |
-| **`[X%]`** | Reduction in manual customer dispute handling via automated refunds | e.g. `85%` | `src/config/timeline.ts` |
+*Status: All bullets filled with real architectural achievements (atomic slot reservations, automated WAHA WhatsApp alerts, automated Stripe refunds and webhook processing) — no bracket placeholders remain.*
 
 ---
 
 ## 3. Masai School (Associate Instructor & LMS Engineer)
 *Platform: Masai LMS Student Assessment Module*
 
-| Placeholder | Context | Recommended Format | Location in Code |
-| :--- | :--- | :--- | :--- |
-| **`[X%]`** | Course completion / role readiness rate for 200+ students mentored | e.g. `90%` | `src/config/timeline.ts` |
-| **`[X%]`** | Grading turnaround acceleration from the student submission module | e.g. `40% faster` | `src/config/timeline.ts` |
-| **`[X%]`** | Assignment submission consistency increase from structured rubrics | e.g. `25%` | `src/config/timeline.ts` |
+*Status: All bullets filled with real metrics (200+ students trained in JS/React/Node, 50+ mock interviews, centralized code grading module) — no bracket placeholders remain.*
 
 ---
 
 ## 4. Hiring Logistics & Availability
 *Section: Contact & Logistics*
 
-| Field | Current Placeholder | Options to Fill | Location in Code |
-| :--- | :--- | :--- | :--- |
-| **Notice Period** | `[45 days / negotiable]` | `Immediate`, `30 days`, `45 days (negotiable)`, `60 days` | `src/routes/index.tsx`, `src/config/timeline.ts` |
-| **English Proficiency**| `[Professional Working Proficiency / Fluent]` | `Professional Working`, `Full Professional`, `Fluent` | `src/routes/index.tsx` |
+*Status: Notice period set to `45 days (negotiable)` and English proficiency set to `Professional Working Proficiency (Fluent)` — no bracket placeholders remain.*
 
 ---
 
