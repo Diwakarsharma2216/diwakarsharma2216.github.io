@@ -86,11 +86,9 @@ export const WORK_TIMELINE: WorkTimelineEntry[] = [
     projectSummary:
       'Production diamond e-commerce platform (diamondforest.com). I own requirements end to end and distribute work among teammates: built a headless CMS so a 6-person content and graphics team manages site images and content without developer help. Images are served from backend, compressed with Sharp, and cached in Redis. Integrated Stripe with webhook verification and failure recovery, RBAC, BullMQ queues, and Docker CI/CD.',
     experienceBullets: [
-      'Diagnosed query and computation bottlenecks to cut cold product-listing build time roughly 4x (~52s to ~13s on cache-disabled benchmark; production ~1.8s cached) by filtering in PostgreSQL (~5,000 to ~800 rows), pricing only displayed cards (19.8s to 1.2–1.4s), and sharing in-flight builds (3 requests: 39–50s to 12.8s).',
-      'Architected headless CMS so a 6-person content and graphics team manages site images and content without developer help, reducing developer image-change tickets from ~15/week to 0.',
-      'Engineered backend media pipeline serving images compressed with Sharp and cached in Redis, decreasing image payloads by up to 82.3% and accelerating catalog rendering.',
-      'Implemented Stripe payment gateway with cryptographic webhook verification, idempotent retry recovery, and BullMQ background queues, processing high-volume checkout with 99.9% webhook verification and transaction reliability.',
-      'Owned requirements end to end: understood specifications, took full delivery responsibility, distributed tasks among teammates, and established Docker CI/CD deployment pipelines.',
+      'Diagnosed query and computation bottlenecks to cut cold product-listing build time roughly 4x (~52s to ~13s on benchmark; ~1.8s cached) by filtering rows in PostgreSQL (~5,000 to ~800 rows), computing single-card pricing (19.8s to 1.2–1.4s), and sharing in-flight builds.',
+      'Architected a headless CMS enabling a 6-person content and graphics team to publish site media and catalog copy independently, reducing developer image-change tickets from ~15/week to 0.',
+      'Integrated Stripe payment processing with cryptographic HMAC webhook verification, failure recovery queues via BullMQ, and backend image optimization with Sharp (measured 82.3% payload reduction) cached in Redis.',
     ],
     highlight: true,
   },
