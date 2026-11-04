@@ -7,7 +7,7 @@ export const env = {
   locationDetail:
     import.meta.env.VITE_LOCATION_DETAIL || 'Surat, Gujarat, India (UTC+5:30)',
   phone: import.meta.env.VITE_PHONE || '+91 6394842216',
-  resumeUrl: import.meta.env.VITE_RESUME_URL || '/resume.pdf',
+  resumeUrl: import.meta.env.VITE_RESUME_URL || '/Diwakar_Sharma_Resume.pdf',
 
   // Contact & Social Links
   email: import.meta.env.VITE_EMAIL || 'diwakarsharma2216@gmail.com',

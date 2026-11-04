@@ -6,7 +6,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-diwakarsharma--fullstackdev-0077b5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diwakarsharma-fullstackdev/)
 [![GitHub](https://img.shields.io/badge/GitHub-Diwakarsharma2216-181717?style=flat&logo=github&logoColor=white)](https://github.com/Diwakarsharma2216)
 [![Book Call](https://img.shields.io/badge/Cal.com-Book_a_30m_Call-ea580c?style=flat&logo=calendar&logoColor=white)](https://cal.com/diwakar-sharma-ojozup/30min)
-[![Download Resume](https://img.shields.io/badge/Resume-Download_PDF-2563eb?style=flat&logo=adobeacrobatreader&logoColor=white)](https://diwakarsharma2216.github.io/resume.pdf)
+[![Download Resume](https://img.shields.io/badge/Resume-Download_PDF-2563eb?style=flat&logo=adobeacrobatreader&logoColor=white)](https://diwakarsharma2216.github.io/Diwakar_Sharma_Resume.pdf)
 
 ---
 
@@ -39,7 +39,7 @@
 | **Calendar Booking** | [cal.com/diwakar-sharma-ojozup/30min](https://cal.com/diwakar-sharma-ojozup/30min) |
 | **GitHub** | [github.com/Diwakarsharma2216](https://github.com/Diwakarsharma2216) |
 | **LinkedIn** | [linkedin.com/in/diwakarsharma-fullstackdev](https://www.linkedin.com/in/diwakarsharma-fullstackdev/) |
-| **Resume Link** | Drop your PDF into `public/resume.pdf` (serves at `/resume.pdf`) |
+| **Resume Link** | [Diwakar_Sharma_Resume.pdf](https://diwakarsharma2216.github.io/Diwakar_Sharma_Resume.pdf) (also accessible at [/resume.pdf](https://diwakarsharma2216.github.io/resume.pdf)) |
 
 ---
 
@@ -59,7 +59,6 @@
 > I work directly with design, content and marketing teams, and build with SEO and analytics in mind.
 
 > **Paragraph 5 (Status & Availability):**  
-> Based in Surat, India. Open to full-time roles.
 
 ---
 

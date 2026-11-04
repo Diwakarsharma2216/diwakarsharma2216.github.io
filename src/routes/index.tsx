@@ -174,7 +174,7 @@ function PortfolioPage() {
                 I write the code behind online stores: storefronts, payment flows, queues, caching and the CMS teams use to run them.
               </p>
               <p>
-                2.5+ years across product-based and service-based companies, building with Next.js, React, Node.js, MongoDB and PostgreSQL, and owning features from requirements to production.
+                3 years across product-based and service-based companies, building with Next.js, React, Node.js, MongoDB and PostgreSQL, and owning features from requirements to production.
               </p>
               <p>
                 At Diamond Atelier, I shipped Stripe payments with webhook verification, BullMQ jobs, Redis caching, RBAC and a headless CMS. At Empiric Infotech, I built booking and WhatsApp platforms with Stripe refunds.
@@ -182,9 +182,7 @@ function PortfolioPage() {
               <p>
                 I work directly with design, content and marketing teams, and build with SEO and analytics in mind.
               </p>
-              <p>
-                Based in Surat, India. Open to full-time roles.
-              </p>
+              
             </div>
 
             {/* Action Buttons: Download Resume, Book a 30m Call, Copy Email, Socials */}
@@ -851,6 +849,21 @@ function PortfolioPage() {
 
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-4">
             <Button
+              as="a"
+              href={env.resumeUrl}
+              download="Diwakar_Sharma_Resume.pdf"
+              variant="primary"
+              size="md"
+              title="Download Resume (PDF)"
+            >
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor">
+                <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14H2.75z" />
+                <path d="M7.25 1.75v7.69L4.97 7.16a.75.75 0 1 0-1.06 1.06l3.5 3.5a.75.75 0 0 0 1.06 0l3.5-3.5a.75.75 0 0 0-1.06-1.06L8.75 9.44V1.75a.75.75 0 0 0-1.5 0z" />
+              </svg>
+              <span>Download Resume</span>
+            </Button>
+
+            <Button
               type="button"
               data-cal-link={env.calLink}
               data-cal-namespace={env.calNamespace}
@@ -862,7 +875,7 @@ function PortfolioPage() {
                   config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
                 })
               }}
-              variant="primary"
+              variant="secondary"
               size="md"
               className="cursor-pointer"
             >
