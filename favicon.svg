@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <!-- Background squircle -->
+  <rect width="64" height="64" rx="16" fill="#0a0a0a" />
+  <rect width="62" height="62" x="1" y="1" rx="15" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none" />
+  
+  <!-- Stylized Geometric D & S monogram for Diwakar Sharma -->
+  <!-- Stem and loop of D -->
+  <path d="M16 20 V44" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M16 20 H23 C31 20 34.5 24.5 34.5 32 C34.5 39.5 31 44 23 44 H16" stroke="#f5f5f5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  
+  <!-- Modern fluid S in vibrant brand gradient -->
+  <path d="M47.5 25 C47 21 44 19.5 40.5 19.5 C36 19.5 33.5 22.5 33.5 26 C33.5 30 36.5 31.5 40.5 32.5 C45 33.5 47.5 35.5 47.5 39.5 C47.5 43.5 44.5 44.5 40.5 44.5 C36 44.5 33 42 32.5 38" stroke="url(#brandGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>

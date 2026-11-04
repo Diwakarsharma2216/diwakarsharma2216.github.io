@@ -1,0 +1,81 @@
+# Diwakar Sharma — Full Stack Developer
+
+> Full Stack Developer with 2.5+ years of experience engineering production web applications, commerce workflows, payment integrations, and cloud infrastructure. Currently Software Developer at Diamond Atelier.
+
+## Canonical Identity
+- **Full Name**: Diwakar Sharma
+- **Primary Online Handle**: diwakarsharma / diwakarsharma2216
+- **Current Role**: Software Developer at Diamond Atelier (Nov 2025 – Present)
+- **Availability**: Notice period: 45 days (negotiable); open to relocation in Noida / Delhi NCR and remote roles worldwide
+- **Roles Sought**: Software Engineer / Full Stack Developer
+- **Location**: Surat, Gujarat, India (UTC+5:30)
+- **Portfolio Website**: https://diwakarsharma2216.github.io
+- **GitHub**: https://github.com/Diwakarsharma2216
+- **LinkedIn**: https://www.linkedin.com/in/diwakarsharma-fullstackdev/
+- **Email**: diwakarsharma2216@gmail.com
+- **Book Call**: https://cal.com/diwakar-sharma-ojozup/30min
+- **Resume**: https://diwakarsharma2216.github.io/resume.pdf
+
+---
+
+## Technical Competencies (Defensible in Technical Interviews)
+
+- **Strong (Daily Production & Architecture)**: TypeScript, JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, Tailwind CSS, RESTful API Design, HTML5, CSS3
+- **Working (Production Delivery & Systems)**: Redis Caching, BullMQ Job Queues, Docker Containerization, MongoDB, PostgreSQL, Stripe Integration & Webhooks, Sharp Image Pipeline, Vite, Git & GitHub, Postman, JWT & RBAC
+- **Familiar (Foundational & Academic)**: Java, C, C++, Firebase, Typesense, WebSockets (Socket.IO), Linux / Bash
+
+---
+
+## Work Experience & Production Systems
+
+1. **Diamond E-Commerce Platform** • *Diamond Atelier*
+   - **Period**: Nov 2025 – Present • Surat (Onsite)
+   - **Role**: Software Developer (Core Platform Delivery)
+   - **Live**: https://www.diamondforest.com/
+   - **Key Achievements**:
+     - I own requirements end to end and distribute work among teammates.
+     - Built headless CMS used by a 6-person content and graphics team to manage catalog assets independently without developer assistance.
+     - Built media pipeline serving images from backend, compressed with Sharp (measured 82.3% size reduction) and cached in Redis.
+     - Integrated Stripe payment gateway with cryptographic HMAC webhook verification and BullMQ queues for idempotent order processing.
+     - Containerized application services with Docker and automated CI/CD deployment pipelines.
+
+2. **WhatsApp & Appointment Booking Platform** • *Empiric Infotech LLP*
+   - **Period**: Apr 2024 – Oct 2025 • Surat (Onsite)
+   - **Role**: MERN Stack Developer
+   - **Nature**: Private Enterprise Platform
+   - **Key Achievements**:
+     - Built scheduling REST APIs with conflict-free slot calculation algorithms.
+     - Integrated WAHA WhatsApp HTTP API into internal workflow automation for automated notifications and group messaging.
+     - Integrated Stripe checkout workflows with automated customer refund handling.
+
+3. **Masai LMS Student Assessment Module** • *Masai School*
+   - **Period**: Oct 2023 – Mar 2024 • Remote
+   - **Role**: Associate Instructor & LMS Engineer
+   - **Nature**: Private Educational Platform
+   - **Key Achievements**:
+     - Built student submission review module, rubric scoring, and mentor feedback tracking.
+     - Mentored and trained 200+ students in full-stack JavaScript, React, and Node.js fundamentals, conducting 50+ mock technical interviews.
+
+---
+
+## Personal Projects
+
+1. **Drone E-Commerce Platform**
+   - **Live**: https://dji-air.vercel.app/
+   - **Repository**: https://github.com/Diwakarsharma2216/DjiAir
+   - **Stack**: React.js, Vite, Tailwind CSS, Razorpay, Node.js, REST APIs
+   - **Highlights**: Drone e-commerce storefront for DJI aerial systems with interactive hardware showcases, dynamic specifications comparison, cart management, and Razorpay payment checkout.
+
+2. **Hevenly Heven E-Commerce Platform**
+   - **Live**: https://hev-en.vercel.app/
+   - **Repository**: https://github.com/Diwakarsharma2216/overrated-chicken-3237
+   - **Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Redux Toolkit
+   - **Highlights**: Full-stack shopping platform with faceted search, Redux Toolkit cart persistence, and RESTful APIs.
+
+---
+
+## Education
+
+- **Bachelor of Computer Applications (BCA)** • Manipal University Jaipur (2023 – 2026) — *Online (while working full-time)*
+- **Full Stack Web Development (NSDC Certified)** • Masai School (Sep 2022 – Jun 2023)
+- **Class XII – Science** • Mahatma Gandhi Inter College (Mar 2021 – Apr 2022)

@@ -1,0 +1,26 @@
+{
+  "name": "Diwakar Sharma (diwakarsharma) — Full Stack Developer",
+  "short_name": "Diwakar Sharma",
+  "description": "Portfolio of Diwakar Sharma (diwakarsharma / diwakarsharma2216), Full Stack Developer. Building clean web architecture and scalable cloud systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ea580c",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
